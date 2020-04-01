@@ -12,7 +12,7 @@ Problem by: Andrew Haberlandt
 
 ## Solution
 
-Using a [fernflower](https://github.com/fesh0r/fernflower), a Java decompiler,
+Using [fernflower](https://github.com/fesh0r/fernflower), a Java decompiler,
 I got the following source files:
 - [SuperDuperSecureFlagValidator.java](decomp/SuperDuperSecureFlagValidator/SuperDuperSecureFlagValidator.java)
 - [Validator1.java](decomp/SuperDuperSecureFlagValidator/Validator1.java)
@@ -72,7 +72,7 @@ public class Validator1 {
 }
 ```
 
-The token needed to a string representation of a natural number. This utilized
+The token needed to be a string representation of a natural number. This utilized
 the [`NaturalNumber`][NaturalNumber] classes from the OSU component library.
 
 The number representation of the token was given to `secretOp()` along with a
