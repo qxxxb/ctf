@@ -83,6 +83,11 @@
     - `disassemble main`
     - `disassemble some_func`
 
+#### Misc
+- `refresh`
+  - Refresh the window
+  - Helpful when the TUI gets messed-up by program IO
+
 ### `objdump`
 Display information from object files
 - `objdump -d a.out`
