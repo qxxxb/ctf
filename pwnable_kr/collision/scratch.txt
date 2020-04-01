@@ -1,0 +1,41 @@
+h = 0x21DD09EC
+
+a00 a01 a02 a03 a04 a05 a06 a07 a08 a09 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19
+ +   +   +   +
+                 +   +   +   +
+                                 +   +   +   +
+                                                 +   +   +   +
+                                                                 +   +   +   +
+
+result (sum):
+a00 a01 a02 a03
+a04 a05 a06 a07
+a08 a09 a10 a11
+a12 a13 a14 a15
+a16 a17 a18 a19
+
+ 06  c5  ce  c8
+ 06  c5  ce  c8
+ 06  c5  ce  c8
+ 06  c5  ce  c8
+ 06  c5  ce  cc
+
+---
+Everything from here to the end of the file is wrong, ignore it
+
+a01 a02 a03 a04 a05 a06 a07 a08 a09 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20
+ +   +   +   +   +   +   +   +
+     +   +   +   +   +   +   +   +
+         +   +   +   +   +   +   +   +
+             +   +   +   +   +   +   +   +
+
+result (sum):
+a01 a02 a03 a04 a05 a06 a07 a08
+a02 a03 a04 a05 a06 a07 a08 a09
+a03 a04 a05 a06 a07 a08 a09 a10
+a04 a05 a06 a07 a08 a09 a10 a11
+
+result (sum):
+TODO
+
+0x00 <= ai <= 0xFF
