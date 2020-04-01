@@ -129,7 +129,7 @@ variables and operations.
 Since a new element is pushed to the stack on every iteration of the first loop,
 we know that the two loops run for the same number of iterations.
 
-The number iterations is equal to `log_3(max(a, b))`. I wrote this function to
+The number of iterations is equal to `log_3(max(a, b))`. I wrote this function to
 derive it:
 ```java
     // Using `x` in-place of `a` is not reliable, because it may still be incorrect if
