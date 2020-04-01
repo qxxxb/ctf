@@ -14,9 +14,9 @@ Problem by: Andrew Haberlandt
 
 Using a [fernflower](https://github.com/fesh0r/fernflower), a Java decompiler,
 I got the following source files:
-- [SuperDuperSecureFlagValidator.java](SuperDuperSecureFlagValidator.java)
-- [Validator1.java](Validator1.java)
-- [Validator2.java](Validator2.java)
+- [SuperDuperSecureFlagValidator.java](decomp/SuperDuperSecureFlagValidator/SuperDuperSecureFlagValidator.java)
+- [Validator1.java](decomp/SuperDuperSecureFlagValidator/Validator1.java)
+- [Validator2.java](decomp/SuperDuperSecureFlagValidator/Validator2.java)
 
 `SuperDuperSecureFlagValidator` called `Validator1` and `Validator2` to
 verify the user's guess for the flag. The flag consisted of two tokens. The
