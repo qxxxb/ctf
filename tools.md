@@ -19,6 +19,12 @@
     - `tb some_func`
       - Set a temporary breakpoint at `some_func` that is used only once
 
+- `disable [breakpoints]`
+  - Disable `breakpoints`, or all if none specified
+  
+- `enable [breakpoints]`
+  - Enable `brekapoints`, or all if none specified
+
 - `watch`
   - Set a watchpoint for an expression
   - A watchpoint stops execution of the program whenever the value of an
@@ -63,7 +69,13 @@
 
 - `bt`
   - Print backtrace of all stack frames
-  - Useful for stack smashing
+  - Useful for stack smashing and finding source of crashes
+
+- `frame [frame-selection]`
+  - Select a frame
+  - After selecting a frame, you can print variables at that frame
+  - Useful for debugging crashes
+  - Prints info on the current frame when run without arguments
 
 - `i f` (`info frame`)
   - Print info on stack frame
