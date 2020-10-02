@@ -21,7 +21,7 @@
 
 - `disable [breakpoints]`
   - Disable `breakpoints`, or all if none specified
-  
+
 - `enable [breakpoints]`
   - Enable `brekapoints`, or all if none specified
 
@@ -134,7 +134,7 @@ probably for a high-level programming language in general
 
 ## Web
 
-### `nmap`
+### [nmap]
 Network exploration tool and security / port scanner
 - It was designed to rapidly scan large networks, although it works fine
   against single hosts.
@@ -180,6 +180,7 @@ A repository with 3 tools for pwning websites with `.git` repositories available
 [Wireshark]: https://www.wireshark.org/
 [ghidra]: https://ghidra-sre.org/
 [fernflower]: https://github.com/fesh0r/fernflower
+[nmap]: https://nmap.org/
 [nikto]: https://github.com/sullo/nikto
 [GitTools]: https://github.com/internetwache/GitTools
 [metasploit]: https://www.metasploit.com/
