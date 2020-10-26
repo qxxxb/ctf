@@ -115,7 +115,7 @@ ude00\ud83d\ude0
 ```
 
 What the heck?? Each of these Unicode characters expands to 6 characters. That
-means our new maxium is `20 * 6` which is `120`. Now we can get the plaintext
+means our new maximum is `20 * 6` which is `120`. Now we can get the plaintext
 blocks we need by mixing in these unicode characters to increase the length of
 the JSON. For example, with `我_administrators`, we get:
 
