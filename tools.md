@@ -4,6 +4,9 @@
 
 ### `gdb`
 
+#### Plugins
+- [pwndbg]
+
 #### Control flow
 
 - `run`
@@ -191,3 +194,4 @@ A repository with 3 tools for pwning websites with `.git` repositories available
 [metasploit]: https://www.metasploit.com/
 [sqlmap]: http://sqlmap.org/
 [radare2]: https://www.radare.org/r/
+[pwndbg]: https://github.com/pwndbg/pwndbg
