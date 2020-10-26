@@ -1,0 +1,26 @@
+==12614== Memcheck, a memory error detector
+==12614== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==12614== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==12614== Command: ./flag
+==12614==
+==12614== Conditional jump or move depends on uninitialised value(s)
+==12614==    at 0x41ABB6: ???
+==12614==    by 0x41B3C8: ???
+==12614==
+I will malloc() and strcpy the flag there. take it.
+==12614== Use of uninitialised value of size 8
+==12614==    at 0x401BBF: ???
+==12614==    by 0x401BC0: ???
+==12614==    by 0x401ADF: ???
+==12614==    by 0x401ADF: ???
+==12614==
+==12614==
+==12614== HEAP SUMMARY:
+==12614==     in use at exit: 0 bytes in 0 blocks
+==12614==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==12614==
+==12614== All heap blocks were freed -- no leaks are possible
+==12614==
+==12614== For counts of detected and suppressed errors, rerun with: -v
+==12614== Use --track-origins=yes to see where uninitialised values come from
+==12614== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

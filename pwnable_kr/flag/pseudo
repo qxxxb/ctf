@@ -1,0 +1,73 @@
+main() {
+    ; arg int64_t arg1 @ rdi
+    ; arg int64_t arg2 @ rsi
+
+    ; We call a function right off the bat
+    ; rax is never used, could it's a void function
+    ; possibly just prints the message? or mallocs the flag?
+    ; 0x0044a4f0      e87b020000     call fcn.0044a770
+    fcn.0044a770()
+
+    ; CODE XREF from entry0 @ 0x44a4f1
+    ; 0x0044a4f5      55             push rbp
+
+    ; Caller saved registered (push before calling a function)
+    ; Why aren't we popping these later?
+    ; 0x0044a4f6      53             push rbx
+    ; 0x0044a4f7      51             push rcx
+    ; 0x0044a4f8      52             push rdx
+
+    ; 0x0044a4f9      4801fe         add rsi, rdi
+    rsi += rdi
+
+    ; Why are we pushing this?
+    ; 0x0044a4fc      56             push rsi
+    push(rsi)
+
+    ; 0x0044a4fd      4889fe         mov rsi, rdi                ; int64_t arg2
+    ; 0x0044a500      4889d7         mov rdi, rdx                ; int64_t arg1
+    rsi = rdi
+    rdi = rdx (?)
+
+    ; 0x0044a503      31db           xor ebx, ebx
+    ; 0x0044a505      31c9           xor ecx, ecx
+    ; ebx = ebx ^ ebx
+    ; ecx = ecx ^ ecx
+    ; zeroing lower 32 bits of rbx and 4th parameter
+    ebx = 0
+    ecx = 0
+
+    ; 0x0044a507      4883cdff       or rbp, 0xffffffffffffffff
+    ; rbp |= 0xffffffffffffffff
+    ; This sets rbp to all ones
+    rbp = 0xffffffffffffffff
+
+    ; 0x0044a50b      e850000000     call fcn.0044a560
+    fnc.0044a560()
+
+    ; 0x0044a510      01db           add ebx, ebx
+    ebx = ebx + ebx ; (these were previously set to 0)
+
+    {
+        0x0044a512      7402           je 0x44a516
+        if (zero flag) {
+            ; 0x0044a516      8b1e           mov ebx, dword [rsi]
+            ebx = rsi[0]
+        } else {
+            ; 0x0044a514      f3c3           ret
+            return
+        }
+    }
+
+    ; 0x0044a518      4883eefc       sub rsi, 0xfffffffffffffffc
+    rsi = rsi - 0xfffffffffffffffc ; why?
+
+    ; 0x0044a51c      11db           adc ebx, ebx (add with carry)
+    ebx = ebx + ebx
+
+    ; 0x0044a51e      8a16           mov dl, byte [rsi]
+    rdx[0] = rsi[0]
+
+    ; 0x0044a520      f3c3           ret
+    return
+}
