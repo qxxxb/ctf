@@ -128,6 +128,11 @@ Network protocol analyzer.
 A software reverse engineering (SRE) suite of tools developed by NSA's Research
 Directorate in support of the Cybersecurity mission
 
+### [radare2]
+- Tutorial: https://www.megabeets.net/a-journey-into-radare-2-part-1/
+- https://radare.gitbooks.io/radare2book/content/first_steps/basic_debugger_session.html
+- https://reverseengineering.stackexchange.com/a/11208
+
 ### [fernflower]
 Fernflower is the first actually working analytical decompiler for Java and
 probably for a high-level programming language in general
@@ -185,3 +190,4 @@ A repository with 3 tools for pwning websites with `.git` repositories available
 [GitTools]: https://github.com/internetwache/GitTools
 [metasploit]: https://www.metasploit.com/
 [sqlmap]: http://sqlmap.org/
+[radare2]: https://www.radare.org/r/
