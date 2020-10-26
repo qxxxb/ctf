@@ -1,0 +1,41 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-23 21:50 EDT
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 21:50
+Completed NSE at 21:50, 0.00s elapsed
+Initiating NSE at 21:50
+Completed NSE at 21:50, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 21:50
+Completed Parallel DNS resolution of 1 host. at 21:50, 0.03s elapsed
+Initiating Connect Scan at 21:50
+Scanning pwn.osucyber.club (3.13.123.179) [1 port]
+Discovered open port 13372/tcp on 3.13.123.179
+Completed Connect Scan at 21:50, 0.06s elapsed (1 total ports)
+Initiating Service scan at 21:50
+Scanning 1 service on pwn.osucyber.club (3.13.123.179)
+Completed Service scan at 21:50, 11.19s elapsed (1 service on 1 host)
+NSE: Script scanning 3.13.123.179.
+Initiating NSE at 21:50
+Completed NSE at 21:50, 1.07s elapsed
+Initiating NSE at 21:50
+Completed NSE at 21:50, 0.00s elapsed
+Nmap scan report for pwn.osucyber.club (3.13.123.179)
+Host is up (0.055s latency).
+Other addresses for pwn.osucyber.club (not scanned): 52.14.255.26
+rDNS record for 3.13.123.179: ec2-3-13-123-179.us-east-2.compute.amazonaws.com
+
+PORT      STATE SERVICE VERSION
+13372/tcp open  http    Node.js (Express middleware)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: ToastAPI
+
+NSE: Script Post-scanning.
+Initiating NSE at 21:50
+Completed NSE at 21:50, 0.00s elapsed
+Initiating NSE at 21:50
+Completed NSE at 21:50, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.02 seconds

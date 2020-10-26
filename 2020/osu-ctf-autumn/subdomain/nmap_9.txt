@@ -1,0 +1,72 @@
+ nmap -v -A 9vyloyc3ojspmtuhtm6ejq.osucyber.club
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-24 16:23 EDT
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:23
+Completed NSE at 16:23, 0.00s elapsed
+Initiating NSE at 16:23
+Completed NSE at 16:23, 0.00s elapsed
+Initiating Ping Scan at 16:23
+Scanning 9vyloyc3ojspmtuhtm6ejq.osucyber.club (35.184.255.49) [2 ports]
+Completed Ping Scan at 16:23, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:23
+Completed Parallel DNS resolution of 1 host. at 16:23, 0.19s elapsed
+Initiating Connect Scan at 16:23
+Scanning 9vyloyc3ojspmtuhtm6ejq.osucyber.club (35.184.255.49) [1000 ports]
+Discovered open port 80/tcp on 35.184.255.49
+Discovered open port 443/tcp on 35.184.255.49
+Discovered open port 22/tcp on 35.184.255.49
+Completed Connect Scan at 16:23, 4.83s elapsed (1000 total ports)
+Initiating Service scan at 16:23
+Scanning 3 services on 9vyloyc3ojspmtuhtm6ejq.osucyber.club (35.184.255.49)
+Completed Service scan at 16:23, 12.30s elapsed (3 services on 1 host)
+NSE: Script scanning 35.184.255.49.
+Initiating NSE at 16:23
+Completed NSE at 16:23, 2.02s elapsed
+Initiating NSE at 16:23
+Completed NSE at 16:23, 0.00s elapsed
+Nmap scan report for 9vyloyc3ojspmtuhtm6ejq.osucyber.club (35.184.255.49)
+Host is up (0.056s latency).
+rDNS record for 35.184.255.49: 49.255.184.35.bc.googleusercontent.com
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE       VERSION
+22/tcp   open   ssh           OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 6b:9b:84:12:9d:10:6b:ac:a2:99:0c:7e:0f:93:3e:c3 (RSA)
+|   256 45:61:7c:9b:73:73:bf:6c:78:98:bc:ef:58:e2:e2:e0 (ECDSA)
+|_  256 5e:31:98:af:a5:e8:e4:f4:32:80:a7:80:b4:3d:d2:59 (EdDSA)
+80/tcp   open   http          nginx 1.14.0 (Ubuntu)
+| http-methods:
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: 404
+443/tcp  open   ssl/http      nginx 1.14.0 (Ubuntu)
+| http-methods:
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: 404
+| ssl-cert: Subject: commonName=9vyloyc3ojspmtuhtm6ejq.osucyber.club
+| Subject Alternative Name: DNS:9vyloyc3ojspmtuhtm6ejq.osucyber.club
+| Issuer: commonName=Let's Encrypt Authority X3/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-10-19T05:28:19
+| Not valid after:  2021-01-17T05:28:19
+| MD5:   19de 4880 38a0 fd9c 97cc 8868 4e39 3ebc
+|_SHA-1: b88b 5fe2 93d7 bf16 18e6 f30e 4eb0 ac22 c39e 185e
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg:
+|_  http/1.1
+3389/tcp closed ms-wbt-server
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 16:23
+Completed NSE at 16:23, 0.00s elapsed
+Initiating NSE at 16:23
+Completed NSE at 16:23, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 20.08 seconds

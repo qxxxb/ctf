@@ -1,0 +1,211 @@
+username: fucking
+
+SESSIONID0: eyJuYW1lIjoiZnVja2luZyIsInJvbGUiOiJhZG1pbiJ9
+SESSIONID1: kxXcL63pqvHhYSvHCtQPDtqzjyybmzeMf7kRLIBfjMOw5q6quh7obDIhswwefiJ/
+session: eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNDBkMjlhNTExYTgzMmM3MGM0MWZiNGRkZDdjYzE2NTBjNzJiNWQ3NyJ9
+
+---
+
+Notes:
+
+- Goal, tweak the plaintext to contain `administrators`
+
+- Why is the flag used in the KDF for the key?
+- The flag is used as the salt in the KDF
+    - We know the flag starts with `osuctf{` and ends with `}`
+        - Can we leverage this?
+- The key is 16 bits, which is relatively short
+
+- The KEY is re-used for every AES encryption
+    - This is a common mistake that can be exploited
+    - Can we use rainbow tables?
+
+- ECB mode is used for AES encryption, which is insecure
+- https://dr3dd.gitlab.io/cryptography/2018/10/11/Simple-Attack-On-AES-ECB-Mode/
+- Block size is 16
+
+---
+
+To encode:
+- Put username into session object (with hardcoded `users` role)
+- Create AES cipher using KEY (using ECB mode)
+- Stringify session JSON
+- PKCS7 pad stringified JSON
+- Encrypt with AES cipher
+- Base 64 encode
+
+To decode:
+- Create AES cipher using KEY (using ECB mode)
+- Base 64 decode
+- Decrypt with AES cipher
+- PKCS7 unpad
+- String to JSON
+
+---
+
+Give a 13-char username
+
+1234567890123456
+{"name":"1234567
+890123","role":"
+administrators"} <- we need to know what this block looks like when encrypted
+
+1234567890123456
+{"name":"12345",
+"role":"administ <- we need to know what these two blocks look like when encrypted
+rators"}00000000 <-
+
+b02b 85f6 bccf f4a5 7740 1ed4 ddb7 2540
+fc74 e699 65cd 12c6 6a95 fe9a fe2a 6b11
+9450 47ae d8c0 0b0d 1c12 10cf c750 fbc4
+
+sCuF9rzP9KV3QB7U3bclQPx05pllzRLGapX+mv4qaxGUUEeu2MALDRwSEM/HUPvE
+
+---
+
+
+1234567890123456
+{"name":"12345",
+"role":"users"}0
+
+00000000: 5839 be5c 1f7e 63fd 988c b2b8 286b 3827  X9.\.~c.....(k8'
+00000010: b3c8 2186 cbf4 6d6a 360b 9652 60c8 be34  ..!...mj6..R`..4
+
+1234567890123456
+{"name":"abcde",
+"role":"users"}0
+
+00000000: d7f2 8c07 02cb d179 fc48 d63b 27c7 c408  .......y.H.;'...
+00000010: b3c8 2186 cbf4 6d6a 360b 9652 60c8 be34  ..!...mj6..R`..4
+
+---
+
+1234567890123456
+{"name":"12345",
+"role":"administ
+rators"}00000000
+
+1234567890123456
+{"name":"1234567
+8901234567890","
+role":"administr
+ators"}
+
+{"name":"12345","role":"administrators"}
+{"name":"12345678901234567890","role":"administrators"}
+
+1234567890123456
+"role":"administ
+rators"}00000000
+
+---
+
+1234567890123456
+{"name":"12345","role":"administrators"}
+{"name":"12345678901234567890","role":"administrators"}
+
+---
+
+1234567890123456
+{"name":"1234567
+administrator","
+administrators"}
+role":"users"}00
+
+             123
+administrator","
+administrators"}
+
+3 bytes
+3 * 8 = 24
+
+2**24 options
+
+---
+
+`.encode('ascii', errors='replace')`
+
+---
+
+1234567890123456
+{"name":"12345",
+"role":"users"}1
+
+1234567890123456
+{"name":"123456"
+,"role":"users"}
+gggggggggggggggg
+
+1234567890123456
+{"name":"1234567
+","role":"users"
+}fffffffffffffff
+
+1234567890123456
+{"name":"1234567
+8","role":"users
+"}eeeeeeeeeeeeee
+
+---
+
+Closest I can get is make it a single quote
+administrators"} <- Last must be a comma, not a bracket
+
+"administrators" <- how can I get the quote at the end? The one at the start works tho
+}                <- yes
+
+:"administrators <- Colon followed by quote impossible
+"}
+
+":"administrator
+s"}              <- How do I get the `s` there?
+
+1234567890123456
+      "roles":"a
+dministrators"}1             <- How do I get the `s` there?
+
+administrators"
+,             } <- Last must be a comma, not a bracket
+
+---
+
+{"name":"xxxxxxx
+","role":"users"
+}
+
+{"name":"\u6211_
+xxxxxx","role":"
+users"}
+
+{"name":"\u6211_
+administrators",
+"role":"users"}
+
+{"name":"\u6211\
+"zzzzzzzzzzzzzzz
+","role":"users"
+}
+
+{"name":"\u6211\
+":              
+","role":"users"
+}
+
+{"name":"\u6211\
+"               
+","role":"users"
+}
+
+{"name":"\u6211_
+dddddddddddddddd
+","role":"users"
+}
+
+{"name":"\u6211_
+}               
+","role":"users"
+}
+
+gLeo7iVSypsn/drBfy3RbH0kGeiwGNdQMVb1PUmSSIuw+67Qxc1bd4bzXlos9KLRscHq/SMWpJ3srPEXN51ZelllHkQOfGWG7yCYJzrclBc+IqzDVNXFRSBM8eDJuWPUPiKsw1TVxUUgTPHgyblj1HfvkbcAz1yplNd9r2En5ws=
+
+gLeo7iVSypsn/drBfy3RbH0kGeiwGNdQMVb1PUmSSIuw+67Qxc1bd4bzXlos9KLRscHq/SMWpJ3srPEXN51ZelllHkQOfGWG7yCYJzrclBc+IqzDVNXFRSBM8eDJuWPUPiKsw1TVxUUgTPHgyblj1HfvkbcAz1yplNd9r2En5ws=

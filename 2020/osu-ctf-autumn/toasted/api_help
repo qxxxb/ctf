@@ -1,0 +1,9 @@
+POST /api/generate_token
+GET /api/status
+POST /api/toast
+POST /api/cancel_toast
+POST /api/generate_maintenance_token
+GET /api/download_backup (maintenance token required)
+
+token=gSNEaD868LJd1DldhZUglykfGwu_NbcLu9d1wmT5luLFTfHV2eVQYI8EupRMi71Cz6qydOc0kgXnGcDoPuUkkA
+time=15

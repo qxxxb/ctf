@@ -1,0 +1,124 @@
+(gdb) disassemble print_spy_instructions
+Dump of assembler code for function print_spy_instructions:
+   0x08048626 <+0>: push   %ebp
+   0x08048627 <+1>: mov    %esp,%ebp
+   0x08048629 <+3>: push   %ebx
+   0x0804862a <+4>: sub    $0x114,%esp
+   0x08048630 <+10>:    call   0x8048560 <__x86.get_pc_thunk.bx>
+   0x08048635 <+15>:    add    $0x19cb,%ebx
+   0x0804863b <+21>:    sub    $0x8,%esp
+   0x0804863e <+24>:    lea    -0x15d9(%ebx),%eax
+   0x08048644 <+30>:    push   %eax
+   0x08048645 <+31>:    lea    -0x15d7(%ebx),%eax
+   0x0804864b <+37>:    push   %eax
+   0x0804864c <+38>:    call   0x80484f0 <fopen@plt>
+   0x08048651 <+43>:    add    $0x10,%esp
+   0x08048654 <+46>:    mov    %eax,-0xc(%ebp)
+   0x08048657 <+49>:    cmpl   $0x0,-0xc(%ebp)
+   0x0804865b <+53>:    jne    0x804866f <print_spy_instructions+73>
+   0x0804865d <+55>:    sub    $0xc,%esp
+   0x08048660 <+58>:    lea    -0x15d0(%ebx),%eax
+   0x08048666 <+64>:    push   %eax
+   0x08048667 <+65>:    call   0x80484a0 <puts@plt>
+   0x0804866c <+70>:    add    $0x10,%esp
+   0x0804866f <+73>:    sub    $0x4,%esp
+   0x08048672 <+76>:    pushl  -0xc(%ebp)
+   0x08048675 <+79>:    push   $0xff
+   0x0804867a <+84>:    lea    -0x10b(%ebp),%eax
+   0x08048680 <+90>:    push   %eax
+   0x08048681 <+91>:    call   0x8048480 <fgets@plt>
+   0x08048686 <+96>:    add    $0x10,%esp
+   0x08048689 <+99>:    sub    $0x8,%esp
+   0x0804868c <+102>:   lea    -0x10b(%ebp),%eax
+   0x08048692 <+108>:   push   %eax
+   0x08048693 <+109>:   lea    -0x15a6(%ebx),%eax
+   0x08048699 <+115>:   push   %eax
+   0x0804869a <+116>:   call   0x8048460 <printf@plt>
+   0x0804869f <+121>:   add    $0x10,%esp
+   0x080486a2 <+124>:   nop
+   0x080486a3 <+125>:   mov    -0x4(%ebp),%ebx
+   0x080486a6 <+128>:   leave
+   0x080486a7 <+129>:   ret
+
+(gdb) disassemble process_order
+Dump of assembler code for function process_order:
+   0x080486a8 <+0>: push   %ebp
+   0x080486a9 <+1>: mov    %esp,%ebp
+   0x080486ab <+3>: push   %ebx
+   0x080486ac <+4>: sub    $0x74,%esp
+   0x080486af <+7>: call   0x8048560 <__x86.get_pc_thunk.bx>
+   0x080486b4 <+12>:    add    $0x194c,%ebx
+   0x080486ba <+18>:    movl   $0x0,-0xc(%ebp)
+   0x080486c1 <+25>:    mov    0x8(%ebp),%eax
+   0x080486c4 <+28>:    sub    $0x1,%eax
+   0x080486c7 <+31>:    mov    0x3c(%ebx,%eax,4),%eax
+   0x080486ce <+38>:    sub    $0x8,%esp
+   0x080486d1 <+41>:    push   %eax
+   0x080486d2 <+42>:    lea    -0x15a3(%ebx),%eax
+   0x080486d8 <+48>:    push   %eax
+   0x080486d9 <+49>:    call   0x8048460 <printf@plt>
+   0x080486de <+54>:    add    $0x10,%esp
+   0x080486e1 <+57>:    sub    $0xc,%esp
+   0x080486e4 <+60>:    lea    -0x158b(%ebx),%eax
+   0x080486ea <+66>:    push   %eax
+   0x080486eb <+67>:    call   0x8048460 <printf@plt>
+   0x080486f0 <+72>:    add    $0x10,%esp
+   0x080486f3 <+75>:    sub    $0xc,%esp
+   0x080486f6 <+78>:    lea    -0x70(%ebp),%eax
+   0x080486f9 <+81>:    push   %eax
+   0x080486fa <+82>:    call   0x8048470 <gets@plt>
+   0x080486ff <+87>:    add    $0x10,%esp
+   0x08048702 <+90>:    sub    $0xc,%esp
+   0x08048705 <+93>:    lea    -0x1572(%ebx),%eax
+   0x0804870b <+99>:    push   %eax
+   0x0804870c <+100>:   call   0x80484a0 <puts@plt>
+   0x08048711 <+105>:   add    $0x10,%esp
+   0x08048714 <+108>:   sub    $0xc,%esp
+   0x08048717 <+111>:   push   $0x5
+   0x08048719 <+113>:   call   0x8048490 <sleep@plt>
+   0x0804871e <+118>:   add    $0x10,%esp
+   0x08048721 <+121>:   sub    $0xc,%esp
+   0x08048724 <+124>:   lea    -0x1564(%ebx),%eax
+   0x0804872a <+130>:   push   %eax
+   0x0804872b <+131>:   call   0x80484a0 <puts@plt>
+   0x08048730 <+136>:   add    $0x10,%esp
+   0x08048733 <+139>:   nop
+   0x08048734 <+140>:   mov    -0x4(%ebp),%ebx
+   0x08048737 <+143>:   leave
+   0x08048738 <+144>:   ret
+
+---
+
+(gdb) p $esp
+$4 = (void *) 0xffffc0e0
+(gdb) p $ebp
+$5 = (void *) 0xffffc168
+
+ebp - esp = 136
+There are 120 bytes of local variables
+Why?
+- 100 bytes to `address`
+- 4 bytes to `purchase_num`
+- 4 bytes to `order_num`?
+
+Stack level 0, frame at 0xffffc170:
+ eip = 0x8048737 in process_order; saved eip = 0x8048893
+ called by frame at 0xffffc2b0
+ Arglist at 0xffffc168, args:
+ Locals at 0xffffc168, Previous frame's sp is 0xffffc170
+ Saved registers:
+  ebx at 0xffffc164, ebp at 0xffffc168, eip at 0xffffc16c
+
+---
+
+
+(gdb) x/36wx $esp
+0xffffc0f0: 0x0804a028  0xffffffff  0x33221100  0x77665544
+0xffffc100: 0x33221100  0x77665544  0x33221100  0x77665544
+0xffffc110: 0x33221100  0x77665544  0x33221100  0x77665544
+0xffffc120: 0x33221100  0x77665544  0x33221100  0x77665544
+0xffffc130: 0x33221100  0x77665544  0x33221100  0x77665544
+0xffffc140: 0x33221100  0x77665544  0x33221100  0x77665544
+0xffffc150: 0x33221100  0x77665544  0x33221100  0xbbaa9988
+0xffffc160: 0xffeeddcc  0x00000000  0x08048626  0x08048800
+0xffffc170: 0x00000001  0x08048baa  0xffffc184  0x00000000

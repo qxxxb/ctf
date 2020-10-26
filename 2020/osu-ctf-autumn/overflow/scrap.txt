@@ -1,0 +1,6 @@
+(gdb) x name
+0x7fffffffd090: 0x68632070
+(gdb) x &check
+0x7fffffffd0ac: 0x00000000
+
+0x7fffffffd090 -  0x7fffffffd0ac

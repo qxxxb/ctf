@@ -1,0 +1,57 @@
+ amass enum -d osucyber.club
+Querying GoogleCT for osucyber.club subdomains
+9vyloyc3ojspmtuhtm6ejq.osucyber.club
+osucyber.club
+Querying HackerTarget for osucyber.club subdomains
+Querying Mnemonic for osucyber.club subdomains
+Querying BufferOver for osucyber.club subdomains
+traditions.osucyber.club
+ctf.osucyber.club
+www.osucyber.club
+Querying Baidu for osucyber.club subdomains
+Querying DNSDumpster for osucyber.club subdomains
+Querying ViewDNS for osucyber.club subdomains
+Average DNS queries performed: 985/sec, Average retries required: 37.26%
+Querying Wayback for osucyber.club subdomains
+slack.osucyber.club
+mailinglist.osucyber.club
+Querying Brute Forcing for osucyber.club subdomains
+Querying UKGovArchive for osucyber.club subdomains
+Querying ThreatCrowd for osucyber.club subdomains
+Querying ThreatMiner for osucyber.club subdomains
+Querying Bing for osucyber.club subdomains
+Querying Crtsh for osucyber.club subdomains
+Querying Robtex for osucyber.club subdomains
+Querying Ask for osucyber.club subdomains
+Querying CertSpotter for osucyber.club subdomains
+Querying ArchiveIt for osucyber.club subdomains
+Average DNS queries performed: 15/sec, Average retries required: 26.67%
+Querying AlienVault for osucyber.club subdomains
+Querying SiteDossier for osucyber.club subdomains
+Querying VirusTotal for osucyber.club subdomains
+Querying Yahoo for osucyber.club subdomains
+pwn.osucyber.club
+Querying HackerOne for osucyber.club subdomains
+Querying URLScan for osucyber.club subdomains
+Querying Pastebin for osucyber.club subdomains
+Querying Sublist3rAPI for osucyber.club subdomains
+Querying Riddler for osucyber.club subdomains
+Average DNS queries performed: 79/sec, Average retries required: 13.92%
+Querying Censys for osucyber.club subdomains
+Querying RapidDNS for osucyber.club subdomains
+Querying LoCArchive for osucyber.club subdomains
+Querying BuiltWith for osucyber.club subdomains
+
+OWASP Amass v3.10.5                               https://github.com/OWASP/Amass
+--------------------------------------------------------------------------------
+8 names discovered - cert: 4, dns: 1, api: 3
+--------------------------------------------------------------------------------
+ASN: 15169 - GOOGLE - Google LLC
+    35.184.0.0/14       4    Subdomain Name(s)
+    172.217.0.0/19      3    Subdomain Name(s)
+ASN: 16509 - AMAZON-02 - Amazon.com, Inc.
+    52.8.0.0/13         1    Subdomain Name(s)
+
+The enumeration has finished
+Discoveries are being migrated into the local database
+
