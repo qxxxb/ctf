@@ -14,3 +14,6 @@
 - `search`: Find stuff
 - `r2`: Launch [radare2]
 - `context`: Print context (registers, source, disassembly, backtrace, etc.)
+
+[radare2]: https://www.radare.org/r/
+[pwndbg]: https://github.com/pwndbg/pwndbg
