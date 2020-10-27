@@ -1,0 +1,9 @@
+.checkstyle
+.classpath
+.project
+output100
+output1000
+bin/
+doc/
+lib/
+test/

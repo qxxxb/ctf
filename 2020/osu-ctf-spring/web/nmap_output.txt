@@ -1,0 +1,574 @@
+ nmap -v -A pwn.osucyber.club -Pn -p13370-13380
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-03-28 13:38 EDT
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 13:38
+Completed NSE at 13:38, 0.00s elapsed
+Initiating NSE at 13:38
+Completed NSE at 13:38, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 13:38
+Completed Parallel DNS resolution of 1 host. at 13:38, 0.00s elapsed
+Initiating Connect Scan at 13:38
+Scanning pwn.osucyber.club (3.136.13.55) [11 ports]
+Discovered open port 13379/tcp on 3.136.13.55
+Discovered open port 13375/tcp on 3.136.13.55
+Discovered open port 13376/tcp on 3.136.13.55
+Discovered open port 13378/tcp on 3.136.13.55
+Discovered open port 13370/tcp on 3.136.13.55
+Discovered open port 13371/tcp on 3.136.13.55
+Discovered open port 13373/tcp on 3.136.13.55
+Discovered open port 13377/tcp on 3.136.13.55
+Discovered open port 13374/tcp on 3.136.13.55
+Discovered open port 13372/tcp on 3.136.13.55
+Completed Connect Scan at 13:38, 1.20s elapsed (11 total ports)
+Initiating Service scan at 13:38
+Scanning 10 services on pwn.osucyber.club (3.136.13.55)
+Service scan Timing: About 50.00% done; ETC: 13:40 (0:00:58 remaining)
+Service scan Timing: About 70.00% done; ETC: 13:41 (0:00:57 remaining)
+Completed Service scan at 13:41, 147.26s elapsed (10 services on 1 host)
+NSE: Script scanning 3.136.13.55.
+Initiating NSE at 13:41
+Completed NSE at 13:41, 2.01s elapsed
+Initiating NSE at 13:41
+Completed NSE at 13:41, 1.37s elapsed
+Nmap scan report for pwn.osucyber.club (3.136.13.55)
+Host is up (0.044s latency).
+Other addresses for pwn.osucyber.club (not scanned): 3.130.47.154
+rDNS record for 3.136.13.55: ec2-3-136-13-55.us-east-2.compute.amazonaws.com
+
+PORT      STATE    SERVICE VERSION
+13370/tcp open     http    Apache httpd 2.4.25
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: 403 Forbidden
+13371/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines: 
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428210
+|     0x42800a
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428210
+|     0x42800a
+|   GetRequest, RTSPRequest: 
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428210
+|     0x42800a
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428210
+|     0x42800a
+|   HTTPOptions: 
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428210
+|     0x42800a
+|     0x427f9a
+|     0x428167
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428253
+|     0x4281ec
+|     0x428273
+|     0x4281ec
+|     0x428293
+|     0x4281ec
+|     0x428233
+|     0x4281ec
+|     0x428210
+|_    0x42800a
+13372/tcp open     http    Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-title: Clocktower Auction
+|_Requested resource was /shop
+13373/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequest: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 1)
+|     input password :
+|   DNSVersionBindReq: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 6)
+|   GenericLines: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 8)
+|     input password :
+|   GetRequest: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 9)
+|   HTTPOptions: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 4)
+|     input password : Wrong Password
+|   Help: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 6)
+|     input password :
+|   NULL, RTSPRequest: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 8)
+|   RPCCheck: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|     srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 3)
+|     input password : Wrong Password
+|   SSLSessionReq: 
+|     RAD ANTI-BRUTEFORCE PROTECTION...
+|_    srsly, don't bruteforce this, it isn't needed and won't work! kthx. (sleeptime: 4)
+13374/tcp open     http    Node.js (Express middleware)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Dreese Lab Gift Shop
+13375/tcp open     http    nginx 1.17.9
+| http-git: 
+|   3.136.13.55:13375/.git/
+|     Git repository found!
+|     .git/config matched patterns 'user'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: flags are off-exhibit 
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.17.9
+|_http-title: Site doesn't have a title (text/html).
+13376/tcp open     unknown
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     ***************************************
+|     DREESE LAB WAITLIST SYSTEM **
+|     ***************************************
+|     You're viewing the waitlist for FLAG 1337.
+|     8:00AM (Instructor: Diego Zaccai). There are 7883 students on the waitlist.
+|     Commands:
+|     login - login as a student
+|     get_off_the_waitlist - try to get off the waitlist for the flag
+|     logout - log out
+|     quit - exit the program
+|     Enter your command:
+|     [anon]> Invalid option
+|     Commands:
+|     login - login as a student
+|     get_off_the_waitlist - try to get off the waitlist for the flag
+|     logout - log out
+|     quit - exit the program
+|     Enter your command:
+|     [anon]> Invalid option
+|     Commands:
+|     login - login as a student
+|     get_off_the_waitlist - try to get off the waitlist for the flag
+|     logout - log out
+|     quit - exit the program
+|     Enter your command:
+|     [anon]>
+|   NULL: 
+|     ***************************************
+|     DREESE LAB WAITLIST SYSTEM **
+|     ***************************************
+|     You're viewing the waitlist for FLAG 1337.
+|     8:00AM (Instructor: Diego Zaccai). There are 7883 students on the waitlist.
+|     Commands:
+|     login - login as a student
+|     get_off_the_waitlist - try to get off the waitlist for the flag
+|     logout - log out
+|     quit - exit the program
+|     Enter your command:
+|_    [anon]>
+13377/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequest, DNSVersionBindReq, JavaRMI, LANDesk-RC, LDAPBindReq, NCP, NULL, NotesRPC, RPCCheck, SMBProgNeg, TerminalServer, WMSRequest, X11Probe, afp, giop, oracle-tns: 
+|     Enter a message:
+|   FourOhFourRequest: 
+|     Enter a message: Not authenticated.
+|     set_me was 841315188
+|   GenericLines, GetRequest, Help, LPDString: 
+|     Enter a message: Not authenticated.
+|     set_me was 0
+|   HTTPOptions, RTSPRequest: 
+|     Enter a message: Not authenticated.
+|     set_me was 221261361
+|   Kerberos: 
+|     Enter a message: Not authenticated.
+|     set_me was 16909218
+|   LDAPSearchReq: 
+|     Enter a message: Not authenticated.
+|     set_me was 4
+|   SIPOptions: 
+|     Enter a message: Not authenticated.
+|     set_me was 793790803
+|   SSLSessionReq: 
+|     Enter a message: Not authenticated.
+|     set_me was -353489734
+|   TLSSessionReq: 
+|     Enter a message: Not authenticated.
+|_    set_me was 1684955506
+13378/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequest, DNSVersionBindReq, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     pls enter ur favorite numbers:
+|     enter ur favorite colors:
+|   NULL: 
+|     pls enter ur favorite numbers:
+|   SMBProgNeg: 
+|     pls enter ur favorite numbers:
+|     enter ur favorite colors:
+|     thinking...
+|     your responses are secret now!!
+|     making your fortune....
+|     will soon be spending a lot of time around the same people.
+|_    leave a kind message for the creator of this program:
+13379/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequest, FourOhFourRequest, GetRequest, Kerberos, LDAPBindReq, LDAPSearchReq, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, WMSRequest, X11Probe, oracle-tns: 
+|     Hi, please enter your name:
+|     Goodbye
+|   DNSVersionBindReq, GenericLines, JavaRMI, LANDesk-RC, NCP, NULL, NotesRPC, RPCCheck, afp: 
+|     Hi, please enter your name:
+|   HTTPOptions, RTSPRequest, SIPOptions: 
+|     Hi, please enter your name:
+|     OPTIONS
+|     Goodbye
+|   Help: 
+|     Hi, please enter your name:
+|     HELP
+|     Goodbye
+|   LPDString: 
+|     Hi, please enter your name:
+|     default
+|_    Goodbye
+13380/tcp filtered unknown
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13371-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA8%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,170,"0x427f9a\n0x428167\n0x428233\n0x4281ec\n0x428253\n0x42
+SF:81ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428
+SF:253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428210\n0x4280
+SF:0a\nEND\n0x427f9a\n0x428167\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x
+SF:428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4
+SF:281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428210\n0x42800a\nEND\
+SF:n")%r(GetRequest,248,"0x427f9a\n0x428167\n0x428233\n0x4281ec\n0x428253\
+SF:n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n
+SF:0x428253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0
+SF:x4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x
+SF:428233\n0x4281ec\n0x428253\n0x4281ec\n0x428210\n0x42800a\nEND\n0x427f9a
+SF:\n0x428167\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec\
+SF:n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n
+SF:0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0
+SF:x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x
+SF:4281ec\n0x428210\n0x42800a\nEND\n")%r(HTTPOptions,194,"0x427f9a\n0x4281
+SF:67\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec\n0x42829
+SF:3\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec
+SF:\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428210\n0x42800a\nEND\n0x42
+SF:7f9a\n0x428167\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0x428
+SF:1ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x4282
+SF:73\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428210\n0x42800
+SF:a\nEND\n")%r(RTSPRequest,248,"0x427f9a\n0x428167\n0x428233\n0x4281ec\n0
+SF:x428253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x
+SF:4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x4
+SF:28233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0x4281ec\n0x428293\n0x42
+SF:81ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428210\n0x42800a\nEND\n
+SF:0x427f9a\n0x428167\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x428273\n0
+SF:x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4281ec\n0x
+SF:428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x428253\n0x4
+SF:281ec\n0x428273\n0x4281ec\n0x428293\n0x4281ec\n0x428233\n0x4281ec\n0x42
+SF:8253\n0x4281ec\n0x428210\n0x42800a\nEND\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13373-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA3%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,75,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\.\nsrsly,\x20don't\x20
+SF:bruteforce\x20this,\x20it\x20isn't\x20needed\x20and\x20won't\x20work!\x
+SF:20kthx\.\x20\(sleeptime:\x208\)\n")%r(GenericLines,86,"RAD\x20ANTI-BRUT
+SF:EFORCE\x20PROTECTION\.\.\.\nsrsly,\x20don't\x20bruteforce\x20this,\x20i
+SF:t\x20isn't\x20needed\x20and\x20won't\x20work!\x20kthx\.\x20\(sleeptime:
+SF:\x208\)\ninput\x20password\x20:\x20")%r(GetRequest,75,"RAD\x20ANTI-BRUT
+SF:EFORCE\x20PROTECTION\.\.\.\nsrsly,\x20don't\x20bruteforce\x20this,\x20i
+SF:t\x20isn't\x20needed\x20and\x20won't\x20work!\x20kthx\.\x20\(sleeptime:
+SF:\x209\)\n")%r(HTTPOptions,95,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\
+SF:.\nsrsly,\x20don't\x20bruteforce\x20this,\x20it\x20isn't\x20needed\x20a
+SF:nd\x20won't\x20work!\x20kthx\.\x20\(sleeptime:\x204\)\ninput\x20passwor
+SF:d\x20:\x20Wrong\x20Password\n")%r(RTSPRequest,75,"RAD\x20ANTI-BRUTEFORC
+SF:E\x20PROTECTION\.\.\.\nsrsly,\x20don't\x20bruteforce\x20this,\x20it\x20
+SF:isn't\x20needed\x20and\x20won't\x20work!\x20kthx\.\x20\(sleeptime:\x208
+SF:\)\n")%r(RPCCheck,95,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\.\nsrsly
+SF:,\x20don't\x20bruteforce\x20this,\x20it\x20isn't\x20needed\x20and\x20wo
+SF:n't\x20work!\x20kthx\.\x20\(sleeptime:\x203\)\ninput\x20password\x20:\x
+SF:20Wrong\x20Password\n")%r(DNSVersionBindReq,75,"RAD\x20ANTI-BRUTEFORCE\
+SF:x20PROTECTION\.\.\.\nsrsly,\x20don't\x20bruteforce\x20this,\x20it\x20is
+SF:n't\x20needed\x20and\x20won't\x20work!\x20kthx\.\x20\(sleeptime:\x206\)
+SF:\n")%r(DNSStatusRequest,86,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\.\
+SF:nsrsly,\x20don't\x20bruteforce\x20this,\x20it\x20isn't\x20needed\x20and
+SF:\x20won't\x20work!\x20kthx\.\x20\(sleeptime:\x201\)\ninput\x20password\
+SF:x20:\x20")%r(Help,86,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\.\nsrsly
+SF:,\x20don't\x20bruteforce\x20this,\x20it\x20isn't\x20needed\x20and\x20wo
+SF:n't\x20work!\x20kthx\.\x20\(sleeptime:\x206\)\ninput\x20password\x20:\x
+SF:20")%r(SSLSessionReq,75,"RAD\x20ANTI-BRUTEFORCE\x20PROTECTION\.\.\.\nsr
+SF:sly,\x20don't\x20bruteforce\x20this,\x20it\x20isn't\x20needed\x20and\x2
+SF:0won't\x20work!\x20kthx\.\x20\(sleeptime:\x204\)\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13376-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA3%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,1A8,"\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+SF:\*\*\*\*\*\*\*\*\n\n\*\*\x20\x20\x20\x20\x20DREESE\x20LAB\x20WAITLIST\x
+SF:20SYSTEM\x20\x20\x20\x20\*\*\n\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\nYou're\x20viewing\x20the\x20
+SF:waitlist\x20for\x20FLAG\x201337\.\n-\x20MWF\x208:00AM\x20\(Instructor:\
+SF:x20Diego\x20Zaccai\)\.\x20There\x20are\x207883\x20students\x20on\x20the
+SF:\x20waitlist\.\n\nCommands:\n\tlogin\x20-\x20login\x20as\x20a\x20studen
+SF:t\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off\x20the\x20wai
+SF:tlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\n\tquit\x20-\x
+SF:20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[anon\]>\x20")%
+SF:r(GenericLines,324,"\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\n\*\*\x20\x20\x20\x20\x20DREESE\x20LAB\x2
+SF:0WAITLIST\x20SYSTEM\x20\x20\x20\x20\*\*\n\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+SF:\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\nYou're\x20viewing
+SF:\x20the\x20waitlist\x20for\x20FLAG\x201337\.\n-\x20MWF\x208:00AM\x20\(I
+SF:nstructor:\x20Diego\x20Zaccai\)\.\x20There\x20are\x207883\x20students\x
+SF:20on\x20the\x20waitlist\.\n\nCommands:\n\tlogin\x20-\x20login\x20as\x20
+SF:a\x20student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off\x2
+SF:0the\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\n\t
+SF:quit\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[ano
+SF:n\]>\x20Invalid\x20option\nCommands:\n\tlogin\x20-\x20login\x20as\x20a\
+SF:x20student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off\x20t
+SF:he\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\n\tqu
+SF:it\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[anon\
+SF:]>\x20Invalid\x20option\nCommands:\n\tlogin\x20-\x20login\x20as\x20a\x2
+SF:0student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off\x20the
+SF:\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\n\tquit
+SF:\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[anon\]>
+SF:\x20")%r(GetRequest,324,"\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+SF:\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\n\*\*\x20\x20\x20\x20\x20DREESE\x20L
+SF:AB\x20WAITLIST\x20SYSTEM\x20\x20\x20\x20\*\*\n\n\*\*\*\*\*\*\*\*\*\*\*\
+SF:*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\nYou're\x20vi
+SF:ewing\x20the\x20waitlist\x20for\x20FLAG\x201337\.\n-\x20MWF\x208:00AM\x
+SF:20\(Instructor:\x20Diego\x20Zaccai\)\.\x20There\x20are\x207883\x20stude
+SF:nts\x20on\x20the\x20waitlist\.\n\nCommands:\n\tlogin\x20-\x20login\x20a
+SF:s\x20a\x20student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20o
+SF:ff\x20the\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20ou
+SF:t\n\tquit\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n
+SF:\[anon\]>\x20Invalid\x20option\nCommands:\n\tlogin\x20-\x20login\x20as\
+SF:x20a\x20student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off
+SF:\x20the\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\
+SF:n\tquit\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[
+SF:anon\]>\x20Invalid\x20option\nCommands:\n\tlogin\x20-\x20login\x20as\x2
+SF:0a\x20student\n\tget_off_the_waitlist\x20-\x20try\x20to\x20get\x20off\x
+SF:20the\x20waitlist\x20for\x20the\x20flag\n\tlogout\x20-\x20log\x20out\n\
+SF:tquit\x20-\x20exit\x20the\x20program\n\nEnter\x20your\x20command:\n\[an
+SF:on\]>\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13377-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA3%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,11,"Enter\x20a\x20message:\x20")%r(GenericLines,31,"Enter\x20a\x20m
+SF:essage:\x20Not\x20authenticated\.\nset_me\x20was\x200\n")%r(GetRequest,
+SF:31,"Enter\x20a\x20message:\x20Not\x20authenticated\.\nset_me\x20was\x20
+SF:0\n")%r(HTTPOptions,39,"Enter\x20a\x20message:\x20Not\x20authenticated\
+SF:.\nset_me\x20was\x20221261361\n")%r(RTSPRequest,39,"Enter\x20a\x20messa
+SF:ge:\x20Not\x20authenticated\.\nset_me\x20was\x20221261361\n")%r(RPCChec
+SF:k,11,"Enter\x20a\x20message:\x20")%r(DNSVersionBindReq,11,"Enter\x20a\x
+SF:20message:\x20")%r(DNSStatusRequest,11,"Enter\x20a\x20message:\x20")%r(
+SF:Help,31,"Enter\x20a\x20message:\x20Not\x20authenticated\.\nset_me\x20wa
+SF:s\x200\n")%r(SSLSessionReq,3A,"Enter\x20a\x20message:\x20Not\x20authent
+SF:icated\.\nset_me\x20was\x20-353489734\n")%r(TLSSessionReq,3A,"Enter\x20
+SF:a\x20message:\x20Not\x20authenticated\.\nset_me\x20was\x201684955506\n"
+SF:)%r(Kerberos,38,"Enter\x20a\x20message:\x20Not\x20authenticated\.\nset_
+SF:me\x20was\x2016909218\n")%r(SMBProgNeg,11,"Enter\x20a\x20message:\x20")
+SF:%r(X11Probe,11,"Enter\x20a\x20message:\x20")%r(FourOhFourRequest,39,"En
+SF:ter\x20a\x20message:\x20Not\x20authenticated\.\nset_me\x20was\x20841315
+SF:188\n")%r(LPDString,31,"Enter\x20a\x20message:\x20Not\x20authenticated\
+SF:.\nset_me\x20was\x200\n")%r(LDAPSearchReq,31,"Enter\x20a\x20message:\x2
+SF:0Not\x20authenticated\.\nset_me\x20was\x204\n")%r(LDAPBindReq,11,"Enter
+SF:\x20a\x20message:\x20")%r(SIPOptions,39,"Enter\x20a\x20message:\x20Not\
+SF:x20authenticated\.\nset_me\x20was\x20793790803\n")%r(LANDesk-RC,11,"Ent
+SF:er\x20a\x20message:\x20")%r(TerminalServer,11,"Enter\x20a\x20message:\x
+SF:20")%r(NCP,11,"Enter\x20a\x20message:\x20")%r(NotesRPC,11,"Enter\x20a\x
+SF:20message:\x20")%r(JavaRMI,11,"Enter\x20a\x20message:\x20")%r(WMSReques
+SF:t,11,"Enter\x20a\x20message:\x20")%r(oracle-tns,11,"Enter\x20a\x20messa
+SF:ge:\x20")%r(afp,11,"Enter\x20a\x20message:\x20")%r(giop,11,"Enter\x20a\
+SF:x20message:\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13378-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA3%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,1F,"pls\x20enter\x20ur\x20favorite\x20numbers:\n")%r(GenericLines,3
+SF:D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20enter\x20ur\x20fa
+SF:vorite\x20colors:\n")%r(GetRequest,3D,"pls\x20enter\x20ur\x20favorite\x
+SF:20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(HTTPOptions
+SF:,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20enter\x20ur\x20
+SF:favorite\x20colors:\n")%r(RTSPRequest,3D,"pls\x20enter\x20ur\x20favorit
+SF:e\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(RPCCheck
+SF:,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20enter\x20ur\x20
+SF:favorite\x20colors:\n")%r(DNSVersionBindReq,3D,"pls\x20enter\x20ur\x20f
+SF:avorite\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(DN
+SF:SStatusRequest,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20e
+SF:nter\x20ur\x20favorite\x20colors:\n")%r(Help,3D,"pls\x20enter\x20ur\x20
+SF:favorite\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(S
+SF:SLSessionReq,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20ent
+SF:er\x20ur\x20favorite\x20colors:\n")%r(TLSSessionReq,3D,"pls\x20enter\x2
+SF:0ur\x20favorite\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\
+SF:n")%r(Kerberos,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20e
+SF:nter\x20ur\x20favorite\x20colors:\n")%r(SMBProgNeg,101,"pls\x20enter\x2
+SF:0ur\x20favorite\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\
+SF:nthinking\.\.\.\nha\x20-\x20your\x20responses\x20are\x20secret\x20now!!
+SF:\nmaking\x20your\x20fortune\.\.\.\.\nYou\x20will\x20soon\x20be\x20spend
+SF:ing\x20a\x20lot\x20of\x20time\x20around\x20the\x20same\x20people\.\nplz
+SF:\x20leave\x20a\x20kind\x20message\x20for\x20the\x20creator\x20of\x20thi
+SF:s\x20program:\x20\n")%r(X11Probe,3D,"pls\x20enter\x20ur\x20favorite\x20
+SF:numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(FourOhFourReq
+SF:uest,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20enter\x20ur
+SF:\x20favorite\x20colors:\n")%r(LPDString,3D,"pls\x20enter\x20ur\x20favor
+SF:ite\x20numbers:\npls\x20enter\x20ur\x20favorite\x20colors:\n")%r(LDAPSe
+SF:archReq,3D,"pls\x20enter\x20ur\x20favorite\x20numbers:\npls\x20enter\x2
+SF:0ur\x20favorite\x20colors:\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port13379-TCP:V=7.60%I=7%D=3/28%Time=5E7F8BA3%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,1C,"Hi,\x20please\x20enter\x20your\x20name:\n")%r(GenericLines,1C,"
+SF:Hi,\x20please\x20enter\x20your\x20name:\n")%r(GetRequest,2C,"Hi,\x20ple
+SF:ase\x20enter\x20your\x20name:\nHi,\x20GET\nGoodbye\n")%r(HTTPOptions,30
+SF:,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20OPTIONS\nGoodbye\n")%
+SF:r(RTSPRequest,30,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20OPTIO
+SF:NS\nGoodbye\n")%r(RPCCheck,1C,"Hi,\x20please\x20enter\x20your\x20name:\
+SF:n")%r(DNSVersionBindReq,1C,"Hi,\x20please\x20enter\x20your\x20name:\n")
+SF:%r(DNSStatusRequest,29,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x2
+SF:0\nGoodbye\n")%r(Help,2D,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\
+SF:x20HELP\nGoodbye\n")%r(SSLSessionReq,2B,"Hi,\x20please\x20enter\x20your
+SF:\x20name:\nHi,\x20\x16\x03\nGoodbye\n")%r(TLSSessionReq,2B,"Hi,\x20plea
+SF:se\x20enter\x20your\x20name:\nHi,\x20\x16\x03\nGoodbye\n")%r(Kerberos,2
+SF:9,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20\nGoodbye\n")%r(SMBP
+SF:rogNeg,29,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20\nGoodbye\n"
+SF:)%r(X11Probe,2A,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20l\nGoo
+SF:dbye\n")%r(FourOhFourRequest,2C,"Hi,\x20please\x20enter\x20your\x20name
+SF::\nHi,\x20GET\nGoodbye\n")%r(LPDString,31,"Hi,\x20please\x20enter\x20yo
+SF:ur\x20name:\nHi,\x20\x01default\nGoodbye\n")%r(LDAPSearchReq,2B,"Hi,\x2
+SF:0please\x20enter\x20your\x20name:\nHi,\x200\x84\nGoodbye\n")%r(LDAPBind
+SF:Req,2A,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x200\nGoodbye\n")%
+SF:r(SIPOptions,30,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20OPTION
+SF:S\nGoodbye\n")%r(LANDesk-RC,1C,"Hi,\x20please\x20enter\x20your\x20name:
+SF:\n")%r(TerminalServer,2A,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\
+SF:x20\x03\nGoodbye\n")%r(NCP,1C,"Hi,\x20please\x20enter\x20your\x20name:\
+SF:n")%r(NotesRPC,1C,"Hi,\x20please\x20enter\x20your\x20name:\n")%r(JavaRM
+SF:I,1C,"Hi,\x20please\x20enter\x20your\x20name:\n")%r(WMSRequest,2A,"Hi,\
+SF:x20please\x20enter\x20your\x20name:\nHi,\x20\x01\nGoodbye\n")%r(oracle-
+SF:tns,29,"Hi,\x20please\x20enter\x20your\x20name:\nHi,\x20\nGoodbye\n")%r
+SF:(afp,1C,"Hi,\x20please\x20enter\x20your\x20name:\n");
+Service Info: Host: 172.17.0.7
+
+NSE: Script Post-scanning.
+Initiating NSE at 13:41
+Completed NSE at 13:41, 0.00s elapsed
+Initiating NSE at 13:41
+Completed NSE at 13:41, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 152.56 seconds
