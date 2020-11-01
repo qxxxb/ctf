@@ -18,6 +18,6 @@ class Wheel:
         return yaml.dump(self.__dict__)
 ```
 
-Using a similar approach describe
+Using a similar approach described
 [here](https://www.kevinlondon.com/2015/08/15/dangerous-python-functions-pt2.html),
 I wrote an exploit in [yoink.py](yoink.py).
