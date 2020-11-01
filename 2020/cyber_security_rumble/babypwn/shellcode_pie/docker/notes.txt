@@ -1,0 +1,6 @@
+Even with PIE enabled, the addresses always look the same.
+
+Idea:
+- Grab the address from r12
+- Put it into rdi (or whatever the param is)
+- Call `puts`

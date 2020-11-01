@@ -1,0 +1,32 @@
+/uploads/HQBoNv5iknmziqEjpenA.png?
+lang=en&
+ref=website&
+pd=858ed669528c98adcbdf22dc3c3d319c&
+u=5f9f014c4f54a&
+client=ql3uv0jmi9not2mn1bul1ia9v6&
+method=direct&t=1604256076
+
+Change filetype to `htm`
+
+http://chal.cybersecurityrumble.de:7667/uploads/kUtKCFpFlfcYV4ZMZqXP.htm?
+lang=en&
+ref=website&
+pd=7ee0295d8fbc3f2b7da6bd060d27a97c&
+u=5f9f0bf90a516&
+client=mm1srtds0004fkn8o4esaolgr4&
+method=direct&
+t=1604258809
+
+client is the PHPSessionID!
+
+http://web/uploads/kUtKCFpFlfcYV4ZMZqXP.htm?
+lang=en&
+ref=website&
+pd=673e4a8d240d0ba0a0cdb3db6ec8af65&
+u=5f9f0cce4332e&
+client=pybu3zheoyeupyzgodcrxf7oqc&
+method=direct&
+t=1604259022
+
+Set PHP session ID to pybu3zheoyeupyzgodcrxf7oqc
+CSR{N1C3_4ND-E4ZY-W4snT-1T?-:)}
