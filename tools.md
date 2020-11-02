@@ -5,6 +5,9 @@
 ### `gdb`
 - See [tools/gdb.md](tools/gdb.md)
 
+### [pwntools]
+Library for exploit development.
+
 ## Forensics
 
 ### `file`
@@ -60,6 +63,9 @@ Network exploration tool and security / port scanner
     - `-Pn`: Treat all hosts as online
     - `-p13370-13380`: Scan ports in range `13370` to `13380`
 
+### [requests]
+Library for using HTTP requests. Good for developing exploit scripts.
+
 ### [nikto]
 Web server scanner which performs comprehensive tests against web servers for
 multiple items:
@@ -80,12 +86,14 @@ Automates the process of detecting and exploiting SQL injection flaws and
 taking over of database servers.
 
 ### [GitTools]
-A repository with 3 tools for pwning websites with `.git` repositories available
+A repository with 3 tools for websites with `.git` repositories available.
 
+[pwntools]: https://github.com/Gallopsled/pwntools
 [Wireshark]: https://www.wireshark.org/
 [ghidra]: https://ghidra-sre.org/
 [fernflower]: https://github.com/fesh0r/fernflower
 [nmap]: https://nmap.org/
+[requests]: https://github.com/psf/requests
 [nikto]: https://github.com/sullo/nikto
 [GitTools]: https://github.com/internetwache/GitTools
 [metasploit]: https://www.metasploit.com/

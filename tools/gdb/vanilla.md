@@ -68,7 +68,8 @@
   - Prints info on the current frame when run without arguments
 
 - `i f` (`info frame`)
-  - Print info on stack frame
+  - Print info on stack frame. This is useful for finding the return address in
+    stack smashing.
 
 - `i r` (`info register`)
   - Print info on registers
