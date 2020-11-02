@@ -56,7 +56,7 @@ Note this line: `var api = require('./api')`
 The `require` function looks very interesting. If I can `require` the `fs`
 module and call `readdirSync`, then I could figure out where the flag is.
 Unfortunately, it returns a Promise object. I spent a few hours trying to figure
-out how to resolve a promise synchronously and it eventually realized that I
+out how to resolve a promise synchronously and I eventually realized that it
 was probably impossible. JS is stupid.
 
 Finally, I tried to an exploit that did not require synchronous execution.
