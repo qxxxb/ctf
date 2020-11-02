@@ -12,7 +12,7 @@ uninitialized. How can we set their values?
 Since nothing cleans up the stack when you enter and leave functions, the values
 that you set on the stack will stay there until they are assigned to.
 
-Using this train of though, we can probably assign to `passcode1` and
+Using this train of thought, we can probably assign to `passcode1` and
 `passcode2` if we populate values on the stack and leave them there.
 
 Conveniently, we have a `name` string in `welcome()` that allows us to do just
