@@ -8,7 +8,7 @@ from the author.
 At first glance, this looks like an XSS challenge. However, the weird thing is
 the `object` tag.
 
-If we try to send JS in an fake PNG, it doesn't execute, which was where I got
+If we try to send JS in a fake PNG, it doesn't execute, which was where I got
 stuck.
 
 But it turns out that you can change the file type from the selector.
