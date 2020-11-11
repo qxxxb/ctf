@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <dict>
+      <key>URL</key>
+      <string>https://device-registration.web.2020.sunshinectf.org/udid/verify</string>
+      <key>DeviceAttributes</key>
+      <array>
+        <string>UDID</string>
+        <string>PRODUCT</string>
+      </array>
+    </dict>
+    <key>PayloadOrganization</key>
+    <string>TotallyNotASmugglingRing</string>
+    <key>PayloadDisplayName</key>
+    <string>Device Registration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadUUID</key>
+    <string>2fe6ebd9-a281-4d46-8094-9468b6d6e701</string>
+    <key>PayloadIdentifier</key>
+    <string>sunshinectf.udid</string>
+    <key>PayloadDescription</key>
+    <string>This configuration is a device enrollment challenge that verifies your device using its UDID and model name.</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
+  </dict>
+</plist>
