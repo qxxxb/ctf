@@ -190,17 +190,20 @@ fn check_email(char* email, char* license):
 01E2.0000: XOR     RV, 0xC0
 01E6.0000: BRA.NE  RD, RA
 
-01E8.0000: MOV     R5, R4 ; R5 = start
-01EA.0000: MOV     R7, ZERO ; R7 = 0
-01EC.0000: AND     RV, R7, 0x7 ; RV = 0x7 ; Loop dest
-01F1.0000: ADD     RV, R3 ; RV = R3 + 0x7
-01F3.0000: LDB     R4, [R5] ; R4 = buf[0]
-01F5.0000: LDB     TMP, [RV] ; TMP = buf[0x7]
-01F7.0000: ADD     TMP, R4 ; TMP = buf[0x7] + 0xfae2
-01F9.0000: STB     [RV], TMP ; buf[0x7] = buf[0x7] + 0xfae2
-01FB.0000: INC     R5, 1 ; R5 = &buf[1]
-01FD.0000: INC     R7, 1 ; R7 = 1
-01FF.0000: CMP     R5,  R6 ; if r5 `<=` r6: loop
+; R3 = &license[0]
+; R4 = &email[0]
+; R6 = &email[28]
+01E8.0000: MOV     R5, R4                       ; R5 = &email[0]
+01EA.0000: MOV     R7, ZERO                     ; R7 = 0
+01EC.0000: AND     RV, R7, 0x7                  ; RV = R7 & 0x7 (highest bit)
+01F1.0000: ADD     RV, R3 ; RV = R3 + 0x7       ; RV += R3
+01F3.0000: LDB     R4, [R5]                     ; R4 = *R5
+01F5.0000: LDB     TMP, [RV]                    ; TMP = *RV
+01F7.0000: ADD     TMP, R4                      ; TMP += R4
+01F9.0000: STB     [RV], TMP                    ; *RV = TMP
+01FB.0000: INC     R5, 1                        ; R5++
+01FD.0000: INC     R7, 1                        ; R7++
+01FF.0000: CMP     R5,  R6                      ; if R5 > R6: break
 0201.0000: BRR.LE  0xFFE8
 
 0204.0000: MOV     RV, ZERO
@@ -251,3 +254,19 @@ fn check_license_key:
 0262.0000: BRR     0xFFB5 ; Jump back to the start of the function
 0265.0000: MOV     RV, 0x1 ; We want to get here
 0269.0000: BRA     RD, RA ; RET
+
+$ hexdump r 0xfac4 60
+fac4: 0000 0000 0000 0000 ebc1 ebc1 ebc1 ebc1  ................
+fad4: ebc1 ebc1 ebc1 ebc1 ebc1 ebc1 eb00 3980  ................
+fae4: 8080 8080 8080 8080 8080 f2f2 f2f2 f2f2  ................
+faf4: f2f2 f2c0 f0e5 e7ae e5e1 7200            ..........r.
+
+Post scramble
+$ hexdump r 0xfac4 60
+fac4: 672e 6561 f2c0 f0e5 ebc1 ebc1 ebc1 ebc1  g.ea............
+fad4: ebc1 ebc1 ebc1 ebc1 ebc1 ebc1 eb00 8080  ................
+fae4: 8080 8080 8080 8080 8080 8080 8080 8080  ................
+faf4: 8080 80c0 f0e5 e7ae e5e1 7200            ..........r.
+
+Expect 0, got:
+ce5c cac2 e480 e0ca

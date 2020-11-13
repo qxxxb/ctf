@@ -1,7 +1,3 @@
-import pwn
-import sys
-
-
 def parse_hexdump(hexdump):
     ans = bytearray()
     for line in hexdump.splitlines():
@@ -37,15 +33,15 @@ def hexdump(stack, addr=0x0, addr_max_width=4):
 
 
 def scramble(stack):
-    license = 0  # R3 = &license[0]
-    email = 30  # R4 = &email[0]
-    email_tail = 30 + 28  # R6 = &email[28]
+    license = 0  # &license[0]
+    email = 30  # &email[0]
+    email_tail = 30 + 28  # &email[28]
 
-    email_i = email  # R5
-    license_i = 0  # R7
+    email_i = email
+    license_i = 0
     while True:
         # 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, ...
-        RV = license + (license_i & 0b111)
+        RV = license + (license_i & 0b11)
 
         # email[0], email[1], email[2], ... , email[28]
         email = stack[email_i]
@@ -60,7 +56,7 @@ def scramble(stack):
 def measure(stack):
     ans = [0] * 8
     for i in range(0, 8):
-        ans[i] = 0x100 - stack[i]
+        ans[i] = stack[i] - 0
     return ans
 
 
@@ -96,12 +92,12 @@ email[-7] = 0xe5
 email[-8] = 0xf0
 email[-9] = 0xc0
 
-with open('dump', 'r') as f:
+with open('stack', 'r') as f:
     s = f.read()
     stack = parse_hexdump(s)
     hexdump(stack, addr=0xfac4)
-    print()
     scramble(stack)
+    print()
     hexdump(stack, addr=0xfac4)
     print()
     diffs = measure(stack)
@@ -112,38 +108,3 @@ with open('dump', 'r') as f:
     print()
     print("New email:")
     hexdump(email)
-
-license = b''.join(license)
-
-if len(sys.argv) > 1:
-    # Only do the IO stuff if we run with args
-
-    with open('payload', 'w') as f:
-        f.write("b 0x0204\n")
-        f.write("c\n")
-
-    with open('payload', 'ab') as f:
-        f.write(email + license)
-
-    if sys.argv[1] == 'r':
-        p = pwn.remote('chal.2020.sunshinectf.org', port=10001)
-    else:
-        p = pwn.process(
-            './runpeg -p peg_rev_checker.so LicenseChecker.peg -d',
-            shell=True
-        )
-
-        p.recvuntil('EAR debugger')
-        p.sendline('')
-        p.recvuntil('(dbg) ')
-
-        p.sendline('b 0x01E8')
-        p.sendline('c')
-
-    p.recvuntil('Email: ')
-    p.send(email)
-
-    p.recvuntil('License key: ')
-    p.send(license)
-
-    p.interactive()
