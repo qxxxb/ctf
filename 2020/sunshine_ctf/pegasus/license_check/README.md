@@ -39,6 +39,10 @@ void main() {
     puts("Email: ");
     char email[30];
     gets(&email);
+
+    // Note: The challenge author later pointed out to me that it's actually
+    // strlen(email) <= 30
+
     if (strlen(email) != 30) exit(1);
 
     puts("License key: ");
@@ -460,5 +464,29 @@ New email:
 [*] Closed connection to chal.2020.sunshinectf.org port 10001
 sun{wh47_15_7h15,_4RM_bu7_w17h_v4rl3n_1n57ruc710n5?}
 ```
+
+---
+
+## Additional notes:
+
+I talked to the challenge author after posting this write-up and it turns out I
+made this problem a lot more difficult than it probably should've been.
+
+First of all, the emails and license keys only need to be *up to* 30
+bytes, not exactly 30 bytes.
+
+Secondly, if I had read the [PEGASUS.md](../PEGASUS.md) document more
+carefully, I would've noticed that it described a type called `lestring` which
+was exactly the format used by `gets()`.
+
+Finally, the `LicenseChecker.peg` actually came with symbols so I could've been
+able to see function names and other good stuff, which would've made
+disassembling easier. This also would have allowed me to notice that the
+`check_license_key` function is actually named `decode_b16` which does the
+following:
+
+> If you notice, it's overwriting bytes in the license key as it loops through.
+> That function is effectively decoding a string from hexadecimal to bytes,
+> except instead of using 0-9a-f for the hex characters I decided to use k-zA-P
 
 [PEGASUS]: https://github.com/kjcolley7/PEGASUS
