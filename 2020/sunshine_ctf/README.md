@@ -7,6 +7,6 @@
 ![rank](rank.png)
 
 ## Solves
+- [License Check](pegasus/license_check/)
 - [Speedrun series](speedrun/)
 - [Hotel Door Puzzle](hotel/)
-- [License Check](pegasus/license_check/)

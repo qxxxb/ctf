@@ -6,6 +6,7 @@ Write-ups for some CTF challenges.
 
 ### Reverse Engineering
 - [2020/osu-ctf-spring/reverse_engineering/validator](2020/osu-ctf-spring/reverse_engineering/validator)
+- [2020/sunshine_ctf/pegasus/license_check](2020/sunshine_ctf/pegasus/license_check)
 - [2020/osu-ctf-autumn/authbot](2020/osu-ctf-autumn/authbot)
 
 ### Cryptography
@@ -13,6 +14,7 @@ Write-ups for some CTF challenges.
 
 ### Binary Exploitation
 - [2020/cyber_security_rumble/babypwn](2020/cyber_security_rumble/babypwn)
+- [2020/sunshine_ctf/speedrun](2020/sunshine_ctf/speedrun)
 - [2020/osu-ctf-autumn/right_address](2020/osu-ctf-autumn/right_address)
 
 ### Web Exploitation
