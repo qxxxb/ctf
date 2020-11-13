@@ -5,8 +5,8 @@
 **Points**: 200
 
 I started working on this problem at 12 AM but unfortunately wasn't able to
-solve it by 9 AM, which was when the CTF ended. I was eventually able solve it
-after asking some questions on the CTF Discord.
+solve it by 9 AM, which was when the CTF ended. Luckily I was eventually able
+solve it after asking some questions on the CTF Discord.
 
 For this problem, I started by running the executable:
 ```
@@ -29,8 +29,8 @@ Options:
     -v, --verbose   Enable verbose mode for EAR emulator
 ```
 
-Running it in debug mode gives me gdb-like program where I can step through the
-program, set breakpoints, dump memory, and most importantly, disassemble
+Running it in debug mode gives me a gdb-like program where I can step through
+instructions, set breakpoints, dump memory, and most importantly, disassemble
 instructions.
 
 After [annotating the assembly](../notes.md), I had this pseudocode:
@@ -210,7 +210,7 @@ contained non-printable characters, copy-pasting my payloads into the debugger
 was no longer an option. There also didn't seem to be any mechanism for piping
 input from a file into the debugger. Because of this, I tried to write some
 Python to replicate the behavior of the two blocks so that I could do some
-reversing from there. Unfortunately, due several misread instructions and
+reversing from there. Unfortunately, due to several misread instructions and
 programming errors, I wasn't able to get it to work.
 
 After posting a few questions on the CTF Discord, I was told that I could use
@@ -220,8 +220,8 @@ errors in my Python code.
 
 I gave this challenge another shot a few days later and was finally able to
 write a working Python script that emulated the first block of the
-`check_email` function. I also found that `bytearray` instead of string of raw
-bytes made it much easier to work with in Python.
+`check_email` function. I also found that using `bytearray` instead of a string
+of raw bytes made it much easier to work with in Python.
 ```python
 def scramble(stack):
     license = 0  # R3 = &license[0]
@@ -250,7 +250,7 @@ key. The goal was to ensure that all 8 bytes in the license key were zero, so I
 decided to try an arbitrary payload, record the result, and try to tweak it so
 that we could gets zeros in the first 8 bytes of the license key.
 
-I chose to use the same payloads I used previously:
+I chose the same payloads I used previously:
 ```python
 email = bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc0\xf0\xe5\xe7\xae\xe5\xe1r\n')
 license_key = b'kAkAkAkAkAkAkAkAkAkAkAkAkAkAkA'
@@ -271,7 +271,7 @@ Focusing on the first byte, we can see that its value is `0x67`. We can set this
 to zero by adding `0x99` because `0x67 + 0x99 = 0x100` and we only care about
 the first byte: `0x00`.
 
-Since the first byte of the email (currenlty `0x80`) is added to `0x67`, we can
+Since the first byte of the email (currently `0x80`) is added to `0x67`, we can
 increment it by `0x99` which gives us `0x80 + 0x99 = 0x119`. However, `0x119` is
 too big to fit in one byte. To resolve this, we can split it across the first
 and eighth bytes, which both get added to the first byte of the license key. So
