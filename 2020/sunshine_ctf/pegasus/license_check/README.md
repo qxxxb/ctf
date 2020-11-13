@@ -161,11 +161,11 @@ So if the last char is a newline character, then we just set the 2nd to last
 character (without getting OR'd with `0x80`!) and return.
 
 Going back to `check_email`, this means that `[R5]` will be pointing to the
-character before the newline character since it's highest bit isn't set. The
+character before the newline character since its highest bit isn't set. The
 char corresponding to `0x72` is `r`, so that must be the character before the
 newline.
 
-After reversing the a few more liens, I had this potential email payload, where
+After reversing the a few more lines, I had this potential email payload, where
 the `\x00`s represented unknown characters:
 ```python
 email = bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc0\xf0\xe5\xe7\xae\xe5\xe1r\n')
