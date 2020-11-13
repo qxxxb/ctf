@@ -33,7 +33,7 @@ Running it in debug mode gives me gdb-like program where I can step through the
 program, set breakpoints, dump memory, and most importantly, disassemble
 instructions.
 
-After [annotating the assembly](notes.md), I had this pseudocode:
+After [annotating the assembly](../notes.md), I had this pseudocode:
 ```c
 void main() {
     puts("Email: ");
