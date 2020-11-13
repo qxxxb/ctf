@@ -44,7 +44,7 @@ def scramble(stack):
     email_i = email  # R5
     license_i = 0  # R7
     while True:
-        # 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, ...
+        # license_i: 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, ...
         RV = license + (license_i & 0b111)
 
         # email[0], email[1], email[2], ... , email[28]
@@ -57,7 +57,9 @@ def scramble(stack):
             break
 
 
-def measure(stack):
+def measure_diffs(stack):
+    # Measure the differences required to make the first 8 bytes of the license
+    # key zero
     ans = [0] * 8
     for i in range(0, 8):
         ans[i] = 0x100 - stack[i]
@@ -65,6 +67,7 @@ def measure(stack):
 
 
 def split_diffs(diffs):
+    # Split the differences that exceed the size of one byte
     ans = []
     for i, diff in enumerate(diffs):
         fixes = []
@@ -78,7 +81,8 @@ def split_diffs(diffs):
     return ans
 
 
-def apply_fixes(email, fixes):
+def apply_diffs(email, fixes):
+    # Apply the differences among the email bytes
     for i, fix in enumerate(fixes):
         for j, inc in enumerate(fix):
             email[i + (j * 8)] += inc
@@ -99,35 +103,30 @@ email[-9] = 0xc0
 with open('dump', 'r') as f:
     s = f.read()
     stack = parse_hexdump(s)
-    hexdump(stack, addr=0xfac4)
-    print()
+
     scramble(stack)
+    print('Hexdump post-scramble:')
     hexdump(stack, addr=0xfac4)
     print()
-    diffs = measure(stack)
-    print(diffs)
-    fixes = split_diffs(diffs)
-    print(fixes)
-    apply_fixes(email, fixes)
-    print()
+
+    diffs = measure_diffs(stack)
+    diffs = split_diffs(diffs)
+    apply_diffs(email, diffs)
+
     print("New email:")
     hexdump(email)
-
-license = b''.join(license)
+    print()
 
 if len(sys.argv) > 1:
-    # Only do the IO stuff if we run with args
-
-    with open('payload', 'w') as f:
-        f.write("b 0x0204\n")
-        f.write("c\n")
-
-    with open('payload', 'ab') as f:
-        f.write(email + license)
+    # Only do the IO stuff if we run with args (doesn't matter what).
+    # This is so we can test the functions above without intializing pwntools
+    # every time.
 
     if sys.argv[1] == 'r':
+        # Run on remote
         p = pwn.remote('chal.2020.sunshinectf.org', port=10001)
     else:
+        # Debug local process
         p = pwn.process(
             './runpeg -p peg_rev_checker.so LicenseChecker.peg -d',
             shell=True
@@ -144,6 +143,10 @@ if len(sys.argv) > 1:
     p.send(email)
 
     p.recvuntil('License key: ')
+    license = b''.join(license)
     p.send(license)
 
-    p.interactive()
+    if sys.argv[1] == 'r':
+        print(p.recvall(timeout=2).decode())
+    else:
+        p.interactive()

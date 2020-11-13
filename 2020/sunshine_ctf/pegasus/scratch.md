@@ -7,6 +7,7 @@ Finally the license key works!
 rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrkAkAkAkAkAkAkAkAkAkAkAkAkAkAkA
 
 rrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+pancakes_dont_taste_bad_maybe
 rrrrrrrrrrrrrrrrrrrrrrrrrråár
 kAkAkAkAkAkAkAkAkAkAkAkAkAkAkA
 
