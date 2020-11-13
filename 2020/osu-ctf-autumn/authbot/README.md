@@ -12,6 +12,8 @@ In particular, the `$auth` command seems to require a password.  Another
 interesting command is `$info`, which will send a link to a GitHub of the bot's
 [source code](https://github.com/qxxxb/auth_bot).
 
+Looking through the source code, you'll notice a command that isn't mentioned
+in `$help`: `$debug_log`. Running this gives us:
 ```
 2020-10-23 23:39:08 INFO     Logged in as authbot#4452
 2020-10-23 23:39:13 DEBUG    User ath0#0294 authed as admin with password hash c023d5796452ad1d80263a05d11dc2a42b8c19c5d7c88c0e84ae3731b73a3d34
