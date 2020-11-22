@@ -1,0 +1,146 @@
+alice_seed:
+0xad79c5ff8f0a05015765107df0f0c919
+0b10101101011110011100010111111111100011110000101000000101000000010101011101100101000100000111110111110000111100001100100100011001
+
+get_bit(alice_seed, 12) == 0
+get_bit(guess, 12) == 1
+
+orig_n_iters = 330
+bit_n_iters[12] = 536
+
+flip = jump_key(0b100011001, 330 * 2)
+payload = base64.b64encode(long_to_bytes(flip))
+sh.sendline(payload)
+output = sh.recvuntilS('bit-flip str:')
+n_iters = int(gen_regex.search(output).group(1))
+
+flip = jump_key(0b100011001, 331 * 2)
+payload = base64.b64encode(long_to_bytes(flip))
+sh.sendline(payload)
+output = sh.recvuntilS('bit-flip str:')
+n_iters = int(gen_regex.search(output).group(1))
+
+flip = 0b100100011001 ^ 0b111111111110
+payload = base64.b64encode(long_to_bytes(flip))
+sh.sendline(payload)
+output = sh.recvuntilS('bit-flip str:')
+n_iters = int(gen_regex.search(output).group(1))
+print(n_iters)
+
+flip = 0b100100011001 ^ 0b000000000000
+flip |= 0b1000000000000
+payload = base64.b64encode(long_to_bytes(flip))
+sh.sendline(payload)
+output = sh.recvuntilS('bit-flip str:')
+n_iters = int(gen_regex.search(output).group(1))
+print(n_iters)
+
+def send(flip):
+    payload = base64.b64encode(long_to_bytes(flip))
+    sh.sendline(payload)
+    output = sh.recvuntilS('bit-flip str:')
+    n_iters = int(gen_regex.search(output).group(1))
+    print(n_iters)
+
+send(0b0) == 330
+send(0b10) == 329
+
+0x
+
+send(0b1) == 106
+send(0b11) == 105
+send(0b101) == 104
+send(0b1001) == 110
+
+00
+
+However, we dn't know the 0s and 1s bit
+
+................................................................................................................................
+No match:  0
+No match:  12
+No match:  13
+No match:  15
+No match:  20
+No match:  23
+No match:  26
+No match:  29
+No match:  36
+No match:  40
+No match:  42
+No match:  43
+No match:  44
+No match:  46
+No match:  50
+No match:  51
+No match:  52
+No match:  53
+No match:  56
+No match:  57
+No match:  58
+No match:  59
+No match:  62
+No match:  63
+No match:  64
+No match:  65
+No match:  66
+No match:  67
+No match:  70
+No match:  75
+No match:  79
+No match:  80
+No match:  81
+No match:  82
+No match:  89
+No match:  90
+No match:  91
+No match:  92
+No match:  95
+No match:  97
+No match:  98
+No match:  103
+No match:  106
+No match:  107
+No match:  109
+No match:  111
+No match:  115
+No match:  116
+No match:  117
+No match:  118
+No match:  119
+No match:  121
+No match:  122
+No match:  123
+No match:  124
+No match:  126
+No match:  127
+
+# TODO: OBOB Strategy
+# flip = guess ^ 0b11110
+# x = send(flip)
+# flip = guess | 0b100000
+# y = send(flip)
+# if x > y: something, idk yet
+
+# TODO:
+# The 0th bit is unknown right now
+# In order to utilitize the OBOB strategy, we need to know it
+# This can probably be easily done by comparing send(1) and send(3)
+
+# guess = 0
+# for i in range(0, 128):
+#     n_iters = bit_n_iters[i]
+#     if n_iters > orig_n_iters:
+#         guess = set_bit(guess, i)
+
+
+# # Check guess
+# # Currently correctly guesses the first 10 bits or so
+# for i in range(0, 128):
+#     if get_bit(guess, i) != get_bit(alice_seed, i):
+#         print('No match: ', i)
+
+def unset_bit(n, pos):
+    return n & ~(1 << pos)
+
+

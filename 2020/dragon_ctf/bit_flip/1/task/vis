@@ -1,0 +1,25 @@
+alice_seed = 16 bytes = 128 bits
+flip_str = 32 bytes = 256 bits
+seed = flip_str ^ alice_seed
+
+prime (generate until found a prime)
+    = rng.getbits(512)
+    = sha256(seed) + sha256(seed + 1)
+    = sha256(seed + 2) + sha256(seed + 3)
+    = sha256(seed + 4) + sha256(seed + 5)
+    = sha256(seed + 6) + sha256(seed + 7)
+    = ...
+    = sha256(seed + x) + sha256(seed + x + 1)
+
+k = upper 64 bits of sha256(seed + x + 2)
+
+Goal: find alice_seed
+Approach:
+    - Flip different bits of `alice_seed`
+    - Observe how it affects the number of candidate primes
+      generated
+    - Use this to determine the values of every bit
+
+Problems:
+    - Determine 0th bit
+    - Only works for first 10 bits or so
