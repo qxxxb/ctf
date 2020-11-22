@@ -21,24 +21,24 @@ To understand the crypto used in this problem, I first read
 [this tutorial](https://martin.kleppmann.com/papers/curve25519.pdf)
 up to section 2.4.
 
-This program uses Diffie-Hellman and the $\mathbb{Z}_p^*$ group where:
-- $g = 5$
-- $k$ (`alice.my_secret`) is random but determined by our input seed
-- $j$ (`bob.my_secret`) is random
-- $g^j$ (`bob.my_number`) is given to us by the server (removed in Bit Flip 2)
+This program uses Diffie-Hellman on the multiplicative group where:
+- `g = 5`
+- `k` (`alice.my_secret`) is random but determined by our input seed
+- `j` (`bob.my_secret`) is random
+- `g^j` (`bob.my_number`) is given to us by the server (removed in Bit Flip 2)
 
 Therefore our goals are:
-- Find $g^{jk}$ (`alice.shared`), the shared symmetric key used to encrypt the flag
-- We know $g^j$ so we can compute $(g^j)^k$ if we know $k$
-- $k$ is determined by `alice_seed` (random) XOR'd with our input
-- If we find `alice_seed`, then we can find $k$
+- Find `g^{jk}` (`alice.shared`), the shared symmetric key used to encrypt the flag
+- We know `g^j$ so we can compute $(g^j)^k$ if we know $k`
+- `k` is determined by `alice_seed` (random) XOR'd with our input
+- If we find `alice_seed`, then we can find `k`
 
 On each iteration of the program, we are told how many iterations were required
-to generate $p$. This is almost like
+to generate `p`. This is almost like
 [this approach](https://crypto.stackexchange.com/a/1971)
-but not quite—the seed for the `Rng` is incremented, not $p$ itself.
+but not quite—the seed for the `Rng` is incremented, not `p` itself.
 
-Here is an overview of how $p$ is determined:
+Here is an overview of how `p` is determined:
 ```
 alice_seed = 16 bytes = 128 bits
 flip_str = 32 bytes = 256 bits
@@ -53,7 +53,7 @@ prime (generate until found a prime)
     = sha256(seed + x) + sha256(seed + x + 1)
 ```
 
-We are told the number of iterations to find $p$. We can use this information
+We are told the number of iterations to find `p`. We can use this information
 to determine every bit of `alice_seed` except the LSB bit. For example, let's
 say we want to find the 5th bit (where the LSB is the 0th bit). Assume that we
 know bits 0 through 4.
@@ -80,7 +80,7 @@ We can send `guess | 10000` to make our seed look like how we want. We then
 record the reported number of iterations in `y_n_iters`.
 
 Next we check if `x_n_iters == y_n_iters + 1` (see the pseudocode above
-explaining how $p$ is generated to understand why this is so). If this is true,
+explaining how `p` is generated to understand why this is so). If this is true,
 then we know `x` is 0. Otherwise, `x` is 1.
 
 We can do this for bits 1 through 127. The LSB is unknown, so we have two
@@ -88,7 +88,7 @@ guesses for `alice_seed`.
 
 Now that we have `alice_seed`, the rest is fairly straightforward. Using the
 code provided with the challenge, we just create `alice` using our guessed seed
-to determine $k$. Then we calculate $(g^j)^k$ to determine the shared symmetric
+to determine `k`. Then we calculate `(g^j)^k` to determine the shared symmetric
 key and use that to decrypt the flag!
 
 Script:
