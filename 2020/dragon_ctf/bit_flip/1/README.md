@@ -10,7 +10,7 @@ Flip bits and decrypt communication between Bob and Alice.
 
 `nc bitflip1.hackable.software 1337`
 
-Given [task.tgx](task.tgz)
+Given [task.tgz](task.tgz)
 
 ## Solution
 
