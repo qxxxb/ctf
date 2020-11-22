@@ -29,7 +29,7 @@ This program uses Diffie-Hellman on the multiplicative group where:
 
 Therefore our goals are:
 - Find `g^{jk}` (`alice.shared`), the shared symmetric key used to encrypt the flag
-- We know `g^j$ so we can compute $(g^j)^k$ if we know $k`
+- We know `g^j` so we can compute `(g^j)^k` if we know `k`
 - `k` is determined by `alice_seed` (random) XOR'd with our input
 - If we find `alice_seed`, then we can find `k`
 
