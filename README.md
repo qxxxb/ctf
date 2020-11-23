@@ -32,7 +32,7 @@ Write-ups for some CTF challenges.
 
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
-[Cyber Security Rumble 2020]: 2020/cyber_security_rumble/j
+[Cyber Security Rumble 2020]: 2020/cyber_security_rumble/
 [Sunshine CTF 2020]: 2020/sunshine_ctf/
 [Affinity CTF Lite 2020]: 2020/affinity_ctf_lite/
 [Dragon CTF 2020]: 2020/dragon_ctf/
