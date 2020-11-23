@@ -112,7 +112,6 @@ for i in range(1, 128):
 
     # 3 2 1 0
     # x 0 0 0
-    mask = set_bit(0, i)
     flip = guess | set_bit(0, i)
     (y_n_iters, y_seed) = send(flip)
 

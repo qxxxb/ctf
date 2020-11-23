@@ -65,7 +65,7 @@ find:
 ```
 
 Since we know the first four bits stored in `guess`, we can accomplish this by
-sending `guess ^ 0b1111`, assuming `guess` matches `alice_seed`. We then record
+sending `guess ^ 0b1110`, assuming `guess` matches `alice_seed`. We then record
 the reported number of iterations in `x_n_iters`.
 
 Next we want to make our seed look like this:
@@ -207,7 +207,6 @@ for i in range(1, 128):
 
     # 3 2 1 0
     # x 0 0 0
-    mask = set_bit(0, i)
     flip = guess | set_bit(0, i)
     (y_n_iters, y_seed) = send(flip)
 
