@@ -76,7 +76,7 @@ Next we want to make our seed look like this:
 If `x == 0`, then our seed will be `10000`, which is two larger than the seed we just sent. \
 If `x == 1`, then our seed will be `00000`, which is much lower than the seed we just sent.
 
-We can send `guess | 10000` to make our seed look like how we want. We then
+We can send `guess | 0b10000` to make our seed look like how we want. We then
 record the reported number of iterations in `y_n_iters`.
 
 Next we check if `x_n_iters == y_n_iters + 1` (see the pseudocode above
