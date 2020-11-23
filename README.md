@@ -14,13 +14,13 @@ Write-ups for some CTF challenges.
 - [Cookie Monster Part 1](2020/osu-ctf-autumn/cookie_monster/1) from [OSU CTF Autumn 2020]
 
 ### Binary Exploitation
-- [babypwn](2020/cyber_security_rumble/babypwn) from [Cybersecurity Rumble 2020]
+- [babypwn](2020/cyber_security_rumble/babypwn) from [Cyber Security Rumble 2020]
 - [speedrun series](2020/sunshine_ctf/speedrun) from [Sunshine CTF 2020]
 - [Right address](2020/osu-ctf-autumn/right_address) from [OSU CTF Autumn 2020]
 
 ### Web Exploitation
-- [CSRegex](2020/cyber_security_rumble/csregex) from [Cybersecurity Rumble 2020]
-- [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels/) from [Cybersecurity Rumble 2020]
+- [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
+- [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels/) from [Cyber Security Rumble 2020]
 - [toasted](2020/osu-ctf-autumn/toasted) from [OSU CTF Autumn 2020]
 
 ### Forensics
@@ -32,7 +32,7 @@ Write-ups for some CTF challenges.
 
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
-[Cybersecurity Rumble 2020]: 2020/cyber_security_rumble/j
+[Cyber Security Rumble 2020]: 2020/cyber_security_rumble/j
 [Sunshine CTF 2020]: 2020/sunshine_ctf/
 [Affinity CTF Lite 2020]: 2020/affinity_ctf_lite/
 [Dragon CTF 2020]: 2020/dragon_ctf/
