@@ -20,7 +20,7 @@ Write-ups for some CTF challenges.
 
 ### Web Exploitation
 - [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
-- [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels/) from [Cyber Security Rumble 2020]
+- [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels) from [Cyber Security Rumble 2020]
 - [toasted](2020/osu-ctf-autumn/toasted) from [OSU CTF Autumn 2020]
 
 ### Forensics
@@ -30,9 +30,13 @@ Write-ups for some CTF challenges.
 ### OSINT
 - [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
 
+### Misc
+- [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 202]
+
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
 [Cyber Security Rumble 2020]: 2020/cyber_security_rumble/
 [SunshineCTF 2020]: 2020/sunshine_ctf/
 [Affinity CTF Lite 2020]: 2020/affinity_ctf_lite/
 [Dragon CTF 2020]: 2020/dragon_ctf/
+[HITCON CTF 2020]: 2020/hitcon_ctf/
