@@ -31,7 +31,7 @@ Write-ups for some CTF challenges.
 - [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
 
 ### Misc
-- [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 202]
+- [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
 
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
