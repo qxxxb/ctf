@@ -94,7 +94,7 @@ PID   USER     COMMAND
     1 root     {systemd} /sbin/init
     2 root     [kthreadd]
 ...
-13497 orange   /lib/systemd/systemd --user    <-- We can CTF admins logged in here
+13497 orange   /lib/systemd/systemd --user    <-- CTF admins logged in here
 13509 orange   (sd-pam)
 13671 orange   {screen} SCREEN
 13672 orange   /bin/bash
@@ -169,7 +169,7 @@ when I tried to few different servers, I got this:
 > pwd ; wget 12.345.67.89
 > bad command: pwd ; wget 12.345.67.89       <-- Multiple periods in one command not allowed
 > pwd ; images.google.com
-> bad command: pwd ; wget images.google.com  <-- Mulitple periods
+> bad command: pwd ; wget images.google.com  <-- Multiple periods
 > pwd ; wget google.com/test
 > bad command: pwd ; wget google.com/test    <-- Slash not allowed
 ```
