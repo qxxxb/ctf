@@ -1,6 +1,6 @@
 # HITCON CTF 2020
 
-**Site**: https://hitcon.org/
+**Site**: https://hitcon.org \
 **Rank**: 80 / 710
 
 ## Solves
