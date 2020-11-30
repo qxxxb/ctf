@@ -63,7 +63,7 @@ And these were allowed:
 ; : ( ) = + # % ~
 ```
 
-Also, interestingly enough, commands with more than `.` would fail.
+Also, interestingly enough, commands with more than one `.` would fail.
 
 From this we can see that:
 - We can't easily inspect parent directions because `/` and `..` are blacklisted
