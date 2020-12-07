@@ -83,8 +83,8 @@ The idea goes like this:
 Since sending a single bigram to the server will make it go through
 `S_box` twice, we have to jump over 1 element in the cycle each time.
 - If the cycle has odd length, we can still get to every element in the cycle
-- If the cycle has even length, we can only two halves of the cycle. What can we
-  do?
+- If the cycle has even length, we can only get two halves of the cycle. What
+  can we do?
 
 ![even](imgs/even.png)
 
