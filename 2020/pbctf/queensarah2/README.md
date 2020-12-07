@@ -100,13 +100,13 @@ bad `S_box` then we just close the connection and try again.
 I wrote a semi-working script in [guess.py](guess.py), and during the CTF I just
 let it run in the background. After around 20 minutes it got lucky:
 ```
-atmxovxmydgu_colfvllcxdffczoachaatekepcveppptfirxzhbuinv__'
-merftbsckhmidlylpn_smzjcguxbhgefekgwjypqqkswoeoyl_wwsofbpj'
-brmecffzjpeewxbsispphlygeeetbl_fbwlhmdlqyowkdcejixrrjxkihw'
-slide_attack_still_relevant_for_home_rolled_crypto_systems'
-uwqnnykpzr_jwuieitlkfdsfahuywguoqnaomqhxpriruwnkuxbpbhhuoz'
-a_egexqtpazpvkkodgibwvxi_c_sfcphrthinnjzeglecdggaa_d_vsfvj'
-awqnqrmjmeikmgdjrc_ojviatxtwkmrjajuoi_buewwamyzlqvzuatpihe'
+atmxovxmydgu_colfvllcxdffczoachaatekepcveppptfirxzhbuinv__
+merftbsckhmidlylpn_smzjcguxbhgefekgwjypqqkswoeoyl_wwsofbpj
+brmecffzjpeewxbsispphlygeeetbl_fbwlhmdlqyowkdcejixrrjxkihw
+slide_attack_still_relevant_for_home_rolled_crypto_systems
+uwqnnykpzr_jwuieitlkfdsfahuywguoqnaomqhxpriruwnkuxbpbhhuoz
+a_egexqtpazpvkkodgibwvxi_c_sfcphrthinnjzeglecdggaa_d_vsfvj
+awqnqrmjmeikmgdjrc_ojviatxtwkmrjajuoi_buewwamyzlqvzuatpihe
 
 ...
 
