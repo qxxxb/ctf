@@ -62,7 +62,7 @@ page_form = parse(res.text)
 # What are the options on each page and where do they lead to?
 # The explored graph is stored in here.
 page_to_options = {}
-pages_forms = {0: page_form}  # Form data need to send a request
+pages_forms = {0: page_form}  # Form data needed to send a request
 pages_todo = {0}  # Unexplored pages
 
 # From `FB_PUBLIC_LOAD_DATA_`, we kind of see the structure of the form.
@@ -78,7 +78,7 @@ while len(pages_todo) > 0:
 
     data = pages_forms[page]
     entry_name = 'entry.' + str(data['entry'])
-    # 'entry' is it for ourselves to remember what the ID is. It shouldn't
+    # 'entry' is just for ourselves to remember what the ID is. It shouldn't
     # really be sent along with the form, so we'll just delete it now
     del data['entry']
     data['continue'] = '1'
