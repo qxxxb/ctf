@@ -11,6 +11,7 @@ Write-ups for some CTF challenges.
 
 ### Cryptography
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
+- [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
 - [Cookie Monster Part 1](2020/osu-ctf-autumn/cookie_monster/1) from [OSU CTF Autumn 2020]
 
 ### Binary Exploitation
@@ -32,6 +33,7 @@ Write-ups for some CTF challenges.
 
 ### Misc
 - [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
+- [GCombo](2020/pbctf/gcombo) from [pbctf 2020]
 
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
@@ -40,3 +42,4 @@ Write-ups for some CTF challenges.
 [Affinity CTF Lite 2020]: 2020/affinity_ctf_lite/
 [Dragon CTF 2020]: 2020/dragon_ctf/
 [HITCON CTF 2020]: 2020/hitcon_ctf/
+[pbctf 2020]: 2020/pbctf/
