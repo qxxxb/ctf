@@ -15,6 +15,7 @@ Write-ups for some CTF challenges.
 - [Cookie Monster Part 1](2020/osu-ctf-autumn/cookie_monster/1) from [OSU CTF Autumn 2020]
 
 ### Binary Exploitation
+- [Amazing ROP](2020/pbctf/amazing_rop) from [pbctf 2020]
 - [babypwn](2020/cyber_security_rumble/babypwn) from [Cyber Security Rumble 2020]
 - [speedrun series](2020/sunshine_ctf/speedrun) from [SunshineCTF 2020]
 - [Right address](2020/osu-ctf-autumn/right_address) from [OSU CTF Autumn 2020]
