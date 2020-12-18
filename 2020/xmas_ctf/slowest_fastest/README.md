@@ -30,7 +30,7 @@ P = 118, Q = 134
 v[1] = 91613, a = 71823, c = 30886, mod = 100001
 ```
 
-Solved with Soronbe and stdnoerror.
+Solved with Soronbe and stdnoerr.
 
 Idea is to assign the fastest robots to the busiest rooms on each day.
 
