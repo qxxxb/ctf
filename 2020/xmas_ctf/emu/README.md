@@ -6,6 +6,8 @@
 
 ## Challenge
 
+Solved with NOT_MASTER08.
+
 The EMU 1.0 digitisation project, lead in 2005 by Tahlia E., aimed to
 immortalise the almost forgotten EMU 1.0 architecture's program collection.
 They did not fully succeed, and all their work fell to obscurity, but a naughty
