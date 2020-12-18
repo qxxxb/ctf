@@ -118,7 +118,7 @@ Taking a look at the disassembly we see this:
 ```
 
 The `SERIAL_INCOMING` device returns the number characters that can be read.
-We can see that it loop until more than 3 characters are buffered.
+We can see that it loops until more than 3 characters are buffered.
 Then it reads the first two characters and discards the next two.
 
 Since only two characters are used, we can just bruteforce all possible bigrams
