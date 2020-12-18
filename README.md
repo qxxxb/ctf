@@ -12,6 +12,7 @@ Write-ups for some CTF challenges.
 ### Cryptography
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
+- [Lost List](2020/xmas_ctf/lost_list) from [X-MAS CTF 2020]
 - [Cookie Monster Part 1](2020/osu-ctf-autumn/cookie_monster/1) from [OSU CTF Autumn 2020]
 
 ### Binary Exploitation
@@ -22,17 +23,22 @@ Write-ups for some CTF challenges.
 
 ### Web Exploitation
 - [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
+- [Comfort Bot](2020/xmas_ctf/comfort_bot) from [X-MAS CTF 2020]
 - [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels) from [Cyber Security Rumble 2020]
 - [toasted](2020/osu-ctf-autumn/toasted) from [OSU CTF Autumn 2020]
 
 ### Forensics
+- [The Cat](2020/xmas_ctf/the_cat) from [X-MAS CTF 2020]
 - [Recently watched](2020/osu-ctf-autumn/recently_watched) from [OSU CTF Autumn 2020]
 - [Fibonacci](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Fibonacci) from [Affinity CTF Lite 2020]
 
 ### OSINT
 - [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
+- [Dox the Yak v4](2020/xmas_ctf/dox_the_yak_v4) from [X-MAS CTF 2020]
 
 ### Misc
+- [EMU](2020/xmas_ctf/emu) from [X-MAS CTF 2020]
+- [Santa's Landing Pad](2020/xmas_ctf/santas_landing_pad/) from [X-MAS CTF 2020]
 - [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
 - [GCombo](2020/pbctf/gcombo) from [pbctf 2020]
 
@@ -44,3 +50,4 @@ Write-ups for some CTF challenges.
 [Dragon CTF 2020]: 2020/dragon_ctf/
 [HITCON CTF 2020]: 2020/hitcon_ctf/
 [pbctf 2020]: 2020/pbctf/
+[X-MAS CTF 2020]: 2020/xmas_ctf/
