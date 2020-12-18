@@ -6,9 +6,12 @@
 
 ## Challenge
 
-You have been warned that this could happen. Note: Wrap the feet-related thing with X-MAS{}
+You have been warned that this could happen. \
+Note: Wrap the feet-related thing with X-MAS{}
 
 ## Solution
+
+Solved with tourpran.
 
 1. Stalk him on Twitter
 
