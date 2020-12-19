@@ -252,7 +252,7 @@ I disassembled `talkative-server-redacted.rom` and annotated it:
 ```
 
 The important parts are the `CMPEQ` instructions from `028` to `067`.
-The get the flag we just need a payload to pass those checks.
+To get the flag we just need a payload to pass those checks.
 
 I wrote a [script](https://github.com/qxxxb/emu/blob/master/talkative.py) to
 automate this. This was the correct payload
@@ -284,8 +284,8 @@ Implement the GAMEBREAK devices and make a nice demo to get some points!
 
 ## Solution
 
-After implementing the MEM, GPU, and D-PAD devices, I was able to run
-`win.rom`:
+After implementing the MEM and GPU (I didn't have time to implement D-PAD
+unfortunately), I was able to run `win.rom`:
 
 ![](win.png)
 
