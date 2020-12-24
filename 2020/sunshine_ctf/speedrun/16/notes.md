@@ -1,0 +1,162 @@
+pwndbg> hex 0x555555755020
++0000 0x555555755020  51 75 65 75  65 20 65 70  69 63 20 67  75 69 74 61  │Queu│e.ep│ic.g│uita│
++0010 0x555555755030  72 20 73 6f  6c 6f 20 2a  73 79 6e 20  73 74 61 72  │r.so│lo.*│syn.│star│
++0020 0x555555755040  74 73 20 73  68 72 65 64  64 69 6e 67  2a 0a 00 00  │ts.s│hred│ding│*...│
++0030 0x555555755050  00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  │....│....│....│....│
+
+pwndbg> disassemble main
+Dump of assembler code for function main:
+   0x00005555555547dd <+0>:	push   rbp
+   0x00005555555547de <+1>:	mov    rbp,rsp
+   0x00005555555547e1 <+4>:	push   rbx
+   0x00005555555547e2 <+5>:	sub    rsp,0x58
+   0x00005555555547e6 <+9>:	mov    rax,QWORD PTR fs:0x28
+   0x00005555555547ef <+18>:	mov    QWORD PTR [rbp-0x18],rax
+   0x00005555555547f3 <+22>:	xor    eax,eax
+   0x00005555555547f5 <+24>:	mov    rdx,QWORD PTR [rip+0x200864]        # 0x555555755060 <stdin@@GLIBC_2.2.5>
+   0x00005555555547fc <+31>:	lea    rax,[rbp-0x50]
+   0x0000555555554800 <+35>:	mov    esi,0x31
+   0x0000555555554805 <+40>:	mov    rdi,rax
+   0x0000555555554808 <+43>:	call   0x555555554690 <fgets@plt>
+   0x000055555555480d <+48>:	lea    rax,[rbp-0x50]
+   0x0000555555554811 <+52>:	mov    rdi,rax
+   0x0000555555554814 <+55>:	call   0x555555554660 <strlen@plt>
+   0x0000555555554819 <+60>:	mov    rbx,rax
+   0x000055555555481c <+63>:	lea    rdi,[rip+0x2007fd]        # 0x555555755020 <key>
+   0x0000555555554823 <+70>:	call   0x555555554660 <strlen@plt>
+   0x0000555555554828 <+75>:	cmp    rbx,rax
+   0x000055555555482b <+78>:	jne    0x555555554a67 <main+650>
+   0x0000555555554831 <+84>:	mov    DWORD PTR [rbp-0x58],0x0
+   0x0000555555554838 <+91>:	jmp    0x555555554a40 <main+611>
+   0x000055555555483d <+96>:	mov    eax,DWORD PTR [rbp-0x58]
+   0x0000555555554840 <+99>:	cdqe   
+   0x0000555555554842 <+101>:	movzx  eax,BYTE PTR [rbp+rax*1-0x50]
+   0x0000555555554847 <+106>:	movsx  eax,al
+   0x000055555555484a <+109>:	mov    DWORD PTR [rbp-0x54],eax
+   0x000055555555484d <+112>:	xor    DWORD PTR [rbp-0x54],0x30
+   0x0000555555554851 <+116>:	xor    DWORD PTR [rbp-0x54],0x31
+   0x0000555555554855 <+120>:	xor    DWORD PTR [rbp-0x54],0x32
+   0x0000555555554859 <+124>:	xor    DWORD PTR [rbp-0x54],0x33
+   0x000055555555485d <+128>:	xor    DWORD PTR [rbp-0x54],0x34
+   0x0000555555554861 <+132>:	xor    DWORD PTR [rbp-0x54],0x35
+   0x0000555555554865 <+136>:	xor    DWORD PTR [rbp-0x54],0x36
+   0x0000555555554869 <+140>:	xor    DWORD PTR [rbp-0x54],0x37
+   0x000055555555486d <+144>:	xor    DWORD PTR [rbp-0x54],0x38
+   0x0000555555554871 <+148>:	xor    DWORD PTR [rbp-0x54],0x39
+   0x0000555555554875 <+152>:	xor    DWORD PTR [rbp-0x54],0x3a
+   0x0000555555554879 <+156>:	xor    DWORD PTR [rbp-0x54],0x3b
+   0x000055555555487d <+160>:	xor    DWORD PTR [rbp-0x54],0x3c
+   0x0000555555554881 <+164>:	xor    DWORD PTR [rbp-0x54],0x3d
+   0x0000555555554885 <+168>:	xor    DWORD PTR [rbp-0x54],0x3e
+   0x0000555555554889 <+172>:	xor    DWORD PTR [rbp-0x54],0x3f
+   0x000055555555488d <+176>:	xor    DWORD PTR [rbp-0x54],0x40
+   0x0000555555554891 <+180>:	xor    DWORD PTR [rbp-0x54],0x41
+   0x0000555555554895 <+184>:	xor    DWORD PTR [rbp-0x54],0x42
+   0x0000555555554899 <+188>:	xor    DWORD PTR [rbp-0x54],0x43
+   0x000055555555489d <+192>:	xor    DWORD PTR [rbp-0x54],0x44
+   0x00005555555548a1 <+196>:	xor    DWORD PTR [rbp-0x54],0x45
+   0x00005555555548a5 <+200>:	xor    DWORD PTR [rbp-0x54],0x46
+   0x00005555555548a9 <+204>:	xor    DWORD PTR [rbp-0x54],0x47
+   0x00005555555548ad <+208>:	xor    DWORD PTR [rbp-0x54],0x48
+   0x00005555555548b1 <+212>:	xor    DWORD PTR [rbp-0x54],0x49
+   0x00005555555548b5 <+216>:	xor    DWORD PTR [rbp-0x54],0x4a
+   0x00005555555548b9 <+220>:	xor    DWORD PTR [rbp-0x54],0x4b
+   0x00005555555548bd <+224>:	xor    DWORD PTR [rbp-0x54],0x4c
+   0x00005555555548c1 <+228>:	xor    DWORD PTR [rbp-0x54],0x4d
+   0x00005555555548c5 <+232>:	xor    DWORD PTR [rbp-0x54],0x4e
+   0x00005555555548c9 <+236>:	xor    DWORD PTR [rbp-0x54],0x4f
+   0x00005555555548cd <+240>:	xor    DWORD PTR [rbp-0x54],0x50
+   0x00005555555548d1 <+244>:	xor    DWORD PTR [rbp-0x54],0x51
+   0x00005555555548d5 <+248>:	xor    DWORD PTR [rbp-0x54],0x52
+   0x00005555555548d9 <+252>:	xor    DWORD PTR [rbp-0x54],0x53
+   0x00005555555548dd <+256>:	xor    DWORD PTR [rbp-0x54],0x54
+   0x00005555555548e1 <+260>:	xor    DWORD PTR [rbp-0x54],0x55
+   0x00005555555548e5 <+264>:	xor    DWORD PTR [rbp-0x54],0x56
+   0x00005555555548e9 <+268>:	xor    DWORD PTR [rbp-0x54],0x57
+   0x00005555555548ed <+272>:	xor    DWORD PTR [rbp-0x54],0x58
+   0x00005555555548f1 <+276>:	xor    DWORD PTR [rbp-0x54],0x59
+   0x00005555555548f5 <+280>:	xor    DWORD PTR [rbp-0x54],0x5a
+   0x00005555555548f9 <+284>:	xor    DWORD PTR [rbp-0x54],0x5b
+   0x00005555555548fd <+288>:	xor    DWORD PTR [rbp-0x54],0x5c
+   0x0000555555554901 <+292>:	xor    DWORD PTR [rbp-0x54],0x5d
+   0x0000555555554905 <+296>:	xor    DWORD PTR [rbp-0x54],0x5e
+   0x0000555555554909 <+300>:	xor    DWORD PTR [rbp-0x54],0x5f
+   0x000055555555490d <+304>:	xor    DWORD PTR [rbp-0x54],0x60
+   0x0000555555554911 <+308>:	xor    DWORD PTR [rbp-0x54],0x61
+   0x0000555555554915 <+312>:	xor    DWORD PTR [rbp-0x54],0x62
+   0x0000555555554919 <+316>:	xor    DWORD PTR [rbp-0x54],0x63
+   0x000055555555491d <+320>:	xor    DWORD PTR [rbp-0x54],0x64
+   0x0000555555554921 <+324>:	xor    DWORD PTR [rbp-0x54],0x65
+   0x0000555555554925 <+328>:	xor    DWORD PTR [rbp-0x54],0x66
+   0x0000555555554929 <+332>:	xor    DWORD PTR [rbp-0x54],0x67
+   0x000055555555492d <+336>:	xor    DWORD PTR [rbp-0x54],0x68
+   0x0000555555554931 <+340>:	xor    DWORD PTR [rbp-0x54],0x69
+   0x0000555555554935 <+344>:	xor    DWORD PTR [rbp-0x54],0x6a
+   0x0000555555554939 <+348>:	xor    DWORD PTR [rbp-0x54],0x6b
+   0x000055555555493d <+352>:	xor    DWORD PTR [rbp-0x54],0x6c
+   0x0000555555554941 <+356>:	xor    DWORD PTR [rbp-0x54],0x6d
+   0x0000555555554945 <+360>:	xor    DWORD PTR [rbp-0x54],0x6e
+   0x0000555555554949 <+364>:	xor    DWORD PTR [rbp-0x54],0x6f
+   0x000055555555494d <+368>:	xor    DWORD PTR [rbp-0x54],0x70
+   0x0000555555554951 <+372>:	xor    DWORD PTR [rbp-0x54],0x71
+   0x0000555555554955 <+376>:	xor    DWORD PTR [rbp-0x54],0x72
+   0x0000555555554959 <+380>:	xor    DWORD PTR [rbp-0x54],0x73
+   0x000055555555495d <+384>:	xor    DWORD PTR [rbp-0x54],0x74
+   0x0000555555554961 <+388>:	xor    DWORD PTR [rbp-0x54],0x75
+   0x0000555555554965 <+392>:	xor    DWORD PTR [rbp-0x54],0x76
+   0x0000555555554969 <+396>:	xor    DWORD PTR [rbp-0x54],0x77
+   0x000055555555496d <+400>:	xor    DWORD PTR [rbp-0x54],0x78
+   0x0000555555554971 <+404>:	xor    DWORD PTR [rbp-0x54],0x79
+   0x0000555555554975 <+408>:	xor    DWORD PTR [rbp-0x54],0x7a
+   0x0000555555554979 <+412>:	xor    DWORD PTR [rbp-0x54],0x7b
+   0x000055555555497d <+416>:	xor    DWORD PTR [rbp-0x54],0x7c
+   0x0000555555554981 <+420>:	xor    DWORD PTR [rbp-0x54],0x7d
+   0x0000555555554985 <+424>:	xor    DWORD PTR [rbp-0x54],0x7e
+   0x0000555555554989 <+428>:	xor    DWORD PTR [rbp-0x54],0x7f
+   0x000055555555498d <+432>:	xor    DWORD PTR [rbp-0x54],0x80
+   0x0000555555554994 <+439>:	xor    DWORD PTR [rbp-0x54],0x81
+   0x000055555555499b <+446>:	xor    DWORD PTR [rbp-0x54],0x82
+   0x00005555555549a2 <+453>:	xor    DWORD PTR [rbp-0x54],0x83
+   0x00005555555549a9 <+460>:	xor    DWORD PTR [rbp-0x54],0x84
+   0x00005555555549b0 <+467>:	xor    DWORD PTR [rbp-0x54],0x85
+   0x00005555555549b7 <+474>:	xor    DWORD PTR [rbp-0x54],0x86
+   0x00005555555549be <+481>:	xor    DWORD PTR [rbp-0x54],0x87
+   0x00005555555549c5 <+488>:	xor    DWORD PTR [rbp-0x54],0x88
+   0x00005555555549cc <+495>:	xor    DWORD PTR [rbp-0x54],0x89
+   0x00005555555549d3 <+502>:	xor    DWORD PTR [rbp-0x54],0x8a
+   0x00005555555549da <+509>:	xor    DWORD PTR [rbp-0x54],0x8b
+   0x00005555555549e1 <+516>:	xor    DWORD PTR [rbp-0x54],0x8c
+   0x00005555555549e8 <+523>:	xor    DWORD PTR [rbp-0x54],0x8d
+   0x00005555555549ef <+530>:	xor    DWORD PTR [rbp-0x54],0x8e
+   0x00005555555549f6 <+537>:	xor    DWORD PTR [rbp-0x54],0x8f
+   0x00005555555549fd <+544>:	xor    DWORD PTR [rbp-0x54],0x90
+   0x0000555555554a04 <+551>:	xor    DWORD PTR [rbp-0x54],0x91
+   0x0000555555554a0b <+558>:	xor    DWORD PTR [rbp-0x54],0x92
+   0x0000555555554a12 <+565>:	xor    DWORD PTR [rbp-0x54],0x93
+   0x0000555555554a19 <+572>:	mov    eax,DWORD PTR [rbp-0x58]
+   0x0000555555554a1c <+575>:	movsxd rdx,eax
+   0x0000555555554a1f <+578>:	lea    rax,[rip+0x2005fa]        # 0x555555755020 <key>
+   0x0000555555554a26 <+585>:	movzx  eax,BYTE PTR [rdx+rax*1]
+   0x0000555555554a2a <+589>:	movsx  eax,al
+=> 0x0000555555554a2d <+592>:	cmp    DWORD PTR [rbp-0x54],eax
+   0x0000555555554a30 <+595>:	je     0x555555554a3c <main+607>
+   0x0000555555554a32 <+597>:	mov    edi,0x0
+   0x0000555555554a37 <+602>:	call   0x5555555546a0 <exit@plt>
+   0x0000555555554a3c <+607>:	add    DWORD PTR [rbp-0x58],0x1
+   0x0000555555554a40 <+611>:	mov    eax,DWORD PTR [rbp-0x58]
+   0x0000555555554a43 <+614>:	movsxd rbx,eax
+   0x0000555555554a46 <+617>:	lea    rdi,[rip+0x2005d3]        # 0x555555755020 <key>
+   0x0000555555554a4d <+624>:	call   0x555555554660 <strlen@plt>
+   0x0000555555554a52 <+629>:	cmp    rbx,rax
+   0x0000555555554a55 <+632>:	jb     0x55555555483d <main+96>
+   0x0000555555554a5b <+638>:	lea    rdi,[rip+0xb2]        # 0x555555554b14
+   0x0000555555554a62 <+645>:	call   0x555555554680 <system@plt>
+   0x0000555555554a67 <+650>:	nop
+   0x0000555555554a68 <+651>:	mov    rax,QWORD PTR [rbp-0x18]
+   0x0000555555554a6c <+655>:	xor    rax,QWORD PTR fs:0x28
+   0x0000555555554a75 <+664>:	je     0x555555554a7c <main+671>
+   0x0000555555554a77 <+666>:	call   0x555555554670 <__stack_chk_fail@plt>
+   0x0000555555554a7c <+671>:	add    rsp,0x58
+   0x0000555555554a80 <+675>:	pop    rbx
+   0x0000555555554a81 <+676>:	pop    rbp
+   0x0000555555554a82 <+677>:	ret    
