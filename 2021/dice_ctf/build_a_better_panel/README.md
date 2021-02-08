@@ -105,7 +105,7 @@ We knew we needed a way to make a GET request to the sql injection URL... but we
 
 Since we just need to make the GET request and we don't really care what happens after, we could ask it to download a script or style (allows because script-src and style-src have 'self') from the SQL injection URL. So we looked for ways to insert a <link> tag.
 
-![css-js.png)(css-js.png)
+![css-js.png](css-js.png)
 
 This is interesting, it looked like it checks if the css attribute is set on some object... if it is, it loads a stylesheet by taking that attribute as the URL! Since our prototype pollution affects all `object`s... we can just try:
 
