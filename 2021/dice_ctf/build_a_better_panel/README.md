@@ -82,10 +82,9 @@ We can bypass the `__proto__` check in `safeDeepMerge` by using
 
 Some googling brings up a
 [related exploit](https://github.com/BlackFan/client-side-prototype-pollution/blob/master/gadgets/embedly.md)
-on [embedly](https://embed.ly/), which is used to show the reddit card at the
-bottom of the page.
-
-We can basically inject any attribute to the `iframe` of the reddit card.
+on [embedly](https://embed.ly/), the service used to show the reddit card at the
+bottom of the page. The exploit allows us to inject any attribute to the
+`iframe` of the reddit card.
 
 The linked exploit uses `onload="alert(1)"`, but that didn't work for this
 challenge due to the Content Security Policy:
@@ -105,7 +104,7 @@ But in the last 30 minutes of the CTF, ath0 finally found a way to do it:
 data = {"prototype": {"css": sql_url()}}
 ```
 
-This will set the `css` attribute of the `iframe` to our malicious URL:
+This sets the `css` attribute of the `iframe` to our malicious URL:
 ![css.png](css.png)
 
 Now all we have to do is run [pollute.py](pollute.py) and send the admin bot a
@@ -113,3 +112,5 @@ link to our panel: https://build-a-better-panel.dicec.tf/create?debugid=yoink5
 
 Visting the panel ourselves, we can see the flag added to our widgets:
 ![flag.png](flag.png)
+
+Thanks DiceCTF for the mind-bending challenge :)
