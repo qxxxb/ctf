@@ -100,12 +100,19 @@ could make the desired SQL injection request. After being stuck for hours, we
 were ready to give up.
 
 But in the last 30 minutes of the CTF, ath0 finally found a way to do it:
+
+We knew we needed a way to make a GET request to the sql injection URL... but we don't need (and probably can't get) code execution. For a while we had looked for ways to hijack the URL of an ajax request (since the connect-src policy allows 'self'), but didn't find anything.
+
+Since we just need to make the GET request and we don't really care what happens after, we could ask it to download a script or style (allows because script-src and style-src have 'self') from the SQL injection URL. So we looked for ways to insert a <link> tag.
+
+![css-js.png)(css-js.png)
+
+This is interesting, it looked like it checks if the css attribute is set on some object... if it is, it loads a stylesheet by taking that attribute as the URL! Since our prototype pollution affects all `object`s... we can just try:
+
 ```python
 data = {"prototype": {"css": sql_url()}}
 ```
-
-This sets the `css` attribute of the `iframe` to our malicious URL:
-![css.png](css.png)
+Since the css attribute is not otherwise set on this.data.options, our prototype pollution works and this.data.options has a css attribute containing our sql url.
 
 Now all we have to do is run [pollute.py](pollute.py) and send the admin bot a
 link to our panel: https://build-a-better-panel.dicec.tf/create?debugid=yoink5
