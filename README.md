@@ -20,6 +20,7 @@ Write-ups for some CTF challenges.
 - [speedrun series](2020/sunshine_ctf/speedrun) from [SunshineCTF 2020]
 
 ### Web Exploitation
+- [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
 - [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
 - [Comfort Bot](2020/xmas_ctf/comfort_bot) from [X-MAS CTF 2020]
 - [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels) from [Cyber Security Rumble 2020]
@@ -48,3 +49,4 @@ Write-ups for some CTF challenges.
 [HITCON CTF 2020]: 2020/hitcon_ctf/
 [pbctf 2020]: 2020/pbctf/
 [X-MAS CTF 2020]: 2020/xmas_ctf/
+[DiceCTF 2021]: 2021/dice_ctf/
