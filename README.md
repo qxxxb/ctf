@@ -21,9 +21,9 @@ Write-ups for some CTF challenges.
 
 ### Web Exploitation
 - [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
+- [Cr0wnAir](2021/union_ctf/Cr0wnAir) from [Union CTF 2021]
 - [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
 - [Comfort Bot](2020/xmas_ctf/comfort_bot) from [X-MAS CTF 2020]
-- [Whales and wheels](2020/cyber_security_rumble/whales_and_wheels) from [Cyber Security Rumble 2020]
 
 ### Forensics
 - [The Cat](2020/xmas_ctf/the_cat) from [X-MAS CTF 2020]
