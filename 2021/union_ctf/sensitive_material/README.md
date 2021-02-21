@@ -43,8 +43,8 @@ squinted my eyes it looked like:
 union{https://www.youtube.com/watch?v=xxxxxxxxxxx}
 ```
 
-To check if that was true, I tried to reproduce the pixelation effect on my
-text and see if it matched `image.png`. I actually got very lucky here
+To check if that was true, I tried to reproduce the pixelation effect with my
+own text and see if it matched `image.png`. I actually got very lucky here
 because I almost immediately got something very similar:
 
 ![comp.png](comp.png)
