@@ -1,7 +1,7 @@
 # Sensitive Material
 
 **Category**: Misc \
-**Points**: 999 (2 solves) \
+**Points**: 995 (3 solves) \
 **Author**: BananaMan
 
 ## Challenge
