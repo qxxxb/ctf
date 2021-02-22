@@ -77,16 +77,41 @@ closest match here. But tbh when I eyeball it, it doesn't seem that much
 worse than the other ones. I probably need to check all the other printable
 ASCII chars to make sure. Time to automate stuff.
 
+My script in `solve.py` basically does this:
 ![scndact.png](scndact.png)
 
-And now which character best matches the 2nd character? SURPRISE IT'S ACTUALLY
-`S` LOL. Here are the characters ranked from best to worst (and `L` is actually
-below average, looks like I dodged a bullet):
+The idea is pretty simple but the implementation is complicated:
+
+- Generating an image from the font using PIL didn't work well. This means I
+  had to manually take a screenshot each time.
+
+  - In order to solve the challenge in a reasonable amount of time, I needed to
+    include as much text as possible in the screenshot.
+
+  - I found that using every line in the Notepad window gave me 47 lines. This
+    was good enough to include almost all possible letters.
+
+- In order for two pixelated images to match, the pixelation effect need to
+  have the same offset. Since the square size is 5px, we need to pick the right
+  X and Y offset, which I did through with trial and error.
+
+- Since the input to my script is a screenshot of lines of text in Notepad, I
+  needed to do perfectly cut each line out of the screenshot so that they all
+  had the same offset and padding.
+
+- Each line was offset, pixelated, and diffed individually with `image.png`.
+
+Finally after several hours fighting PIL and NumPy, I was able to get some
+results.
+
+So according to my script, which character best matches the 2nd character?
+SURPRISE IT'S ACTUALLY `S` LOL. Here are the characters ranked from best to
+worst (and `L` is actually below average, looks like I dodged a bullet):
 ```
 S 5 3 t E 4 6 8 R 9 F B A k i Z X I 1 0 G K f 7 T 2 J l L b h N C Y d O P j W D M H U V Q g
 ```
 
-Repeat this for all the characters and here's what I got (messy script in `solve.py`):
+Repeat this for all the characters and here's what I got:
 ```
 Y |
 S | 5 3 t E 4 6 8 R 9 F B A k i Z X I 1 0 G K f 7 T 2 J l L b h N C Y d O P j W D M H U V Q g
