@@ -79,9 +79,9 @@ ASCII chars to make sure. Time to automate stuff.
 
 ![scndact.png](scndact.png)
 
-And now which character best matches the 2nd character? SURPRISE IT'S
-ACTUALLY `S` LOL. Here are the characters from ranked from best to worst (and
-WTF `L` is actually below average, looks like I dodged a bullet):
+And now which character best matches the 2nd character? SURPRISE IT'S ACTUALLY
+`S` LOL. Here are the characters ranked from best to worst (and `L` is actually
+below average, looks like I dodged a bullet):
 ```
 S 5 3 t E 4 6 8 R 9 F B A k i Z X I 1 0 G K f 7 T 2 J l L b h N C Y d O P j W D M H U V Q g
 ```
@@ -110,7 +110,7 @@ WRONG \*INTERNAL SCREAMING\*.
 
 ![yt.png](yt.png)
 
-Ok very sad. I was ready to brute youtube URLs but why not ask the admin first:
+I was going to brute youtube URLs but why not ask the admin first:
 
 ![dc.png](dc.png)
 
