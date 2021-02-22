@@ -96,22 +96,21 @@ The idea is pretty simple but the implementation is complicated:
   X and Y offset, which I did through with trial and error.
 
 - Since the input to my script is a screenshot of lines of text in Notepad, I
-  needed to do perfectly cut each line out of the screenshot so that they all
-  had the same offset and padding.
+  needed to perfectly cut each line out of the screenshot so that they all had
+  the same offset.
 
-- Each line was offset, pixelated, and diffed individually with `image.png`.
+- Each line was then padded, pixelated, and diffed individually with `image.png`.
 
-Finally after several hours fighting PIL and NumPy, I was able to get some
-results.
+Finally after several hours fighting with PIL and NumPy, I got some results.
 
 So according to my script, which character best matches the 2nd character?
 SURPRISE IT'S ACTUALLY `S` LOL. Here are the characters ranked from best to
-worst (and `L` is actually below average, looks like I dodged a bullet):
+worst (somehow `L` is actually below average):
 ```
 S 5 3 t E 4 6 8 R 9 F B A k i Z X I 1 0 G K f 7 T 2 J l L b h N C Y d O P j W D M H U V Q g
 ```
 
-Repeat this for all the characters and here's what I got:
+I repeated this for the rest of the unknown characters in the flag and got:
 ```
 Y |
 S | 5 3 t E 4 6 8 R 9 F B A k i Z X I 1 0 G K f 7 T 2 J l L b h N C Y d O P j W D M H U V Q g
@@ -131,11 +130,11 @@ So that means the flag must be this RIGHT??
 union{https://www.youtube.com/watch?v=YSwHrTfcikU}
 ```
 
-WRONG \*INTERNAL SCREAMING\*.
+WRONG \*INTERNAL SCREAMING\*
 
 ![yt.png](yt.png)
 
-I was going to brute youtube URLs but why not ask the admin first:
+I was going to bruteforce youtube URLs but why not ask the admin first:
 
 ![dc.png](dc.png)
 
