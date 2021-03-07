@@ -217,22 +217,23 @@ Abbreviate QR as any quadratic residue
 Going back to the problem, let's say `g` is a QR. Then `g^anything` is also a
 QR. This means `g^(rx)` will also be a QR.
 
-We know that `1` is always a QR. (`1^2 === 1`). But `2` and `3` may or may not
-be a QR depending on the value of `p`.
+We know that `1` is always a QR because `1^2 === 1`. But `2` and `3` may or may
+not be a QR depending on the value of `p`.
 
-Let's say we get a `p` so that (we can reconnect to the challenge server until
-we get one):
+Let's say we get a `p` so that:
 ```
 1 is a QR (always true)
 2 is a QR
 3 is not a QR
 ```
+> Note that we can reconnect to the challenge server until the constraints are
+> satisfied
 
 Then:
 ```
-If m == 1: m * g^(rx) is a QR
-If m == 2: m * g^(rx) is a QR
-If m == 3: m * g^(rx) is not a QR
+if m == 1: m * g^(rx) is a QR
+if m == 2: m * g^(rx) is a QR
+if m == 3: m * g^(rx) is not a QR
 ```
 
 How can we check if something is a QR? Use the Legendre symbol, which can
