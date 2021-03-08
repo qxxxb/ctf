@@ -181,8 +181,7 @@ def decrypt(c, key):
 ```
 
 How can we attack this?
-- Since `p` is a strong prime, attacks like Pohlig-Hellman or small subgroup
-  attacks won't work.
+- Since `p` is a strong prime, attacks like Pohlig-Hellman won't work.
 - As mentioned earlier, even when we know `g`, `g^r`, and `g^(rx)`, we can't
   calculate `r` or `x`
 
