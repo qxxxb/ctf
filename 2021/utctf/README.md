@@ -1,7 +1,7 @@
 # UTCTF 2021
 
 **Team**: Buckeye Bureau of BOF \
-**Rank**: 7 / 697
+**Rank**: 7 / 697 \
 **Write-ups**: [Here](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf)
 
 Here are some of the challenges I solved:
