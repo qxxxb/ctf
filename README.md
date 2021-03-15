@@ -8,10 +8,11 @@ Write-ups for some CTF challenges.
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
-- [Lost List](2020/xmas_ctf/lost_list) from [X-MAS CTF 2020]
-- [Cookie Monster Part 1](2020/osu-ctf-autumn/cookie_monster/1) from [OSU CTF Autumn 2020]
+- [Sleeves](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves)
+- [A Bit Weird](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/A_Bit_Weird)
 
 ### Binary Exploitation
+- [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG)
 - [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
 - [Amazing ROP](2020/pbctf/amazing_rop) from [pbctf 2020]
 - [babypwn](2020/cyber_security_rumble/babypwn) from [Cyber Security Rumble 2020]
@@ -27,7 +28,6 @@ Write-ups for some CTF challenges.
 ### Forensics
 - [The Cat](2020/xmas_ctf/the_cat) from [X-MAS CTF 2020]
 - [Recently watched](2020/osu-ctf-autumn/recently_watched) from [OSU CTF Autumn 2020]
-- [Fibonacci](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Fibonacci) from [Affinity CTF Lite 2020]
 
 ### Reverse Engineering
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
