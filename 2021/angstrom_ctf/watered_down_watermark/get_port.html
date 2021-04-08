@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Get port</title>
+    </head>
+    <body>
+        <pre id="urls">Hi</pre>
+        <script>
+            const radius = 2500; // Number of ports scanned = 2 * radius
+            const target = 40000;
+            for (let port = target - radius; port < target + radius; port++) {
+                const url = `http://127.0.0.1:${port}`
+                fetch(url, {mode: "no-cors"}).then(res => {
+                    urls.textContent += `\n${url}`
+                })
+            }
+        </script>
+
+        <!-- Delay page load to keep script running -->
+        <link rel="stylesheet" href="nothing_here">
+    </body>
+</html>
