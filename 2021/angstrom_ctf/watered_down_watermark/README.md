@@ -157,7 +157,7 @@ Then I put the ID into `get_flag.html`:
 ```
 
 Then I sent http://xxxxxxxxxxxx.ngrok.io/get_flag.html to be rendered, which
-give me the flag:
+gave me the flag:
 
 <img src="f.png" width="400" height="300">
 
