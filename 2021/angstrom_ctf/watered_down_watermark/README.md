@@ -107,7 +107,7 @@ doesn't like. One way to bypass this is to use `fetch` with `no-cors`:
 ```
 
 After starting an `ngrok` server, I sent my HTML page to be rendered. After
-tweaking the port ranges a few times, I got:
+tweaking the port range a few times, I got:
 
 <img src="p.png" width="400" height="300">
 
