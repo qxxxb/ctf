@@ -49,6 +49,7 @@ but basically this can just be solved as a system of linear equations.
 
 Solve script in `solve.sage`. Output:
 ```
+$ export PWNLIB_NOTERM=true
 $ sage test1.sage
 b'actf{polynomials_20a829322766642530cf69}'
 b'\x00actf{polynomials_20a829322766642530cf69}'
