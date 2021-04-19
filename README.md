@@ -20,6 +20,7 @@ Write-ups for some CTF challenges.
 
 ### Web Exploitation
 - [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
+- [Pearl's U-Stor](https://github.com/cscosu/ctf-writeups/tree/master/2021/plaidctf/pearls_ustor) from [PlaidCTF 2021]
 - [Cr0wnAir](2021/union_ctf/Cr0wnAir) from [Union CTF 2021]
 - [Baby SQLi](2021/zer0pts_ctf/baby_sqli) from [zer0pts CTF 2021]
 - [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
@@ -32,6 +33,7 @@ Write-ups for some CTF challenges.
 ### Reverse Engineering
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
 - [License Check](2020/sunshine_ctf/pegasus/license_check) from [SunshineCTF 2020]
+- [roulette_wheel](https://github.com/cscosu/ctf-writeups/tree/master/2021/b01lers_ctf/roulette_wheel) from [b01lers CTF 2021]
 
 ### OSINT
 - [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
@@ -57,3 +59,5 @@ Write-ups for some CTF challenges.
 [Union CTF 2021]: 2021/union_ctf/
 [zer0pts CTF 2021]: 2021/zer0pts_ctf/
 [UTCTF 2021]: 2021/utctf/
+[PlaidCTF 2021]: 2021/plaidctf/
+[b01lers CTF 2021]: 2021/b01lers_ctf/
