@@ -11,20 +11,16 @@ Write-ups for some CTF challenges.
 - [Sleeves](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves) from [UTCTF 2021]
 - [A Bit Weird](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/A_Bit_Weird) from [UTCTF 2021]
 
-### Binary Exploitation
-- [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG) from [UTCTF 2021]
-- [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
-- [Amazing ROP](2020/pbctf/amazing_rop) from [pbctf 2020]
-- [babypwn](2020/cyber_security_rumble/babypwn) from [Cyber Security Rumble 2020]
-- [speedrun series](2020/sunshine_ctf/speedrun) from [SunshineCTF 2020]
-
 ### Web Exploitation
 - [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
+- [Watered Down Watermark as a Service](2021/angstrom_ctf/watered_down_watermark) from [ångstromCTF 2021]
 - [Pearl's U-Stor](https://github.com/cscosu/ctf-writeups/tree/master/2021/plaidctf/pearls_ustor) from [PlaidCTF 2021]
 - [Cr0wnAir](2021/union_ctf/Cr0wnAir) from [Union CTF 2021]
 - [Baby SQLi](2021/zer0pts_ctf/baby_sqli) from [zer0pts CTF 2021]
-- [CSRegex](2020/cyber_security_rumble/csregex) from [Cyber Security Rumble 2020]
-- [Comfort Bot](2020/xmas_ctf/comfort_bot) from [X-MAS CTF 2020]
+
+### Binary Exploitation
+- [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG) from [UTCTF 2021]
+- [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
 
 ### Forensics
 - [The Cat](2020/xmas_ctf/the_cat) from [X-MAS CTF 2020]
@@ -60,4 +56,5 @@ Write-ups for some CTF challenges.
 [zer0pts CTF 2021]: 2021/zer0pts_ctf/
 [UTCTF 2021]: 2021/utctf/
 [PlaidCTF 2021]: 2021/plaidctf/
+[ångstromCTF 2021]: 2021/angstrom_ctf/
 [b01lers CTF 2021]: 2021/b01lers_ctf/
