@@ -27,6 +27,7 @@ Write-ups for some CTF challenges.
 - [Recently watched](2020/osu-ctf-autumn/recently_watched) from [OSU CTF Autumn 2020]
 
 ### Reverse Engineering
+- [nooopster](https://github.com/cscosu/ctf-writeups/tree/master/2021/def_con_quals/nooopster) from [DEF CON Quals 2021]
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
 - [License Check](2020/sunshine_ctf/pegasus/license_check) from [SunshineCTF 2020]
 - [roulette_wheel](https://github.com/cscosu/ctf-writeups/tree/master/2021/b01lers_ctf/roulette_wheel) from [b01lers CTF 2021]
@@ -58,3 +59,4 @@ Write-ups for some CTF challenges.
 [PlaidCTF 2021]: 2021/plaidctf/
 [ångstromCTF 2021]: 2021/angstrom_ctf/
 [b01lers CTF 2021]: 2021/b01lers_ctf/
+[DEF CON Quals 2021]: 2021/def_con_quals/
