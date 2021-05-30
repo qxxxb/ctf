@@ -12,6 +12,7 @@ Write-ups for some CTF challenges.
 - [A Bit Weird](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/A_Bit_Weird) from [UTCTF 2021]
 
 ### Web Exploitation
+- [Ruthless Monster](2021/pwn2win/ruthless_monster) from [Pwn2Win 2021]
 - [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
 - [Watered Down Watermark as a Service](2021/angstrom_ctf/watered_down_watermark) from [ångstromCTF 2021]
 - [Pearl's U-Stor](https://github.com/cscosu/ctf-writeups/tree/master/2021/plaidctf/pearls_ustor) from [PlaidCTF 2021]
@@ -39,6 +40,7 @@ Write-ups for some CTF challenges.
 ### Misc
 - [Sensitive Material](2021/union_ctf/sensitive_material) from [Union CTF 2021]
 - [EMU](2020/xmas_ctf/emu) from [X-MAS CTF 2020]
+- [Dots Exposed](2021/pwn2win/dots_exposed) from [Pwn2Win 2021]
 - [Santa's Landing Pad](2020/xmas_ctf/santas_landing_pad/) from [X-MAS CTF 2020]
 - [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
 - [GCombo](2020/pbctf/gcombo) from [pbctf 2020]
@@ -60,3 +62,4 @@ Write-ups for some CTF challenges.
 [ångstromCTF 2021]: 2021/angstrom_ctf/
 [b01lers CTF 2021]: 2021/b01lers_ctf/
 [DEF CON Quals 2021]: 2021/def_con_quals/
+[Pwn2Win 2021]: 2021/pwn2win/
