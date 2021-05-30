@@ -89,8 +89,8 @@ def _import_lib_file_with_warp_id(self, char_obj_array, filename, warp_id, is_si
     char_obj_array.extend(lib_char_obj_array)  # This is important
 ```
 
-The function will try to parse it, but none of will really do anything except
-the last line:
+The function will try to parse it, but it won't really do anything except the
+last line:
 
 ```python
 char_obj_array.extend(lib_char_obj_array)
