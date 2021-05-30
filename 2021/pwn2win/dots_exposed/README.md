@@ -1,6 +1,6 @@
 # Dots Exposed
 
-**Category**: web, misc \
+**Category**: misc \
 **Solves**: 33 \
 **Points**: 243 \
 **Author**: geolado
