@@ -7,4 +7,4 @@ This is a hard (but really fun) CTF hosted by
 **Site**: https://pwn2win.party/ \
 **Rank**: 16 / 720
 
-![rank](/rank.png)
+![rank](rank.png)
