@@ -97,7 +97,7 @@ char_obj_array.extend(lib_char_obj_array)
 ```
 
 This `char_obj_array` is set to `self.world.map`, which is just a 2D list
-container a "map" of the word. For example, given this program:
+containing a "map" of the world. For example, given this program:
 
 ```
 /-&
@@ -154,8 +154,10 @@ Map:
 ]
 ```
 
-We need `a` to in the map (outside of the line where it's imported) in order
-for the library to actually be loaded. To prevent the `Warp "a" has no destination` error, we can just ... never invoke it by never letting a dot touch it:
+We need `a` to be in the map (aside from the line where it's imported) in order
+for the library to actually be loaded. To prevent the `Warp "a" has no
+destination` error, we can just ... never invoke it by never letting a dot
+touch it:
 
 ```dots
 %!flag a
