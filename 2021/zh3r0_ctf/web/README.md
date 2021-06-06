@@ -19,7 +19,7 @@ Download - [Flags.tar.gz](Flags.tar.gz)
 
 ### Solution
 
-> Solved with @uanirudhx, who did most of the work
+> Solved with @anirudhb, who did most of the work
 
 ```ejs
         <meta http-equiv='Content-Security-Policy' content="script-src 'nonce-<%=bytes%>'; object-src 'none'; base-uri 'none'require-trusted-types-for 'script'; frame-src 'none'">
@@ -139,7 +139,7 @@ Link - http://web.zh3r0.cf:6969
 
 ## Solution
 
-> Solved with @uanirudhx
+> Solved with @anirudhb
 
 Weird challenge with no source provided. There's a page where you can request a
 URL and get the headers returned. For some reason `localhost` is blocked, but
