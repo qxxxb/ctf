@@ -7,6 +7,7 @@ Write-ups for some CTF challenges.
 ### Cryptography
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
+- [Real Mersenne](2021/zh3r0_ctf/real_mersenne) from [Zh3r0 CTF V2]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
 - [Sleeves](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves) from [UTCTF 2021]
 - [A Bit Weird](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/A_Bit_Weird) from [UTCTF 2021]
@@ -41,6 +42,7 @@ Write-ups for some CTF challenges.
 - [Sensitive Material](2021/union_ctf/sensitive_material) from [Union CTF 2021]
 - [EMU](2020/xmas_ctf/emu) from [X-MAS CTF 2020]
 - [Dots Exposed](2021/pwn2win/dots_exposed) from [Pwn2Win 2021]
+- [cheater mind](2021/zh3r0_ctf/cheater_mind) from [Zh3r0 CTF V2]
 - [Santa's Landing Pad](2020/xmas_ctf/santas_landing_pad/) from [X-MAS CTF 2020]
 - [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
 - [GCombo](2020/pbctf/gcombo) from [pbctf 2020]
@@ -63,3 +65,4 @@ Write-ups for some CTF challenges.
 [b01lers CTF 2021]: 2021/b01lers_ctf/
 [DEF CON Quals 2021]: 2021/def_con_quals/
 [Pwn2Win 2021]: 2021/pwn2win/
+[Zh3r0 CTF V2]: 2021/zh3r0_ctf/
