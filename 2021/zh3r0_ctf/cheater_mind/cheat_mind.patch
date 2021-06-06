@@ -1,0 +1,184 @@
+From deb2c72566b7f28bac47d906cde0b319e0d99d05 Mon Sep 17 00:00:00 2001
+From: qxxxb <46016483+qxxxb@users.noreply.github.com>
+Date: Sun, 6 Jun 2021 14:00:22 -0400
+Subject: [PATCH] Patch for cheat_mind challenge
+
+---
+ lib/genetic_algorithm/solver.ex | 54 +++++++++++++++++----------------
+ lib/mastermind/game.ex          | 39 +++++++++---------------
+ 2 files changed, 42 insertions(+), 51 deletions(-)
+
+diff --git a/lib/genetic_algorithm/solver.ex b/lib/genetic_algorithm/solver.ex
+index d33c8ae..b07d9fd 100644
+--- a/lib/genetic_algorithm/solver.ex
++++ b/lib/genetic_algorithm/solver.ex
+@@ -1,14 +1,17 @@
+ defmodule GeneticAlgorithm.Solver do
+   alias Mastermind.Game
+-  def color_length(), do: 6
+-  def genome_length(), do: 4
++  def color_length(), do: String.to_integer(Enum.at(System.argv, 1))
++  def genome_length(), do: String.to_integer(Enum.at(System.argv, 2))
++  def cheat_mutation(), do: String.to_float(Enum.at(System.argv, 3))
++  def is_cheat(), do: cheat_mutation() > 0
+ 
+   def crossover_probability(), do: 0.5
+-  def mutation_probability(), do: 0.03
++  def mutation_probability(), do: if is_cheat(), do: 0.06, else: 0.03
+   def permutation_probability(), do: 0.03
+ 
+   def max_population_size(), do: 60
+   def max_generations(), do: 100
++  def max_evolutions(), do: if is_cheat(), do: 100, else: 750
+ 
+   def generate_random_color() do
+     Enum.random(1..color_length())
+@@ -68,10 +71,11 @@ defmodule GeneticAlgorithm.Solver do
+   end
+ 
+   def fitness_score(trial, guesses) do
+-    guesses
++    ans = guesses
+     |> Enum.map(&get_difference(trial, &1))
+-    |> Enum.map(fn {correct, same_color} -> correct + same_color end)
++    |> Enum.map(fn {correct, same_color} -> correct + 2 * same_color end)
+     |> Enum.sum()
++    ans
+   end
+ 
+   def generate_offsprings(population) do
+@@ -109,7 +113,7 @@ defmodule GeneticAlgorithm.Solver do
+         generate_offsprings(population)
+         |> population_score(guesses)
+         |> Enum.sort_by(&elem(&1, 0))
+-        |> Enum.filter(fn {score, _} -> score == 0 end)
++        |> Enum.filter(fn {score, _} -> score <= (if is_cheat(), do: (if cheat_mutation() == 0.1, do: 10, else: 6), else: 0) end)
+ 
+       if eligibles == [] do
+         generation_inner_loop(population, pop_size, max_generations, guesses, chosen_ones, h+1)
+@@ -140,40 +144,38 @@ defmodule GeneticAlgorithm.Solver do
+     Enum.find(eligibles, fn eligible -> eligible not in guess_codes end)
+   end
+ 
+-  def play_loop(game, guesses) do
+-    cond do
+-      Game.won?(game) -> IO.puts("Genetic Algorithm guessed it right!")
+-      Game.is_game_over?(game) -> IO.puts("Genetic Algorithm, sorry, game is over!")
+-      true ->
+-        eligibles = genetic_evolution(max_population_size(), max_generations(), guesses)
++  def play_loop(game, guesses, h) do
++    if h <= max_evolutions() do
++      eligibles = genetic_evolution(max_population_size(), max_generations(), guesses)
+ 
+-        guess_codes = Enum.map(guesses, fn {code, _} -> code end)
+-        code = get_first_valid_eligible(eligibles, guess_codes)
++      guess_codes = Enum.map(guesses, fn {code, _} -> code end)
++      code = get_first_valid_eligible(eligibles, guess_codes)
+ 
+-        if code == nil do
+-          play_loop(game, guesses)
+-        else
+-          IO.puts "Genetic Algorithm guesses : #{inspect code}"
+-          new_game = Game.make_move(game, code)
+-          result = {new_game.correct_position, new_game.same_color}
++      if code == nil do
++        play_loop(game, guesses, h+1)
++      else
++        IO.puts "Genetic Algorithm guesses : #{inspect code}"
++        new_game = Game.make_move(game, code)
++        result = {new_game.correct_position, new_game.same_color}
+ 
+-          Game.print_score(new_game.same_color, "but in the wrong position")
+-          Game.print_score(new_game.correct_position, "and in the correct position")
+-          play_loop(new_game, [{code, result}|guesses])
+-        end
++        Game.print_score(new_game.same_color, "but in the wrong position")
++        Game.print_score(new_game.correct_position, "and in the correct position")
++        play_loop(new_game, [{code, result}|guesses], 0)
++      end
++    else
++      raise "FAIL"
+     end
+   end
+ 
+   def play() do
+     game = Game.new
+ 
+-    IO.puts "Sequence we are guessing : #{inspect game.sequence}"
+     first_guess = generate_random_genome()
+     IO.puts "Genetic Algorithm guesses : #{inspect first_guess}"
+ 
+     new_game = Game.make_move(game, first_guess)
+     initial_result = {new_game.correct_position, new_game.same_color}
+     guesses=[{first_guess, initial_result}]
+-    play_loop(new_game, guesses)
++    play_loop(new_game, guesses, 0)
+   end
+ end
+diff --git a/lib/mastermind/game.ex b/lib/mastermind/game.ex
+index d644db3..6682b5d 100644
+--- a/lib/mastermind/game.ex
++++ b/lib/mastermind/game.ex
+@@ -1,28 +1,11 @@
+ defmodule Mastermind.Game do
+-  @enforce_keys [:sequence, :guesses, :same_color, :correct_position]
++  @enforce_keys [:guesses, :same_color, :correct_position]
+   defstruct @enforce_keys
+ 
+-  defp generate_sequence() do
+-    Enum.map(1..4, fn _ -> Enum.random(colors()) end)
+-  end
+-
+-  defp count_same_color_guesses(guess, sequence) do
+-    length(guess) - length(sequence -- guess)
+-  end
+-
+-  defp count_correct_guesses(guess, sequence) do
+-    Enum.zip(guess, sequence)
+-    |> Enum.count(fn {a, b} -> a == b end)
+-  end
++  def colors, do: 1..String.to_integer(Enum.at(System.argv, 1))
+ 
+-  def color_mapping do
+-    %{"R" => 1, "G" => 2, "B" => 3, "Y" => 4, "O" => 5, "D" => 6}
+-  end
+-
+-  def colors, do: 1..6
+-
+-  def won?(%__MODULE__{sequence: sequence, correct_position: correct}) do
+-    length(sequence) == correct
++  def won?(%__MODULE__{correct_position: correct}) do
++    correct == String.to_integer(Enum.at(System.argv, 2))
+   end
+ 
+   def is_game_over?(state = %__MODULE__{guesses: guesses}) do
+@@ -36,16 +19,22 @@ defmodule Mastermind.Game do
+ 
+   def new do
+     %__MODULE__{
+-      sequence: generate_sequence(),
+-      guesses: 9,
++      guesses: String.to_integer(Enum.at(System.argv, 4)),
+       same_color: 0,
+       correct_position: 0
+     }
+   end
+ 
+   def make_move(game, guess) do
+-    same_color = count_same_color_guesses(guess, game.sequence)
+-    correct_position = count_correct_guesses(guess, game.sequence)
++    IO.puts("I guess:\n#{inspect guess}")
++    ns = IO.gets("Enter move results:\n")
++      |> String.trim
++      |> String.split(" ")
++      |> Enum.map(fn n -> String.to_integer(n) end)
++
++    correct_position = Enum.at(ns, 0)
++    same_color = Enum.at(ns, 1)
++
+     %{ game |
+       correct_position: correct_position,
+       same_color: same_color - correct_position,
+-- 
+2.25.1
+
