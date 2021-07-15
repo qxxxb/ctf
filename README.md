@@ -29,10 +29,10 @@ Write-ups for some CTF challenges.
 - [Recently watched](2020/osu-ctf-autumn/recently_watched) from [OSU CTF Autumn 2020]
 
 ### Reverse Engineering
+- [2k](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/2k) from [redpwnCTF 2021]
 - [nooopster](https://github.com/cscosu/ctf-writeups/tree/master/2021/def_con_quals/nooopster) from [DEF CON Quals 2021]
+- [dimensionality](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/dimensionality) from [redpwnCTF 2021]
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
-- [License Check](2020/sunshine_ctf/pegasus/license_check) from [SunshineCTF 2020]
-- [roulette_wheel](https://github.com/cscosu/ctf-writeups/tree/master/2021/b01lers_ctf/roulette_wheel) from [b01lers CTF 2021]
 
 ### OSINT
 - [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
@@ -66,3 +66,4 @@ Write-ups for some CTF challenges.
 [DEF CON Quals 2021]: 2021/def_con_quals/
 [Pwn2Win 2021]: 2021/pwn2win/
 [Zh3r0 CTF V2]: 2021/zh3r0_ctf/
+[redpwnCTF 2021]: 2021/redpwn_ctf/
