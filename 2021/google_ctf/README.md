@@ -1,4 +1,4 @@
-Link: https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf
+Link: https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf
 
 I solved:
 - [cpp](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/cpp) (rev)
