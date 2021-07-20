@@ -8,9 +8,9 @@ Write-ups for some CTF challenges.
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
 - [Real Mersenne](2021/zh3r0_ctf/real_mersenne) from [Zh3r0 CTF V2]
+- [pythia](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/pythia) from [Google CTF 2021]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
 - [Sleeves](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves) from [UTCTF 2021]
-- [A Bit Weird](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/A_Bit_Weird) from [UTCTF 2021]
 
 ### Web Exploitation
 - [Ruthless Monster](2021/pwn2win/ruthless_monster) from [Pwn2Win 2021]
@@ -30,6 +30,7 @@ Write-ups for some CTF challenges.
 
 ### Reverse Engineering
 - [2k](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/2k) from [redpwnCTF 2021]
+- [cpp](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/cpp) from [Google CTF 2021]
 - [nooopster](https://github.com/cscosu/ctf-writeups/tree/master/2021/def_con_quals/nooopster) from [DEF CON Quals 2021]
 - [dimensionality](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/dimensionality) from [redpwnCTF 2021]
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
@@ -67,3 +68,4 @@ Write-ups for some CTF challenges.
 [Pwn2Win 2021]: 2021/pwn2win/
 [Zh3r0 CTF V2]: 2021/zh3r0_ctf/
 [redpwnCTF 2021]: 2021/redpwn_ctf/
+[Google CTF 2021]: 2021/google_ctf/
