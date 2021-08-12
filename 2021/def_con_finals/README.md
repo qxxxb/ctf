@@ -239,7 +239,7 @@ GLORIOUS VICTORY
   even consider that a 2 byte payload was possible, but they did it with a
   single syscall 👏
 
-- I almost forgot to mention it, but we also got first blood on both stages
+- I almost forgot to mention it, but we also got first blood on the first stage
   of `ooows-hyper-o`, thanks to setuid0! In total, we managed to get first
   blood on 4 challenges.
 
