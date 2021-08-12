@@ -38,11 +38,11 @@ eye-opening experience.
 
 ## Friday
 
-- Woke up and went downstairs to the CTF floor.
+- I woke up at 8 AM and went downstairs to the CTF floor at 9 AM.
 
 - As we were setting up, we discovered that OOO accidentally leaked a bunch of
-  challenges. Despite the leaked challenges, the first challenges were released
-  with only a slight delay. I focused on `zero-is-you`.
+  challenges. Despite the leaked challenges, the competition started with only a
+  slight delay. I focused on `zero-is-you`:
 
   ![imgs/z.png](imgs/z.png)
 
@@ -63,9 +63,8 @@ eye-opening experience.
   around 12:30 PM! Hearing Zardus yell "FIRST BLOOD" into the microphone was
   always nice.
 
-- That evening we got three pizzas from Giordano's. Actually it turns out
-  bringing outside food into the convention center is not allowed—DEF CON
-  staff told us to be more discreet next time.
+- That evening we got three pizzas from Giordano's. I've concluded that deep
+  dish pizza tastes about the same as lasagna.
 
 - At the end of the first day, we were in 3rd place! We also got a picture
   with Zardus (I'm the one on the left wearing a black mask).
@@ -77,7 +76,7 @@ eye-opening experience.
 
 ## Saturday
 
-- Woke up at 8:00 AM to get ready for the CTF. Meme credit goes to Ammar:
+- Woke up at 8:00 AM again to get ready for the CTF. Meme credit goes to Ammar:
 
 ![imgs/m.jpg](imgs/m.jpg)
 
@@ -136,9 +135,11 @@ if len(shellcode) < len(previous_shellcode):
     return True
 ```
 
-  - You can see another teams' solutions that become king.
-  - You can write x86_64, aarch64, or riscv64 shellcode. I started by writing
-    basic `openat, read, write` shellcode
+  - An important detail was that you could see other teams' solutions, allowing
+    you to steal them for use in later rounds.
+
+  - The server accepts x86_64, aarch64, and riscv64 shellcode. I started by
+    writing basic `openat, read, write` shellcode in C:
 
 ```c
 #include "syscall_x86_64.h"
