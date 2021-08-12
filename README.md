@@ -20,14 +20,6 @@ Write-ups for some CTF challenges.
 - [Cr0wnAir](2021/union_ctf/Cr0wnAir) from [Union CTF 2021]
 - [Baby SQLi](2021/zer0pts_ctf/baby_sqli) from [zer0pts CTF 2021]
 
-### Binary Exploitation
-- [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG) from [UTCTF 2021]
-- [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
-
-### Forensics
-- [The Cat](2020/xmas_ctf/the_cat) from [X-MAS CTF 2020]
-- [Recently watched](2020/osu-ctf-autumn/recently_watched) from [OSU CTF Autumn 2020]
-
 ### Reverse Engineering
 - [2k](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/2k) from [redpwnCTF 2021]
 - [cpp](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/cpp) from [Google CTF 2021]
@@ -35,9 +27,9 @@ Write-ups for some CTF challenges.
 - [dimensionality](https://github.com/cscosu/ctf-writeups/tree/master/2021/redpwn_ctf/dimensionality) from [redpwnCTF 2021]
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
 
-### OSINT
-- [Path of the suspect](https://github.com/Red-Knights-CTF/writeups/tree/master/2020/affinity_ctf_lite/Path_of_the_suspect) from [Affinity CTF Lite 2020]
-- [Dox the Yak v4](2020/xmas_ctf/dox_the_yak_v4) from [X-MAS CTF 2020]
+### Binary Exploitation
+- [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG) from [UTCTF 2021]
+- [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
 
 ### Misc
 - [Sensitive Material](2021/union_ctf/sensitive_material) from [Union CTF 2021]
