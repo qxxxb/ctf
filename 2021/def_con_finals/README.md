@@ -53,8 +53,8 @@ eye-opening experience.
   - The goal for each level is to pop a shell with `execve("/bin/sh")`.
 
   - I was able to solve challenges up to level 5 with Andrew and zeta, but we
-    got stuck after that. Luckily qbeom and 챠늘 were able to solve a few more
-    levels.
+    got stuck after that. Luckily qbeom and 챠늘 were able to solve four more
+    levels with their insane shellcoding skills.
 
   - Here's a playthrough of qbeom's solution to Level 8, the last level our
     team was able to complete that day: https://youtu.be/fGSz1Yj5pRQ
