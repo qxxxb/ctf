@@ -101,10 +101,10 @@ eye-opening experience.
     teams had already pwned many services, making it much harder for us to
     exploit.
 
-  - But in the last hour, Andrew found a bug in the challenge infrastructure:
-    you could submit the same flag over and over again to get new graffiti on
-    each tick. We leveraged this as much as possible and in the end were able to
-    score a score a few points on the problem 😅
+  - But in the last hour, Ammar and Andrew found a bug in the challenge
+    infrastructure: you could submit the same flag over and over again to get
+    new graffiti on each tick. We leveraged this as much as possible and in the
+    end were able to score a score a few points on the problem 😅
 
   ![imgs/w.png](imgs/w.png)
 
