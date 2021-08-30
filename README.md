@@ -9,12 +9,12 @@ Write-ups for some CTF challenges.
 - [DEF CON CTF 2021](2021/def_con_finals)
 
 ### Cryptography
+- [Party Ticket](https://hackmd.io/N24BVozuT2CgUrdWz6V7NA) from [CakeCTF 2021]
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
 - [Real Mersenne](2021/zh3r0_ctf/real_mersenne) from [Zh3r0 CTF V2]
 - [pythia](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/pythia) from [Google CTF 2021]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
-- [Sleeves](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves) from [UTCTF 2021]
 
 ### Web Exploitation
 - [Ruthless Monster](2021/pwn2win/ruthless_monster) from [Pwn2Win 2021]
@@ -32,17 +32,19 @@ Write-ups for some CTF challenges.
 - [Super Duper Secure Flag Validator](2020/osu-ctf-spring/reverse_engineering/validator) from [OSU CTF Spring 2020]
 
 ### Binary Exploitation
+- [hwdbg](https://github.com/cscosu/ctf-writeups/tree/master/2021/cakectf/hwdbg) from [CakeCTF 2021]
+- [GOT it](https://github.com/cscosu/ctf-writeups/tree/master/2021/cakectf/GOT_it) from [CakeCTF 2021]
 - [AEG](https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/AEG) from [UTCTF 2021]
 - [Not Beginner's Stack](2021/zer0pts_ctf/not_beginners_stack) from [zer0pts CTF 2021]
 
 ### Misc
 - [Sensitive Material](2021/union_ctf/sensitive_material) from [Union CTF 2021]
-- [EMU](2020/xmas_ctf/emu) from [X-MAS CTF 2020]
 - [Dots Exposed](2021/pwn2win/dots_exposed) from [Pwn2Win 2021]
+- [EMU](2020/xmas_ctf/emu) from [X-MAS CTF 2020]
 - [cheater mind](2021/zh3r0_ctf/cheater_mind) from [Zh3r0 CTF V2]
-- [Santa's Landing Pad](2020/xmas_ctf/santas_landing_pad/) from [X-MAS CTF 2020]
 - [Baby Shock](2020/hitcon_ctf/baby_shock) from [HITCON CTF 2020]
 - [GCombo](2020/pbctf/gcombo) from [pbctf 2020]
+- [telepathy](https://github.com/cscosu/ctf-writeups/tree/master/2021/cakectf/telepathy) from [CakeCTF 2021]
 
 [OSU CTF Spring 2020]: 2020/osu-ctf-spring/
 [OSU CTF Autumn 2020]: 2020/osu-ctf-autumn/
@@ -65,3 +67,4 @@ Write-ups for some CTF challenges.
 [Zh3r0 CTF V2]: 2021/zh3r0_ctf/
 [redpwnCTF 2021]: 2021/redpwn_ctf/
 [Google CTF 2021]: 2021/google_ctf/
+[CakeCTF 2021]: 2021/cake_ctf/
