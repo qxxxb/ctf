@@ -10,9 +10,9 @@ Write-ups for some CTF challenges.
 
 ### Cryptography
 - [Party Ticket](https://hackmd.io/N24BVozuT2CgUrdWz6V7NA) from [CakeCTF 2021]
+- [hav3-i-b33n-pwn3d](https://github.com/cscosu/ctf-writeups/tree/master/2021/dam_ctf/hav3-i-b33n-pwn3d) from [DamCTF 2021]
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
-- [Real Mersenne](2021/zh3r0_ctf/real_mersenne) from [Zh3r0 CTF V2]
 - [pythia](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/pythia) from [Google CTF 2021]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
 
@@ -20,6 +20,7 @@ Write-ups for some CTF challenges.
 - [Ruthless Monster](2021/pwn2win/ruthless_monster) from [Pwn2Win 2021]
 - [Build a Better Panel](2021/dice_ctf/build_a_better_panel) from [DiceCTF 2021]
 - [Watered Down Watermark as a Service](2021/angstrom_ctf/watered_down_watermark) from [ångstromCTF 2021]
+- [shitty blog](https://github.com/cscosu/ctf-writeups/tree/master/2021/hxp_ctf/shitty-blog) from [hxp CTF 2021]
 - [Pearl's U-Stor](https://github.com/cscosu/ctf-writeups/tree/master/2021/plaidctf/pearls_ustor) from [PlaidCTF 2021]
 - [Cr0wnAir](2021/union_ctf/Cr0wnAir) from [Union CTF 2021]
 - [Baby SQLi](2021/zer0pts_ctf/baby_sqli) from [zer0pts CTF 2021]
@@ -68,3 +69,5 @@ Write-ups for some CTF challenges.
 [redpwnCTF 2021]: 2021/redpwn_ctf/
 [Google CTF 2021]: 2021/google_ctf/
 [CakeCTF 2021]: 2021/cake_ctf/
+[DamCTF 2021]: 2021/dam_ctf/
+[hxp CTF 2021]: 2021/hxp_ctf/
