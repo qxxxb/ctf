@@ -13,7 +13,6 @@ Write-ups for some CTF challenges.
 - [hav3-i-b33n-pwn3d](https://github.com/cscosu/ctf-writeups/tree/master/2021/dam_ctf/hav3-i-b33n-pwn3d) from [DamCTF 2021]
 - [Bit Flip 1](2020/dragon_ctf/bit_flip/1) from [Dragon CTF 2020]
 - [Queensarah2](2020/pbctf/queensarah2) from [pbctf 2020]
-- [pythia](https://github.com/cscosu/ctf-writeups/tree/master/2021/google_ctf/pythia) from [Google CTF 2021]
 - [janken vs yoshiking](2021/zer0pts_ctf/janken_vs_yoshiking) from [zer0pts CTF 2021]
 
 ### Web Exploitation
